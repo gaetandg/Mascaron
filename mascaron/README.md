@@ -2,6 +2,10 @@
 
 Jeu d'exploration familial : trouver des détails remarquables (mascarons, clochers, plaques, fontaines…) à Bordeaux.
 
+**Jouer en ligne : https://gaetandg.github.io/Mascaron/**
+
+L'app est republiée automatiquement à chaque envoi de code sur la branche `main` (voir `.github/workflows/deploy.yml`).
+
 ## Lancer l'app sur l'ordinateur
 
 ```bash
