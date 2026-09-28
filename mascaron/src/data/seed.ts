@@ -799,4 +799,78 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est une croix orthodoxe, comme on en voit surtout en Russie et en Europe de l'Est. La petite barre du haut représente l'écriteau cloué au-dessus du Christ, et la barre penchée du bas le support pour ses pieds. Et toi, de quel côté penche-t-elle ?",
   }),
+
+  // ---------- Centre : place de la Bourse / Saint-Pierre ----------
+  place({
+    id: 'seed-porte-cailhau',
+    title: 'La porte Cailhau',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.838794,
+    lng: -0.568481,
+    challenge:
+      "On dirait l'entrée d'un château de conte de fées, avec ses toits pointus. Trouve cette vieille porte de la ville, et passe dessous : que découvres-tu de l'autre côté ?",
+    photo: commons('porte-cailhau', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Porte_Cailhau_R01.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier Saint-Pierre, tout près des quais.', 'Place du Palais.'],
+    story:
+      "De l'autre côté, c'est la Garonne ! La porte Cailhau a été construite vers 1495, en l'honneur d'une victoire du roi Charles VIII en Italie. C'était une des portes des remparts, côté fleuve : les bateaux accostaient juste devant. Son nom viendrait du gascon « cailhau », le caillou : peut-être à cause des galets que déchargeaient les bateaux.",
+  }),
+  place({
+    id: 'seed-parlement-mascarons',
+    title: 'Les barbus de la fontaine du Parlement',
+    category: 'fontaine',
+    difficulty: 2,
+    lat: 44.840616,
+    lng: -0.572038,
+    challenge:
+      "Au milieu d'une jolie place entourée de terrasses, une fontaine a des visages barbus qui crachent de l'eau. Trouve-les !",
+    photo: commons('parlement-mascaron', 'Langladure', 'CC BY-SA 3.0', 'Bordeaux_Mascaron_fontaine_du_Parlement.JPG', {
+      x: 50,
+      y: 40,
+      zoom: 1,
+    }),
+    hints: ['Place du Parlement.', 'Fais le tour du bassin et regarde sous la grande vasque.'],
+    story:
+      "Ces visages qui crachent l'eau sont des mascarons ! La fontaine a été installée en 1865, dessinée par l'architecte bordelais Louis Garros. La place s'appelle « du Parlement » en souvenir du Parlement de Bordeaux, un grand tribunal d'autrefois. Fais le tour : les visages sont-ils tous pareils ?",
+  }),
+  place({
+    id: 'seed-trois-graces',
+    title: 'La fontaine des Trois Grâces',
+    category: 'fontaine',
+    difficulty: 1,
+    lat: 44.8415,
+    lng: -0.57002,
+    challenge:
+      "Au milieu d'une immense place ouverte sur le fleuve, trois dames de bronze se tiennent dos à dos au-dessus d'une fontaine. Trouve-les !",
+    photo: commons('trois-graces', 'Romainbehar', 'CC0', 'Bordeaux_-_Fontaine_des_Trois_Gr%C3%A2ces_15.jpg', {
+      x: 50,
+      y: 40,
+      zoom: 1,
+    }),
+    hints: ['Place de la Bourse.', 'Juste en face du miroir d’eau.'],
+    story:
+      "Les trois Grâces sont des déesses de la mythologie grecque : elles représentent la beauté, la joie et la gaieté. La fontaine date du XIXᵉ siècle. Avant elle, une statue du roi Louis XV se dressait ici, sur ce qui s'appelait alors la « place Royale » ; elle a été renversée à la Révolution. Bonus : traverse la rue et va te regarder dans le miroir d'eau !",
+  }),
+  place({
+    id: 'seed-bourse-neptune',
+    title: 'Le monstre des mers de la place de la Bourse',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.8421,
+    lng: -0.570287,
+    challenge:
+      "Autour de la place, presque chaque fenêtre en arc a son visage sculpté. Parmi eux, trouve celui-ci : un barbu hirsute, la bouche ouverte, avec des sortes d'ailes de chaque côté.",
+    photo: commons('bourse-neptune', 'Langladure', 'CC BY-SA 3.0', 'Bordeaux_Mascaron_Place_de_la_Bourse_Neptune.JPG', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place de la Bourse : fais le tour des façades.', 'Regarde juste au-dessus des fenêtres du rez-de-chaussée, sous les balcons dorés.'],
+    story:
+      "C'est un mascaron : on pense qu'il représente Neptune, le dieu de la mer, ou un monstre marin. Sur la place de la Bourse, il y en a des dizaines, tous différents : dieux, hommes, femmes, créatures… Ils rappellent que Bordeaux était un grand port, qui vivait de la mer et du commerce. Lequel est ton préféré ?",
+  }),
 ]
