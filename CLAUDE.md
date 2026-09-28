@@ -20,7 +20,7 @@ Projet perso de Gaëtan (usage familial, en pensant à une ouverture future). Ga
 - **Direction artistique** : « carnet d'explorateur » (papier crème, encre sépia, cachets de cire bordeaux, carte OpenStreetMap restylée en sépia, tampon « Trouvé » animé, carnet façon polaroïds scotchés). Polices : Fraunces (titres), Caveat (manuscrit), Nunito (texte). Mascotte : un petit mascaron dessiné au trait, qui parle dans une bulle (indices, bravo).
 - **Difficulté** de 1 à 3 affichée sur chaque lieu.
 - **Lieux de mémoire** (pavés de mémoire, monument aux morts) : traités comme n'importe quel autre lieu (choix de Gaëtan).
-- 32 lieux de départ autour de Nansouty / Saint-Genès / Victoire (voir `mascaron/src/data/seed.ts`). Les photos viennent de Wikimedia Commons ; 9 lieux n'ont pas de photo libre disponible (octrois, croix Saint-Genès, fresques, Gouzou, pavés de mémoire) : à photographier sur place avec le mode créateur.
+- 32 lieux de départ autour de Nansouty / Saint-Genès / Victoire (voir `mascaron/src/data/seed.ts`). Les photos viennent de Wikimedia Commons ; 10 lieux n'ont pas de photo libre disponible (octrois, croix Saint-Genès, fresques dont celle du square de la Croix-du-Sud, Gouzou, pavés de mémoire) : à photographier sur place avec le mode créateur.
 
 ## Code
 
