@@ -1272,4 +1272,92 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est Michel de Montaigne, un écrivain et philosophe du XVIᵉ siècle, qui a été maire de Bordeaux. Il a écrit les « Essais », où il raconte ce qu'il pense de tout et de rien, pour mieux se connaître lui-même. Sa collerette plissée s'appelle une fraise : c'était la mode de son époque ! La statue est du sculpteur Dominique Maggesi.",
   }),
+
+  // ---------- Saint-Seurin / Fondaudège / Mériadeck ----------
+  place({
+    id: 'seed-palais-gallien',
+    title: 'Les arènes du palais Gallien',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.84759,
+    lng: -0.58271,
+    challenge:
+      "Au milieu des maisons, de vieux murs de briques et de pierres percés de grandes arches… Ce sont les restes d'un monument vieux de près de 2 000 ans ! Trouve-les et compte les arches du grand mur.",
+    photo: commons('palais-gallien', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Palais_Gallien_R01.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rue du Docteur-Albert-Barraud, quartier Fondaudège.', 'Les ruines se voient à travers les grilles, entre les immeubles.'],
+    story:
+      "Malgré son nom, ce n'était pas un palais : c'était un amphithéâtre romain, comme une arène, où des milliers de spectateurs venaient voir des combats et des spectacles, à l'époque où Bordeaux s'appelait Burdigala. Il a été construit autour du IIᵉ siècle. Regarde bien les murs : les Romains alternaient des rangées de petites pierres et des rangées de briques rouges.",
+  }),
+  place({
+    id: 'seed-saint-seurin-portail',
+    title: 'Le porche sculpté de Saint-Seurin',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.843212,
+    lng: -0.585719,
+    challenge:
+      "Sous un grand porche, des dizaines de saints de pierre sont alignés de chaque côté de la porte, et au-dessus, une foule de petits personnages. Trouve ce portail : combien de statues comptes-tu d'un seul côté ?",
+    photo: commons(
+      'saint-seurin-portail',
+      'Zairon',
+      'CC BY-SA 4.0',
+      'Bordeaux_Basilique_Saint-Seurin_Ext%C3%A9rieure_Portail_Sud_2.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Basilique Saint-Seurin, place des Martyrs-de-la-Résistance.', 'Ce n’est pas l’entrée principale : fais le tour, le porche est sur le côté.'],
+    story:
+      "La basilique Saint-Seurin est l'une des plus anciennes églises de Bordeaux : sous elle se cache une crypte et une nécropole (un ancien cimetière) de l'Antiquité. Ce portail sculpté date du Moyen Âge. Les pèlerins en route vers Saint-Jacques-de-Compostelle s'arrêtaient ici : la basilique fait partie des monuments classés au patrimoine mondial de l'Unesco au titre des chemins de Compostelle.",
+  }),
+  place({
+    id: 'seed-alhambra-mascaron',
+    title: 'Le masque du théâtre de l’Alhambra',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.841797,
+    lng: -0.588868,
+    challenge:
+      "Sur la façade d'un théâtre, un visage sculpté grimace entre deux grosses volutes, avec une couronne de plumes sur la tête. Trouve-le !",
+    photo: commons('alhambra-mascaron', 'Clalrt', 'CC BY-SA 4.0', 'Mascaron_de_la_fa%C3%A7ade_.JPG', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Théâtre de l’Alhambra, quartier Saint-Seurin.', 'Lève les yeux vers le haut de la façade.'],
+    story:
+      "C'est un mascaron qui ressemble à un masque de théâtre : parfait pour décorer la façade d'une salle de spectacle ! Dans l'Antiquité, les acteurs grecs portaient des masques pour jouer : un masque qui rit pour la comédie, un masque qui pleure pour la tragédie. Et celui-ci, il rit ou il pleure ?",
+  }),
+  place({
+    id: 'seed-meriadeck-caisse-epargne',
+    title: 'La tour ronde de Mériadeck',
+    category: 'facade',
+    difficulty: 1,
+    lat: 44.838556,
+    lng: -0.583465,
+    challenge:
+      "Dans un quartier de dalles et de passerelles, un drôle de bâtiment en béton empile des étages arrondis, comme des soucoupes, autour d'une tour ronde. Trouve-le !",
+    photo: commons(
+      'meriadeck-caisse-epargne',
+      'Lionel CLOT',
+      'CC BY 4.0',
+      'Caisse_d%27%C3%A9pargne_bordeaux_m%C3%A9riadeck_photographie_3.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Quartier Mériadeck, près de la patinoire et du centre commercial.', 'C’est le bâtiment de la Caisse d’épargne.'],
+    story:
+      "Mériadeck est un quartier construit dans les années 1970, sur une grande dalle : les voitures roulent en dessous, les piétons marchent au-dessus, sur des passerelles. Ce bâtiment en béton brut, aux formes arrondies, est typique de cette époque. Compare avec les vieilles façades en pierre du centre : lequel préfères-tu ?",
+  }),
+  place({
+    id: 'seed-saint-bruno',
+    title: 'La façade de Saint-Bruno',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.8376,
+    lng: -0.589892,
+    challenge:
+      "Une église à la façade très décorée, avec des volutes et une statue dans une niche, tout en haut. Trouve-la : qui est dans la niche ?",
+    photo: commons('saint-bruno', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Saint-Bruno_R01.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Rue François-de-Sourdis, derrière Mériadeck.', 'Juste à côté de l’entrée du grand cimetière de la Chartreuse.'],
+    story:
+      "L'église Saint-Bruno était la chapelle d'un couvent de chartreux, des moines qui vivaient dans le silence, construit au XVIIᵉ siècle. C'est pour ça que le grand cimetière juste à côté s'appelle « la Chartreuse ». Saint Bruno est justement le fondateur des chartreux. La statue de la niche le représente peut-être : à toi de vérifier sur place !",
+  }),
 ]
