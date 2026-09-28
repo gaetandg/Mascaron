@@ -968,6 +968,19 @@ export const SEED_PLACES: Place[] = [
       "Il y en a douze, une au-dessus de chaque colonne : neuf Muses (les déesses des arts : musique, danse, théâtre, poésie…) et trois déesses, Junon, Vénus et Minerve. Le Grand-Théâtre a été construit par l'architecte Victor Louis et inauguré en 1780 : on y joue toujours des opéras et des ballets.",
   }),
   place({
+    id: 'seed-sanna',
+    title: 'Sanna, le visage géant',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.8421,
+    lng: -0.5752,
+    challenge:
+      "À côté du Grand-Théâtre, un immense visage de jeune fille, les yeux fermés, semble rêver au milieu de la place. Trouve-la, puis fais-en le tour : à quoi ressemble-t-elle de côté ?",
+    hints: ['Place de la Comédie, côté rue Sainte-Catherine.', 'Elle mesure environ 7 mètres de haut !'],
+    story:
+      "Elle s'appelle Sanna, c'est une œuvre du sculpteur catalan Jaume Plensa, tout en fonte (un métal très lourd, qui rouille et devient brun-orangé). Elle est arrivée en 2013 pour une exposition en plein air, et un mécène l'a achetée pour la laisser aux Bordelais. Jaume Plensa aime les visages aux yeux fermés : il veut inviter les passants à s'arrêter, à se taire et à rêver un instant. Et toi, à quoi penses-tu qu'elle rêve ?",
+  }),
+  place({
     id: 'seed-girondins-chevaux',
     title: 'Les chevaux du monument aux Girondins',
     category: 'fontaine',
@@ -1104,5 +1117,72 @@ export const SEED_PLACES: Place[] = [
     hints: ['Place Gambetta.', 'Au numéro 2.'],
     story:
       "Encore un mascaron ! Tous ne font pas peur : certains représentent de jeunes visages souriants, des saisons ou des déesses. La place Gambetta a été construite au XVIIIᵉ siècle : fais le tour des façades, combien d'autres mascarons trouves-tu ?",
+  }),
+
+  // ---------- Quais et rive droite ----------
+  place({
+    id: 'seed-modeste-testas',
+    title: 'Modeste Testas, au bord de la Garonne',
+    category: 'memoire',
+    difficulty: 1,
+    lat: 44.84827,
+    lng: -0.56989,
+    challenge:
+      "Au bord du fleuve, une femme de bronze se tient debout, un foulard sur la tête. À ses pieds, un objet de métal ouvert est posé par terre. Trouve-la, et regarde bien ce que c'est.",
+    photo: commons(
+      'modeste-testas',
+      'Paul Arps',
+      'CC BY 2.0',
+      'Statue_Marthe_Ad%C3%A9la%C3%AFde_Modeste_Testa_Bordeaux.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Sur les quais, en face de la Bourse maritime.', 'Côté Garonne, dans l’herbe, au bout d’une allée pavée.'],
+    story:
+      "À ses pieds, ce sont des chaînes brisées : le symbole de la liberté retrouvée. Cette statue représente Modeste Testas, une femme née en Afrique, réduite en esclavage et achetée par deux négociants bordelais, les frères Testas, qui l'ont emmenée à Saint-Domingue (l'actuelle Haïti). Elle a été libérée plus tard et a vécu très vieille en Haïti. La statue, œuvre de l'artiste haïtien Woodly Caymitte, a été installée en 2019 pour se souvenir que Bordeaux a participé à la traite des esclaves.",
+  }),
+  place({
+    id: 'seed-gare-orleans',
+    title: 'L’ancienne gare d’Orléans',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.84163,
+    lng: -0.562075,
+    challenge:
+      "Sur la rive droite, une grande façade de pierre avec de longues arcades… C'était une gare ! Trouve-la : qu'y a-t-il aujourd'hui à l'intérieur ?",
+    photo: commons(
+      'gare-orleans',
+      'Jefunky',
+      'CC0',
+      'Ancienne_gare_d%27Orl%C3%A9ans_(Bordeaux)_en_octobre_2023.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Quartier de la Bastide, juste après le pont de pierre.', 'Tout près de la place de Stalingrad et de son grand lion bleu.'],
+    story:
+      "Aujourd'hui, c'est un cinéma ! Mais au XIXᵉ siècle, c'était la gare d'Orléans : les trains venant de Paris s'arrêtaient ici, sur la rive droite, car il n'y avait pas encore de pont de chemin de fer pour traverser la Garonne. Les voyageurs finissaient le trajet à pied ou en voiture à cheval, par le pont de pierre. Regarde bien la façade : on y devine encore la gare d'autrefois.",
+  }),
+  place({
+    id: 'seed-lion-bleu',
+    title: 'Le lion bleu de la place de Stalingrad',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.840242,
+    lng: -0.560206,
+    challenge: "De l'autre côté du pont de pierre, un lion géant, tout bleu, veille sur une place. Trouve-le !",
+    hints: ['Rive droite, place de Stalingrad.', 'Juste au bout du pont de pierre : impossible de le rater !'],
+    story:
+      "C'est « Le Lion », une sculpture de l'artiste Xavier Veilhan, installée en 2005. Le lion n'a pas été choisi par hasard : un léopard (un cousin du lion) figure sur le blason de Bordeaux, et c'est aussi la girouette dorée de la Grosse Cloche. Tourne autour : que regarde-t-il ?",
+  }),
+  place({
+    id: 'seed-meca-enfant-eau',
+    title: 'L’enfant qui recueille la pluie',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.828129,
+    lng: -0.551065,
+    challenge:
+      "Près du grand bâtiment de la MÉCA, au bord de la Garonne, un enfant sculpté est assis et tend ses mains en creux pour recueillir l'eau de pluie. Trouve-le !",
+    hints: ['Quai de Paludate, sur le parvis Corto-Maltese.', 'Au pied du grand escalier de la MÉCA.'],
+    story:
+      "Cette sculpture s'appelle « Étude sur la nature des choses : l'eau ». Elle a été installée en 2020, au début d'un parcours d'œuvres entre la gare Saint-Jean et la MÉCA, où un enfant observe l'eau, l'air et la lumière. Regarde sous ses mains : l'eau qui goutte creuse peu à peu la pierre. Bonus : cherche les autres enfants du parcours en allant vers la gare !",
   }),
 ]
