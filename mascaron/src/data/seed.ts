@@ -873,4 +873,78 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est un mascaron : on pense qu'il représente Neptune, le dieu de la mer, ou un monstre marin. Sur la place de la Bourse, il y en a des dizaines, tous différents : dieux, hommes, femmes, créatures… Ils rappellent que Bordeaux était un grand port, qui vivait de la mer et du commerce. Lequel est ton préféré ?",
   }),
+
+  // ---------- Centre : Pey-Berland / cathédrale ----------
+  place({
+    id: 'seed-pey-berland',
+    title: 'La dame dorée de la tour Pey-Berland',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.837619,
+    lng: -0.576556,
+    challenge:
+      "Une haute tour de pierre, toute seule à côté de la cathédrale… Tout en haut, une statue dorée brille au soleil. Trouve-la !",
+    photo: commons('pey-berland', 'W. Bulach', 'CC BY-SA 4.0', '00_0479_Bordeaux_-_Tour_Pey_Berland.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place Pey-Berland, à côté de la cathédrale Saint-André.', 'Lève la tête, tout en haut de la flèche.'],
+    story:
+      "C'est le clocher de la cathédrale, construit à part au XVᵉ siècle : on dit que c'était pour que les vibrations des cloches n'abîment pas la cathédrale. Il porte le nom de Pey Berland, l'archevêque de Bordeaux qui l'a fait construire. La statue dorée, Notre-Dame d'Aquitaine, a été ajoutée au XIXᵉ siècle. Avec elle, la tour mesure environ 66 mètres. On peut monter tout en haut, par un escalier en colimaçon !",
+  }),
+  place({
+    id: 'seed-portail-royal',
+    title: 'Les morts qui se réveillent du portail royal',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.83774,
+    lng: -0.57807,
+    challenge:
+      "Au-dessus d'une grande porte rouge de la cathédrale, une rangée de petits personnages de pierre soulèvent le couvercle de leur tombeau pour en sortir ! Trouve-les.",
+    photo: commons(
+      'portail-royal',
+      'GO69',
+      'CC BY-SA 4.0',
+      'Bordeaux_(33)_Cath%C3%A9drale_Saint-Andr%C3%A9_Portail_royal_03.JPG',
+      { x: 50, y: 15, zoom: 2 },
+    ),
+    hints: ['Cathédrale Saint-André.', 'Ce n’est pas la grande façade : fais le tour, la porte royale est sur un côté.'],
+    story:
+      "C'est le portail royal, sculpté au Moyen Âge, il y a plus de 700 ans. Il raconte le Jugement dernier : tout en haut, le Christ, et juste au-dessus de la porte, les morts qui sortent de leurs tombeaux pour être jugés. Regarde bien leurs visages et leurs gestes : les sculpteurs ont donné à chacun une attitude différente.",
+  }),
+  place({
+    id: 'seed-gloria-victis',
+    title: 'L’ange de Gloria Victis',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.838375,
+    lng: -0.577561,
+    challenge:
+      "Un grand ange de bronze aux ailes déployées emporte un jeune soldat dans ses bras. Trouve cette statue, et lis les deux mots latins gravés sur son socle.",
+    photo: commons(
+      'gloria-victis',
+      'Romainbehar',
+      'CC0',
+      'Bordeaux_-_Place_Jean_Moulin_-_Gloria_Victis_(Antonin_Merci%C3%A9)_01.jpg',
+      { x: 50, y: 40, zoom: 1 },
+    ),
+    hints: ['Place Jean-Moulin, derrière la cathédrale.', 'Juste au nord de la cathédrale.'],
+    story:
+      "« Gloria victis » veut dire « Gloire aux vaincus » en latin. Le sculpteur Antonin Mercié a imaginé cette œuvre après la défaite de la France dans la guerre de 1870 : la Gloire, une femme ailée, emporte un soldat mort au combat. C'est une façon de dire que même ceux qui perdent méritent d'être honorés.",
+  }),
+  place({
+    id: 'seed-porte-dijeaux',
+    title: 'La porte Dijeaux',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.8406,
+    lng: -0.579722,
+    challenge:
+      "Une grande porte en arc, toute seule au milieu de la rue : on passe dessous sans rien ouvrir ! Trouve-la, et regarde le blason sculpté tout en haut : que vois-tu dessus ?",
+    photo: commons('porte-dijeaux', 'Gzen92', 'CC BY-SA 4.0', 'Porte_Dijeaux_(Bordeaux).jpg', { x: 50, y: 30, zoom: 1 }),
+    hints: ['Place Gambetta, côté centre-ville.', 'Elle fait le bout de la rue Porte-Dijeaux.'],
+    story:
+      "La porte Dijeaux a été construite au XVIIIᵉ siècle, à l'endroit d'une ancienne porte des remparts. Son nom viendrait du latin « porta Jovis », la porte de Jupiter, le roi des dieux romains. Aujourd'hui, les remparts ont disparu : il ne reste que la porte, comme un décor au milieu de la rue.",
+  }),
 ]
