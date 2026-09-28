@@ -66,7 +66,6 @@ export function CarnetScreen() {
                   ) : (
                     // Pas encore de photo : une illustration du type de lieu, sur un fond bien différent des cases « à découvrir »
                     <div className="polaroid-img polaroid-illu">
-                      <span className="polaroid-illu-note">photo à prendre !</span>
                       <Icon size={54} strokeWidth={1.3} aria-hidden />
                     </div>
                   )}
