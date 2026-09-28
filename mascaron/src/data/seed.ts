@@ -82,22 +82,16 @@ export const SEED_PLACES: Place[] = [
   }),
   place({
     id: 'seed-boite-croix-du-sud',
-    title: 'La boîte à livres du square de la Croix-du-Sud',
-    category: 'autre',
+    title: 'La fresque du square de la Croix-du-Sud',
+    category: 'street-art',
     difficulty: 1,
     lat: 44.81764,
     lng: -0.57383,
-    challenge: 'Dans ce square, une boîte à livres se tient près des jeux. Trouve-la et regarde ce qu’elle contient.',
-    photo: commons(
-      'boite-croix-du-sud',
-      'Sylvain Machefert',
-      'CC BY-SA 4.0',
-      'Bordeaux_-_square_de_la_croix_du_sud_-_boite_%C3%A0_livres.jpg',
-      { x: 45, y: 30, zoom: 2 },
-    ),
-    hints: ['Square de la Croix-du-Sud.'],
+    challenge:
+      'Dans ce petit square de la rue Jean-Mermoz, une fresque se cache près de la boîte à livres. Trouve-la et invente-lui un titre !',
+    hints: ['Square de la Croix-du-Sud, rue Jean-Mermoz.', 'Commence par chercher la boîte à livres.'],
     story:
-      "Les boîtes à livres de la ville portent ce grand panneau « Ceci est une boîte à lire ». Petit défi : dépose un livre que tu as fini, et note ici son titre pour t'en souvenir.",
+      "Le square porte le nom de la « Croix-du-Sud », l'hydravion à bord duquel le pilote Jean Mermoz a disparu au-dessus de l'océan Atlantique le 7 décembre 1936. Voilà pourquoi il est rue Jean-Mermoz ! La fresque est l'œuvre de l'artiste Rouge Hartley, peinte en 2021. Cherche sa signature !",
   }),
   place({
     id: 'seed-octroi-toulouse',
@@ -160,8 +154,9 @@ export const SEED_PLACES: Place[] = [
     difficulty: 3,
     lat: 44.821321,
     lng: -0.576235,
-    challenge: 'Au sol, devant une maison, deux petits pavés dorés portent des noms. Trouve-les et lis-les.',
-    hints: ['Regarde le trottoir, devant les portes.'],
+    challenge:
+      'Au sol, deux petits pavés dorés portent les prénoms de deux sœurs. Trouve-les : en quelle année est née la plus jeune ?',
+    hints: ['Marche en regardant le trottoir, devant les portes.', 'Les pavés sont carrés, pas plus grands que ta main.'],
     story:
       "« Ici habitait… » Marcelle Borruel, née en 1928, et Ginette Borruel, née en 1937, ont été arrêtées le 10 janvier 1944, internées à Drancy puis déportées à Auschwitz, où elles ont été assassinées le 20 janvier 1944. Ginette avait 6 ou 7 ans. Ces pavés, posés en 2022, font partie des « Stolpersteine » imaginés par l'artiste Gunter Demnig : ils rappellent les victimes du nazisme devant leur dernier domicile.",
   }),
@@ -172,8 +167,9 @@ export const SEED_PLACES: Place[] = [
     difficulty: 3,
     lat: 44.821472,
     lng: -0.577695,
-    challenge: 'Au sol, devant une maison, deux petits pavés dorés portent des noms. Trouve-les et lis-les.',
-    hints: ['Regarde le trottoir, devant les portes.'],
+    challenge:
+      'Deux pavés dorés, avec le même nom de famille, sont scellés dans le trottoir. Trouve-les : en quelle année ont-ils été arrêtés ?',
+    hints: ['Marche en regardant le trottoir, devant les portes.', 'Ils sont côte à côte, au pied d’une maison.'],
     story:
       "« Ici habitait… » Robert Bret, né en 1906, arrêté le 22 novembre 1940, interné au fort du Hâ, assassiné au camp de Souge. Georgette Bret, née en 1905, arrêtée le 28 août 1942, internée au fort du Hâ puis à Romainville, déportée en 1943 à Auschwitz, où elle a été assassinée. Ces pavés ont été posés en 2025.",
   }),
@@ -184,10 +180,11 @@ export const SEED_PLACES: Place[] = [
     difficulty: 3,
     lat: 44.818328,
     lng: -0.564465,
-    challenge: 'Au sol, devant une maison, deux petits pavés dorés portent des noms. Trouve-les et lis-les.',
-    hints: ['Regarde le trottoir, devant les portes.'],
+    challenge:
+      'Encore deux pavés dorés, cette fois au nom de Cantelaube. Trouve-les et lis les dates : te rappellent-elles d’autres pavés du quartier ?',
+    hints: ['Ils sont loin des autres pavés du quartier : regarde bien le point sur la carte.', 'Regarde le trottoir, devant les portes.'],
     story:
-      "« Ici habitait… » Jean Cantelaube, né en 1910, arrêté le 22 novembre 1940, interné au camp de Mérignac-Beaudésert, assassiné au camp de Souge le 24 octobre 1941. Germaine Cantelaube, née en 1908, arrêtée le 28 août 1942, internée au fort du Hâ puis à Romainville, déportée en 1943 à Auschwitz, où elle a été assassinée. Ces pavés ont été posés en 2025.",
+      "« Ici habitait… » Jean Cantelaube, né en 1910, arrêté le 22 novembre 1940, interné au camp de Mérignac-Beaudésert, assassiné au camp de Souge le 24 octobre 1941. Germaine Cantelaube, née en 1908, arrêtée le 28 août 1942, internée au fort du Hâ puis à Romainville, déportée en 1943 à Auschwitz, où elle a été assassinée. Ces pavés ont été posés en 2025. As-tu remarqué ? Robert et Georgette Bret ont été arrêtés exactement les mêmes jours que Jean et Germaine.",
   }),
 
   // ---------- Vers le Sacré-Cœur ----------
