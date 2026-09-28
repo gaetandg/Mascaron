@@ -1457,6 +1457,57 @@ export const SEED_PLACES: Place[] = [
       "Le mot, c'est « ENTREPÔT » ! Au XIXᵉ siècle, on y stockait les « denrées coloniales » arrivées par bateau : sucre, café, cacao, épices… avant de payer les taxes. Aujourd'hui, c'est le CAPC, un musée d'art contemporain : à l'intérieur, les immenses arcades de pierre sont impressionnantes.",
   }),
 
+  place({
+    id: 'seed-halle-chartrons',
+    title: 'La halle des Chartrons',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.852008,
+    lng: -0.572442,
+    challenge:
+      "Au milieu d'une place, un bâtiment de pierre est entouré d'un grand toit de verre et de fer posé sur de fines colonnes. Trouve cette halle !",
+    photo: commons('halle-chartrons', 'Chabe01', 'CC BY-SA 4.0', 'Halle_Chartrons_-_Bordeaux_(FR33)_-_2022-09-10_-_1.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place du Marché-des-Chartrons.', 'Tout près de l’église Saint-Louis et de ses deux flèches.'],
+    story:
+      "C'était le marché couvert du quartier, construit au XIXᵉ siècle : le toit de fer et de verre laissait entrer la lumière tout en protégeant les étals de la pluie. Aujourd'hui, la halle accueille des expositions et des événements. Regarde les colonnes de fonte : combien en comptes-tu d'un seul côté ?",
+  }),
+  place({
+    id: 'seed-saint-martial',
+    title: 'L’inscription latine de Saint-Martial',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.85837,
+    lng: -0.56524,
+    challenge:
+      "Sur le haut de la façade d'une église toute simple, sous une horloge, une longue phrase est gravée en grandes lettres… en latin ! Trouve-la et essaie de la lire.",
+    photo: commons('saint-martial', 'JeanWilhelm', 'CC0', 'Facade_saint_martial.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Entre les Chartrons et Bacalan.', 'La façade ressemble à un petit temple grec, avec un triangle au-dessus.'],
+    story:
+      "La phrase dit « Sub invocatione Sancti Martialis », ce qui veut dire « sous la protection de saint Martial ». Saint Martial était, selon la tradition, le premier évêque de Limoges. Autrefois, beaucoup d'églises portaient leur nom en latin sur la façade, la langue de l'Église catholique.",
+  }),
+  place({
+    id: 'seed-secrestat',
+    title: 'La façade de la distillerie Sécrestat',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.857525,
+    lng: -0.566302,
+    challenge:
+      "Une façade élégante mélange la pierre blonde et la brique rouge, avec une grande fenêtre en arc et un balcon de fer. Pourtant, ce n'était pas une maison ! Trouve-la.",
+    photo: commons('secrestat', 'picotche', 'CC BY-SA 3.0', 'Distillerie_S%C3%A9crestat_2012-10-05_15-56-59.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Aux Chartrons, côté Bacalan.', 'Près de l’église Saint-Martial.'],
+    story:
+      "C'était la distillerie Sécrestat, une fabrique de liqueurs et d'apéritifs. Aux Chartrons, beaucoup de négociants et de fabricants de boissons avaient leurs bâtiments près du port, pour charger facilement les bouteilles sur les bateaux. Une usine aussi jolie qu'un palais, ça montrait que l'entreprise était riche et sérieuse !",
+  }),
+
   // ---------- Bastide / Grand Parc ----------
   place({
     id: 'seed-sainte-marie-bastide',
