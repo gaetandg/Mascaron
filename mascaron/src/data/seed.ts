@@ -1360,4 +1360,100 @@ export const SEED_PLACES: Place[] = [
     story:
       "L'église Saint-Bruno était la chapelle d'un couvent de chartreux, des moines qui vivaient dans le silence, construit au XVIIᵉ siècle. C'est pour ça que le grand cimetière juste à côté s'appelle « la Chartreuse ». Saint Bruno est justement le fondateur des chartreux. La statue de la niche le représente peut-être : à toi de vérifier sur place !",
   }),
+
+  // ---------- Chartrons ----------
+  place({
+    id: 'seed-statue-liberte',
+    title: 'La petite statue de la Liberté',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.855325,
+    lng: -0.571423,
+    challenge:
+      "Pas besoin d'aller à New York : sur une place des Chartrons, une dame couronnée lève une torche vers le ciel. Trouve-la !",
+    photo: commons('statue-liberte', 'Sylvain Machefert', 'CC BY-SA 4.0', 'Bordeaux_-_place_Picard_-_statue_de_la_libert%C3%A9.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place Picard, aux Chartrons.', 'Elle est bien plus petite que celle de New York…'],
+    story:
+      "C'est une réplique de la statue de la Liberté du sculpteur Bartholdi, celle qui accueille les bateaux à New York. Bordeaux avait déjà une statue comme celle-ci à la fin du XIXᵉ siècle, mais elle a disparu pendant la Seconde Guerre mondiale, quand l'occupant fondait le métal des statues. Celle-ci l'a remplacée bien plus tard. Que tient-elle dans sa main gauche ?",
+  }),
+  place({
+    id: 'seed-saint-louis-chartrons',
+    title: 'Les deux flèches de Saint-Louis-des-Chartrons',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.851564,
+    lng: -0.572181,
+    challenge:
+      "Deux flèches pointues et une grande fenêtre ronde, découpée comme une dentelle : trouve cette église des Chartrons. À quoi te fait penser sa fenêtre ronde ?",
+    photo: commons(
+      'saint-louis-chartrons',
+      'Zairon',
+      'CC BY-SA 4.0',
+      'Bordeaux_%C3%89glise_Saint-Louis-des-Chartrons_Ext%C3%A9rieure_Facade_1.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Rue Notre-Dame, aux Chartrons.', 'Ses deux flèches dépassent des toits : cherche-les !'],
+    story:
+      "L'église Saint-Louis-des-Chartrons a été construite au XIXᵉ siècle dans le style néo-gothique : elle imite les cathédrales du Moyen Âge, avec ses flèches, ses pinacles et sa rosace. Le quartier des Chartrons doit son nom aux moines chartreux qui s'y étaient installés autrefois. La grande fenêtre ronde s'appelle une rosace, parce qu'elle ressemble à une rose qui s'ouvre, avec ses pétales de pierre.",
+  }),
+  place({
+    id: 'seed-hotel-fenwick',
+    title: 'Les tours de guet de l’hôtel Fenwick',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.848869,
+    lng: -0.571091,
+    challenge:
+      "Face au fleuve, un grand immeuble de pierre porte sur son toit deux petites tourelles avec des fenêtres de tous les côtés. Trouve-les : à quoi pouvaient-elles bien servir ?",
+    photo: commons('hotel-fenwick', 'Pierre-Yves Beaudouin', 'CC BY-SA 3.0', 'Bordeaux_-_H%C3%B4tel_Fenwick_01.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Au bout de la place des Quinconces, côté Chartrons, face au fleuve.', 'Regarde tout en haut du toit.'],
+    story:
+      "Ces petites tours s'appellent des belvédères : on dit que du haut, on guettait l'arrivée des bateaux sur la Garonne ! L'hôtel a été construit à la fin du XVIIIᵉ siècle pour Joseph Fenwick, l'un des tout premiers consuls des États-Unis, envoyé à Bordeaux juste après leur indépendance. Bordeaux faisait alors beaucoup de commerce avec l'Amérique.",
+  }),
+  place({
+    id: 'seed-maisons-hollandaises',
+    title: 'Les maisons hollandaises',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.850575,
+    lng: -0.569969,
+    challenge:
+      "Deux vieilles maisons côte à côte ont un toit en forme de triangle bien pointu, tourné vers la rue : ça ne ressemble pas aux autres façades de Bordeaux ! Trouve-les.",
+    photo: commons(
+      'maisons-hollandaises',
+      'Chabe01',
+      'CC BY-SA 4.0',
+      'Maison_Hollandaise_-_Bordeaux_(FR33)_-_2022-09-10_-_1.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Aux Chartrons, entre les quais et la rue Notre-Dame.', 'Cherche des pignons pointus, comme sur les maisons d’Amsterdam.'],
+    story:
+      "On les appelle les maisons hollandaises à cause de leurs pignons pointus tournés vers la rue, comme aux Pays-Bas. Ce sont parmi les plus vieilles maisons des Chartrons, un quartier où vivaient de nombreux marchands de vin venus de l'étranger (Hollande, Angleterre, Allemagne…). Compare-les avec les façades plates du reste du quartier !",
+  }),
+  place({
+    id: 'seed-entrepot-laine',
+    title: 'L’entrepôt Lainé',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.8485,
+    lng: -0.571986,
+    challenge:
+      "Un énorme bâtiment de pierre, aux murs épais et aux petites fenêtres, porte un seul mot gravé au-dessus de sa porte. Trouve-le et lis ce mot !",
+    photo: commons('entrepot-laine', 'Pierre-Yves Beaudouin', 'CC BY-SA 3.0', 'Bordeaux_-_Entrep%C3%B4t_Lain%C3%A9_01.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rue Ferrère, entre les Quinconces et les Chartrons.', 'Aujourd’hui, c’est un musée d’art contemporain.'],
+    story:
+      "Le mot, c'est « ENTREPÔT » ! Au XIXᵉ siècle, on y stockait les « denrées coloniales » arrivées par bateau : sucre, café, cacao, épices… avant de payer les taxes. Aujourd'hui, c'est le CAPC, un musée d'art contemporain : à l'intérieur, les immenses arcades de pierre sont impressionnantes.",
+  }),
 ]
