@@ -1186,4 +1186,90 @@ export const SEED_PLACES: Place[] = [
     story:
       "Cette sculpture s'appelle « Étude sur la nature des choses : l'eau ». Elle a été installée en 2020, au début d'un parcours d'œuvres entre la gare Saint-Jean et la MÉCA, où un enfant observe l'eau, l'air et la lumière. Regarde sous ses mains : l'eau qui goutte creuse peu à peu la pierre. Bonus : cherche les autres enfants du parcours en allant vers la gare !",
   }),
+
+  // ---------- Jardin public / Tourny ----------
+  place({
+    id: 'seed-jeunesse-chimere',
+    title: 'Le garçon et la chimère',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.847411,
+    lng: -0.578149,
+    challenge:
+      "Dans le Jardin public, un jeune garçon est assis à califourchon sur un drôle d'animal à ailes. Trouve-les ! À quoi ressemble ce monstre ?",
+    photo: commons(
+      'jeunesse-chimere',
+      'Symac / Sylvain Machefert',
+      'CC BY-SA 4.0',
+      'Jeunesse_et_chim%C3%A8re,_jardin_public_de_Bordeaux,_octobre_2014.JPG',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Jardin public, près des bâtiments en pierre.', 'Cherche dans les massifs de fleurs, pas loin du Muséum.'],
+    story:
+      "Cette sculpture s'appelle « Jeunesse et Chimère », du sculpteur Pierre Granet (1892). Une chimère, dans la mythologie grecque, c'est un monstre fabriqué avec des morceaux de plusieurs animaux : tête de lion, corps de chèvre, queue de serpent… Aujourd'hui, on dit aussi « une chimère » pour parler d'un rêve impossible. Et si le garçon chevauchait ses rêves ?",
+  }),
+  place({
+    id: 'seed-jardin-public-pont',
+    title: 'Le petit pont du Jardin public',
+    category: 'nature',
+    difficulty: 1,
+    lat: 44.84854,
+    lng: -0.57739,
+    challenge:
+      "Au milieu du Jardin public, un joli pont de métal enjambe une rivière où glissent les canards. Trouve-le, et traverse-le !",
+    photo: commons('jardin-public-pont', 'Marc Ryckaert (MJJR)', 'CC BY 3.0', 'Bordeaux_Jardin_Public_R02.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Jardin public, entrée cours de Verdun ou place du Champ-de-Mars.', 'Suis la rivière qui serpente dans le jardin.'],
+    story:
+      "Le Jardin public a été créé au XVIIIᵉ siècle, à l'époque de l'intendant Tourny, avec des allées bien droites « à la française ». Au XIXᵉ siècle, on l'a transformé en jardin « à l'anglaise », avec des chemins qui tournent, une rivière et ce petit pont, pour donner l'impression d'une promenade dans la nature. Regarde sous le pont : combien de canards vois-tu ?",
+  }),
+  place({
+    id: 'seed-fontaine-gruet',
+    title: 'La fontaine de la place Gruet',
+    category: 'fontaine',
+    difficulty: 2,
+    lat: 44.847,
+    lng: -0.58,
+    challenge:
+      "Sur une petite place ombragée, une fontaine de pierre abrite un personnage sous son arche. Et tout en haut, un visage barbu veille. Trouve-les !",
+    photo: commons('fontaine-gruet', 'Zairon', 'CC BY-SA 4.0', 'Bordeaux_Place_Gruet_1.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Place Charles-Gruet, tout près du Jardin public.', 'La place est entourée de platanes et de terrasses.'],
+    story:
+      "Le visage barbu sculpté tout en haut de la fontaine, c'est un mascaron ! Regarde bien le personnage sous l'arche : que tient-il, que fait-il ? La place porte le nom de Charles Gruet, un ancien maire de Bordeaux. Fais le tour de la fontaine : d'autres décors se cachent sur ses côtés.",
+  }),
+  place({
+    id: 'seed-tourny',
+    title: 'Le marquis de Tourny',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.845103,
+    lng: -0.577942,
+    challenge:
+      "Au milieu d'une place, un homme en bronze, avec une perruque et un long manteau, regarde la ville qu'il a transformée. Trouve-le !",
+    photo: commons('tourny', 'Marc Ryckaert', 'CC BY 3.0', 'Bordeaux_Statue_Tourny_R01.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Place Tourny, entre le Jardin public et les allées de Tourny.', 'Il est tout en haut d’un grand socle de pierre.'],
+    story:
+      "Louis-Urbain Aubert, marquis de Tourny, était l'intendant de Bordeaux (le représentant du roi) de 1743 à 1757. C'est lui qui a fait abattre une partie des vieux remparts pour ouvrir de grandes places, des allées et le Jardin public : le Bordeaux élégant du XVIIIᵉ siècle, c'est un peu grâce à lui. Des places et des allées portent son nom : combien en connais-tu ?",
+  }),
+  place({
+    id: 'seed-montaigne',
+    title: 'Montaigne dans sa grande robe',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.845007,
+    lng: -0.572837,
+    challenge:
+      "Au bord d'une immense place, un homme en marbre blanc porte une grande collerette plissée autour du cou. Trouve-le, et lis son nom gravé sur le socle !",
+    photo: commons('montaigne', 'Symac', 'CC BY-SA 3.0', 'Place_des_Quinconces_-_Michel_de_Montaigne.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place des Quinconces, côté Grand-Théâtre.', 'Il a un voisin, lui aussi en marbre : Montesquieu.'],
+    story:
+      "C'est Michel de Montaigne, un écrivain et philosophe du XVIᵉ siècle, qui a été maire de Bordeaux. Il a écrit les « Essais », où il raconte ce qu'il pense de tout et de rien, pour mieux se connaître lui-même. Sa collerette plissée s'appelle une fraise : c'était la mode de son époque ! La statue est du sculpteur Dominique Maggesi.",
+  }),
 ]
