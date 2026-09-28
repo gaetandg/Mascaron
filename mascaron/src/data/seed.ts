@@ -1168,7 +1168,7 @@ export const SEED_PLACES: Place[] = [
     lat: 44.840242,
     lng: -0.560206,
     challenge: "De l'autre côté du pont de pierre, un lion géant, tout bleu, veille sur une place. Trouve-le !",
-    photo: panoramax('lion-bleu', 'AlbaireN', 'CC BY-SA 4.0', '6193b3ec-488c-4717-9cdf-f02cb5c3736b', { x: 55, y: 60, zoom: 1 }),
+    photo: panoramax('lion-bleu', 'trouyer', 'CC BY-SA 4.0', '47a4142d-21eb-4866-8a1c-23f86313ad3f', { x: 50, y: 50, zoom: 1 }),
     hints: ['Rive droite, place de Stalingrad.', 'Juste au bout du pont de pierre : impossible de le rater !'],
     story:
       "C'est « Le Lion », une sculpture de l'artiste Xavier Veilhan, installée en 2005. Le lion n'a pas été choisi par hasard : un léopard (un cousin du lion) figure sur le blason de Bordeaux, et c'est aussi la girouette dorée de la Grosse Cloche. Tourne autour : que regarde-t-il ?",

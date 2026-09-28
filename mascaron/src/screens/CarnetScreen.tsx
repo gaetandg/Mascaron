@@ -64,8 +64,10 @@ export function CarnetScreen() {
                   {p.photo ? (
                     <FocusPhoto photo={p.photo} zoomed={false} className="polaroid-img" />
                   ) : (
-                    <div className="polaroid-img polaroid-icon">
-                      <Icon size={40} strokeWidth={1.4} aria-hidden />
+                    // Pas encore de photo : une illustration du type de lieu, sur un fond bien différent des cases « à découvrir »
+                    <div className="polaroid-img polaroid-illu">
+                      <span className="polaroid-illu-note">photo à prendre !</span>
+                      <Icon size={54} strokeWidth={1.3} aria-hidden />
                     </div>
                   )}
                   <Stamp date={found[p.id]} size="small" />
