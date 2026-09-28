@@ -947,4 +947,82 @@ export const SEED_PLACES: Place[] = [
     story:
       "La porte Dijeaux a été construite au XVIIIᵉ siècle, à l'endroit d'une ancienne porte des remparts. Son nom viendrait du latin « porta Jovis », la porte de Jupiter, le roi des dieux romains. Aujourd'hui, les remparts ont disparu : il ne reste que la porte, comme un décor au milieu de la rue.",
   }),
+
+  // ---------- Centre : Grand-Théâtre / Quinconces / quais ----------
+  place({
+    id: 'seed-grand-theatre',
+    title: 'Les statues du Grand-Théâtre',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.8425,
+    lng: -0.573611,
+    challenge:
+      "Sur le toit de ce grand théâtre à colonnes, des statues se tiennent en rang, au-dessus de la place. Trouve-les et compte-les !",
+    photo: commons('grand-theatre', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Grand_Th%C3%A9%C3%A2tre_R01.jpg', {
+      x: 50,
+      y: 40,
+      zoom: 1,
+    }),
+    hints: ['Place de la Comédie.', 'Lève les yeux au-dessus des douze colonnes.'],
+    story:
+      "Il y en a douze, une au-dessus de chaque colonne : neuf Muses (les déesses des arts : musique, danse, théâtre, poésie…) et trois déesses, Junon, Vénus et Minerve. Le Grand-Théâtre a été construit par l'architecte Victor Louis et inauguré en 1780 : on y joue toujours des opéras et des ballets.",
+  }),
+  place({
+    id: 'seed-girondins-chevaux',
+    title: 'Les chevaux du monument aux Girondins',
+    category: 'fontaine',
+    difficulty: 1,
+    lat: 44.8453,
+    lng: -0.574722,
+    challenge:
+      "Au pied d'une immense colonne, des chevaux de bronze sortent de l'eau en se cabrant, comme s'ils galopaient dans les vagues. Trouve-les !",
+    photo: commons(
+      'girondins-chevaux',
+      'Romainbehar',
+      'CC0',
+      'Bordeaux_-_Monument_aux_Girondins_-_Fontaine_du_Triomphe_de_la_Concorde_01.jpg',
+      { x: 50, y: 40, zoom: 1 },
+    ),
+    hints: ['Place des Quinconces.', 'Il y a deux bassins, un de chaque côté de la colonne : fais le tour !'],
+    story:
+      "Ce monument rend hommage aux Girondins, des députés de la Révolution française venus de Gironde et guillotinés en 1793. Pendant la Seconde Guerre mondiale, en 1943, les statues de bronze ont été démontées ; elles ne sont revenues à leur place qu'en 1983. Tout en haut de la colonne, une statue de la Liberté brise ses chaînes.",
+  }),
+  place({
+    id: 'seed-colonnes-rostrales',
+    title: 'Les ancres des colonnes rostrales',
+    category: 'monument',
+    difficulty: 2,
+    lat: 44.845763,
+    lng: -0.571233,
+    challenge:
+      "Deux hautes colonnes se dressent face au fleuve, décorées d'avant de bateaux et d'ancres sculptées. Trouve une ancre !",
+    photo: commons(
+      'colonnes-rostrales',
+      'Chabe01',
+      'CC BY-SA 4.0',
+      'Colonnes_Rostrales_Esplanade_Quinconces_-_Bordeaux_(FR33)_-_2022-09-10_-_3.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Au bout de la place des Quinconces, côté Garonne.', 'Les ancres sont sculptées sur le fût des colonnes.'],
+    story:
+      "« Rostrales » vient de « rostres » : chez les Romains, c'était l'éperon à l'avant des navires de guerre. Ces colonnes, sculptées d'avant de bateaux et d'ancres, rappellent que Bordeaux est un grand port. Tout en haut, deux statues représentent le Commerce et la Navigation. Regarde vers le fleuve : quels bateaux vois-tu passer ?",
+  }),
+  place({
+    id: 'seed-porte-bourgogne',
+    title: 'La porte de Bourgogne',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.8361,
+    lng: -0.566111,
+    challenge:
+      "Une grande arche de pierre, sans porte à ouvrir, se dresse face au fleuve. Trouve-la, passe dessous et regarde vers la Garonne : quel pont vois-tu juste en face ?",
+    photo: commons('porte-bourgogne', 'Aubry Françon', 'CC BY-SA 3.0', 'Bordeaux_Porte_de_Bourgogne_Vue_n%C2%B03.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place Bir-Hakeim, au bout du cours Victor-Hugo.', 'Tout près des quais, côté Saint-Michel.'],
+    story:
+      "Juste en face, c'est le pont de pierre, le plus ancien pont de Bordeaux sur la Garonne. La porte de Bourgogne a été construite au XVIIIᵉ siècle, quand on a remplacé les vieilles portes des remparts par de grandes portes élégantes, comme la porte Dijeaux ou la porte d'Aquitaine. Les as-tu toutes trouvées ?",
+  }),
 ]
