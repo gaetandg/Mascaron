@@ -1473,7 +1473,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Place du Marché-des-Chartrons.', 'Tout près de l’église Saint-Louis et de ses deux flèches.'],
     story:
-      "C'était le marché couvert du quartier, construit au XIXᵉ siècle : le toit de fer et de verre laissait entrer la lumière tout en protégeant les étals de la pluie. Aujourd'hui, la halle accueille des expositions et des événements. Regarde les colonnes de fonte : combien en comptes-tu d'un seul côté ?",
+      "C'était le marché couvert du quartier, construit au XIXᵉ siècle : le toit de fer et de verre laissait entrer la lumière tout en protégeant les étals de la pluie. Aujourd'hui, la halle accueille des expositions et des événements. Regarde les fines colonnes en fonte (un métal moulé) : elles portent tout le toit !",
   }),
   place({
     id: 'seed-saint-martial',
