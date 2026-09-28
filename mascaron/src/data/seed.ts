@@ -1456,4 +1456,78 @@ export const SEED_PLACES: Place[] = [
     story:
       "Le mot, c'est « ENTREPÔT » ! Au XIXᵉ siècle, on y stockait les « denrées coloniales » arrivées par bateau : sucre, café, cacao, épices… avant de payer les taxes. Aujourd'hui, c'est le CAPC, un musée d'art contemporain : à l'intérieur, les immenses arcades de pierre sont impressionnantes.",
   }),
+
+  // ---------- Bastide / Grand Parc ----------
+  place({
+    id: 'seed-sainte-marie-bastide',
+    title: 'Le clocher de Sainte-Marie de la Bastide',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.84306,
+    lng: -0.556664,
+    challenge:
+      "Sur la rive droite, un très haut clocher de pierre dorée se termine par un petit dôme arrondi. Trouve cette église : de quelle forme est le sommet du clocher ?",
+    photo: commons('sainte-marie-bastide', 'Guerinf', 'CC BY-SA 4.0', 'Sainte-Marie_de_la_Bastide_(1).jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier de la Bastide, près de l’avenue Thiers.', 'Son haut clocher dépasse des toits de la rive droite : cherche-le au-dessus des maisons.'],
+    story:
+      "Le sommet du clocher est en forme de bulbe, comme un gros oignon de pierre. L'église a été construite au XIXᵉ siècle par l'architecte Paul Abadie, celui qui a dessiné le Sacré-Cœur de Montmartre à Paris : les deux églises se ressemblent un peu ! Sur une plaque au sol devant l'église, on raconte qu'elle a été bâtie sur un terrain marécageux, de la tourbe. Cherche cette plaque et lis-la.",
+  }),
+  place({
+    id: 'seed-maison-cantonale',
+    title: 'La maison cantonale de la Bastide',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.8415,
+    lng: -0.552785,
+    challenge:
+      "Un drôle de bâtiment blanc au grand toit brun, avec une petite tour à horloge et des lucarnes pointues bordées de rouge. On dirait un chalet géant ! Trouve-le.",
+    photo: panoramax('maison-cantonale', 'Bordeaux Métropole', ETALAB, '1b4e3949-0051-4bc3-8697-edece8171d1f', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier de la Bastide, à quelques rues de l’église Sainte-Marie.', 'Il donne sur une petite place pavée, avec des boules de pierre devant les marches.'],
+    story:
+      "La maison cantonale était un bâtiment public pour les habitants de la rive droite, qui ont longtemps été un peu à part du reste de Bordeaux, de l'autre côté du fleuve. Son style, avec ses grands toits, ses lucarnes et son horloge, ne ressemble à aucun autre bâtiment de la ville. Quelle heure indique l'horloge quand tu passes ?",
+  }),
+  place({
+    id: 'seed-jardin-botanique',
+    title: 'Le jardin botanique de la Bastide',
+    category: 'nature',
+    difficulty: 1,
+    lat: 44.846,
+    lng: -0.5623,
+    challenge:
+      "Au bord de la Garonne, un grand jardin est rangé comme une bibliothèque de plantes, en longues bandes. Trouve-le, et trouve une fleur que tu ne connais pas !",
+    photo: commons('jardin-botanique', 'Franck-fnba', 'CC BY-SA 4.0', 'Bordeaux_jardin_botanique_bastide_2025-11.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rive droite, derrière les quais de la Bastide.', 'Juste à côté de la grande pelouse du parc des Berges.'],
+    story:
+      "Un jardin botanique, c'est un jardin où l'on cultive des plantes pour les étudier et les faire connaître. Celui de la Bastide a été ouvert en 2003. Regarde les petites étiquettes : elles donnent le nom de chaque plante, souvent en latin. Et toi, quelle fleur as-tu découverte ?",
+  }),
+  place({
+    id: 'seed-trinite-grand-parc',
+    title: 'Le clocher-flèche du Grand Parc',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.86036,
+    lng: -0.57917,
+    challenge:
+      "Au milieu des grands immeubles, une église toute simple a un clocher qui ne ressemble pas du tout à ceux du centre : une haute lame de béton surmontée d'une croix. Trouve-la !",
+    photo: commons('trinite-grand-parc', 'JeanWilhelm', 'CC0', '%C3%89glise_de_la_Trinit%C3%A9_bordeaux.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Cité du Grand Parc.', 'Cherche le nom de l’église, écrit en grandes lettres sur la façade.'],
+    story:
+      "C'est l'église de la Trinité, construite en même temps que la cité du Grand Parc, ce quartier de grands immeubles bâti à partir des années 1960. Pas de pierre sculptée ni de gargouilles ici : c'est une église moderne, en béton, avec des formes très simples. Compare avec la flèche Saint-Michel ou les clochers de Saint-Louis : lequel préfères-tu ?",
+  }),
 ]
