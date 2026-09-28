@@ -20,6 +20,16 @@ const commons = (file: string, author: string, license: string, page: string, fo
 // Photographe de la plupart des photos du quartier sur Wikimedia
 const rb = (file: string, page: string, focus?: Photo['focus']) => commons(file, 'Romainbehar', 'CC0', page, focus)
 
+// Vue extraite d'une photo Panoramax (photos de rue libres, OpenStreetMap France / IGN)
+const panoramax = (file: string, author: string, license: string, pic: string, focus?: Photo['focus']): Photo => ({
+  url: `${import.meta.env.BASE_URL}seed/${file}.jpg`,
+  author: `${author} (Panoramax)`,
+  license,
+  sourceUrl: `https://api.panoramax.xyz/#focus=pic&pic=${pic}`,
+  focus,
+})
+const ETALAB = 'Licence Ouverte 2.0'
+
 export const SEED_PLACES: Place[] = [
   // ---------- Nansouty / Saint-Genès ----------
   place({
@@ -101,22 +111,33 @@ export const SEED_PLACES: Place[] = [
     lat: 44.814859,
     lng: -0.572473,
     challenge:
-      "Ce petit bâtiment servait à faire payer une taxe à tous ceux qui entraient dans Bordeaux avec des marchandises. Trouve-le, et cherche une date ou une inscription sur sa façade.",
-    hints: ['À la barrière de Toulouse, au bout du cours de la Somme.', 'Il a été construit en 1867.'],
+      "Cette petite maison de briques rouges et de pierre servait à faire payer une taxe à ceux qui entraient dans Bordeaux avec des marchandises. Trouve-la ! Bonus : aux angles, les pierres blanches alternent longues et courtes. À quoi ça te fait penser ?",
+    photo: panoramax('octroi-toulouse', 'AlbaireN', 'CC BY-SA 4.0', 'ce4a678d-9784-4a0f-a919-0443df2fe8f8', {
+      x: 45,
+      y: 45,
+      zoom: 1.6,
+    }),
+    hints: ['À la barrière de Toulouse, au bout du cours de la Somme.', 'Elle fait l’angle, avec une porte bleue.'],
     story:
       "L'octroi, c'était une taxe sur ce qui entrait en ville : vin, viande, bois… Les « barrières » de Bordeaux (de Toulouse, de Bègles, Saint-Genès…) étaient les portes d'entrée où l'on payait. Le nom est resté, même si la taxe a disparu depuis longtemps.",
   }),
   place({
     id: 'seed-fresque-croix-du-sud',
-    title: 'Une fresque près de la Croix-du-Sud',
+    title: 'La fresque à la fleur blanche',
     category: 'street-art',
-    difficulty: 2,
+    difficulty: 1,
     lat: 44.816719,
     lng: -0.576044,
-    challenge: "Une fresque est peinte sur un mur par ici. Trouve-la, et invente-lui un titre !",
-    hints: ['Regarde les grands murs sans fenêtre.'],
+    challenge:
+      "Sur le grand pignon d'une maison, au bord d'un carrefour, on a peint un rocher, la mer, un coucher de soleil… et une grande fleur blanche. Trouve-la !",
+    photo: panoramax('fresque-croix-du-sud', 'trouyer', 'CC BY-SA 4.0', '8fdfccdf-56a0-4220-ba75-332ece9455ad', {
+      x: 85,
+      y: 36,
+      zoom: 2.5,
+    }),
+    hints: ['Regarde les grands murs sans fenêtre.', 'La maison abrite une laverie.'],
     story:
-      "Les fresques de rue changent parfois : certaines sont repeintes, d'autres effacées. Prends-la en photo, elle ne sera peut-être plus là l'an prochain. Si tu trouves la signature de l'artiste, note-la !",
+      "Les fresques de rue changent : en 2020, ce même mur portait une tout autre fresque, noire, avec les mots « Climax – Global warming » (le réchauffement de la planète). Elle a été remplacée par ce paysage. Prends-le en photo, il ne sera peut-être plus là dans quelques années ! Si tu trouves la signature de l'artiste, note-la.",
   }),
 
   // ---------- Barrière Saint-Genès ----------
@@ -128,8 +149,13 @@ export const SEED_PLACES: Place[] = [
     lat: 44.821484,
     lng: -0.582912,
     challenge:
-      "Comme à la barrière de Toulouse, un ancien bureau d'octroi garde l'entrée de la ville. Trouve-le. Ressemble-t-il à celui de la barrière de Toulouse ?",
-    hints: ['Près de la barrière Saint-Genès, sur les boulevards.'],
+      "Comme à la barrière de Toulouse, un ancien bureau d'octroi garde l'entrée de la ville. Sous la pointe de son toit, une fenêtre ronde regarde le carrefour comme un œil. Trouve-la !",
+    photo: panoramax('octroi-saint-genes', 'Bordeaux Métropole', ETALAB, '9c422341-a1cf-4c2d-aaf2-079b40e37a3d', {
+      x: 79,
+      y: 16,
+      zoom: 3,
+    }),
+    hints: ['Près de la barrière Saint-Genès, sur les boulevards.', 'Une maison de briques rouges et de pierre, comme celle de la barrière de Toulouse.'],
     story:
       "Les bureaux d'octroi se ressemblent souvent : ce sont de petites maisons de garde, construites au bord des routes qui entraient dans Bordeaux. Si tu as trouvé les deux, compare-les !",
   }),
@@ -140,10 +166,15 @@ export const SEED_PLACES: Place[] = [
     difficulty: 2,
     lat: 44.821861,
     lng: -0.582685,
-    challenge: 'Une croix se dresse au bord du chemin, tout près des boulevards. Trouve-la.',
-    hints: ["Tout près de l'ancien octroi de Saint-Genès."],
+    challenge: 'Derrière une grille, une croix de pierre se dresse sur une haute colonne. Trouve-la, et regarde qui est représenté dessus.',
+    photo: panoramax('croix-saint-genes', 'Bordeaux Métropole', ETALAB, '67b77492-cf40-46db-a375-782d6d48f00b', {
+      x: 50,
+      y: 31,
+      zoom: 3,
+    }),
+    hints: ["Tout près de l'ancien octroi de Saint-Genès.", 'Place Louis-Barthou, contre un vieux mur de pierre.'],
     story:
-      "Autrefois, on plantait des croix au bord des routes, aux carrefours ou à l'entrée des villages. Regarde-la bien : en quoi est-elle faite ? Y a-t-il une date ou une inscription ?",
+      "Autrefois, on plantait des croix au bord des routes, aux carrefours ou à l'entrée des villages. Celle-ci porte le Christ en croix : on appelle ça un calvaire. Sur le pilier de pierre juste à côté, une plaque est fixée : que raconte-t-elle ?",
   }),
 
   // ---------- Pavés de mémoire ----------
@@ -195,7 +226,7 @@ export const SEED_PLACES: Place[] = [
     difficulty: 3,
     lat: 44.82244,
     lng: -0.56945,
-    challenge: "Juste au-dessus du nom de la rue, une toute petite plaque porte un numéro. Lequel ?",
+    challenge: 'Juste au-dessus du nom de la rue, une toute petite plaque se cache. Trouve-la et lis ce qui est écrit dessus.',
     photo: rb('galard-plaque', 'Bordeaux_-_Rue_de_Galard_-_Plaque.jpg', { x: 51, y: 50, zoom: 5 }),
     hints: ["Cherche la plaque bleue « Rue de Galard » sur l'angle d'une maison.", 'Le numéro est suivi de « Arr ».'],
     story:
@@ -240,7 +271,7 @@ export const SEED_PLACES: Place[] = [
       'Sylvain Machefert',
       'CC BY-SA 4.0',
       'Bordeaux_-_rue_Malbec_-_boite_%C3%A0_livres.jpg',
-      { x: 55, y: 42, zoom: 4 },
+      { x: 54, y: 28, zoom: 3 },
     ),
     hints: ['Près d’un banc et d’un arbre.'],
     story: "Encore une ! Est-ce qu'elle ressemble à celle de la place Nansouty ? Regarde si tu y trouves un livre pour toi.",
@@ -279,7 +310,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ["Fais le tour de l'église en regardant les murs, pas très haut.", 'Il est rond, en métal sombre, à peu près grand comme une paume de main.'],
     story:
-      "C'est un repère de nivellement : les géomètres en ont posé partout en France pour mesurer l'altitude au centimètre près. Cherche-en d'autres : on en trouve sur les églises, les mairies, les ponts… Lis ce qui est écrit autour du disque.",
+      "C'est un repère de nivellement : les géomètres en ont posé partout en France pour mesurer l'altitude au centimètre près. Cherche-en d'autres : on en trouve sur les églises, les mairies, les ponts… Lis ce qui est écrit autour du disque : « CUB », c'est l'ancienne Communauté urbaine de Bordeaux, devenue Bordeaux Métropole.",
   }),
   place({
     id: 'seed-coq-furtado',
@@ -336,8 +367,14 @@ export const SEED_PLACES: Place[] = [
     difficulty: 1,
     lat: 44.82572,
     lng: -0.57245,
-    challenge: 'Une grande fresque est peinte sur un mur, tout près du cours de la Somme. Trouve-la et décris-la en trois mots.',
-    hints: ["À l'angle de la rue Fonfrède et du cours de la Somme."],
+    challenge:
+      "Au coin de la rue, une peinture pleine de couleurs recouvre l'ancienne vitrine d'une boutique. Trouve-la et décris-la en trois mots.",
+    photo: panoramax('fresque-fonfrede', 'AlbaireN', 'CC BY-SA 4.0', '50ee757d-c15a-4ff2-b66a-a6e5275d7ce0', {
+      x: 49,
+      y: 66,
+      zoom: 2.5,
+    }),
+    hints: ["À l'angle de la rue Fonfrède et du cours de la Somme.", 'Elle est au rez-de-chaussée, juste à côté d’un panneau sens interdit.'],
     story:
       "Les artistes signent souvent leurs fresques dans un coin. Cherche la signature, et note-la : tu pourras chercher ses autres œuvres dans Bordeaux.",
   }),
@@ -403,7 +440,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Cours de la Marne, vers les numéros 60-62.', 'Lève la tête, au niveau du premier étage.'],
     story:
-      "On trouve à Bordeaux beaucoup de niches avec des statuettes : des saints, des personnages, parfois des vierges. Elles protégeaient symboliquement la maison. Observe-le : que tient-il, et que regarde-t-il ?",
+      "On trouve à Bordeaux beaucoup de niches avec des statuettes : des saints, des personnages, parfois des vierges. Celui-ci est bien étrange : observe-le, que tient-il au bout de son bras levé ? Sous la niche, des lettres sont gravées dans la pierre : arrives-tu à les lire ?",
   }),
 
   // ---------- Place de la Victoire ----------
@@ -433,9 +470,9 @@ export const SEED_PLACES: Place[] = [
     lng: -0.572708,
     challenge: 'Au pied de cette haute colonne, des animaux en bronze se cachent. Lesquels ?',
     photo: commons('colonne-victoire', 'Patrick Despoix', 'CC BY-SA 3.0', '021_-_Place_de_la_Victoire_-_Bordeaux.jpg', {
-      x: 88,
-      y: 50,
-      zoom: 2,
+      x: 90,
+      y: 82,
+      zoom: 3,
     }),
     hints: ["C'est la colonne en pierre rose, place de la Victoire.", 'Les animaux sont lents… et ont une carapace.'],
     story:
@@ -527,5 +564,163 @@ export const SEED_PLACES: Place[] = [
     hints: ['Place Amédée-Larrieu.', 'Il y a plusieurs fontaines sur la place : cherche celle du poisson volant.'],
     story:
       "Un triton, dans la mythologie grecque, c'est une créature marine moitié homme, moitié poisson. Ces fontaines sont l'œuvre du sculpteur Raoul Verlet. Fais le tour de la place : quelles autres créatures marines trouves-tu ?",
+  }),
+
+  // ---------- Rue du Mirail / cours Victor-Hugo ----------
+  place({
+    id: 'seed-mirail-marin',
+    title: 'Le vieux marin de la rue du Mirail',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.832848,
+    lng: -0.57091,
+    challenge:
+      "Au-dessus d'une grande porte, un visage d'homme barbu est entouré d'écailles de poisson et de pinces de homard. Trouve ce vieux marin !",
+    photo: commons(
+      'mirail-marin',
+      'Langladure',
+      'CC BY-SA 3.0',
+      'Bordeaux_Mascaron_rue_du_Mirail_marin.JPG',
+      { x: 50, y: 50, zoom: 1.3 },
+    ),
+    hints: ['Rue du Mirail.', "Il est au numéro 54, tout en haut de l'arc de la porte."],
+    story:
+      "Voilà un vrai mascaron, comme le nom de ce jeu ! Il est sculpté sur la clé de voûte : la pierre du milieu de l'arc, celle qui tient toutes les autres. Les écailles et les pinces rappellent la mer : à cette époque, Bordeaux vivait de son port et du commerce par bateau. D'après la personne qui l'a photographié, il daterait de 1720. Promène-toi dans la rue : d'autres visages de pierre te regardent passer…",
+  }),
+  place({
+    id: 'seed-mirail-saint-francois',
+    title: 'Les petits anges de la rue du Mirail',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.834043,
+    lng: -0.571097,
+    challenge:
+      "Au-dessus d'une immense porte de bois sculptée, trois petits anges jouent autour d'une coquille. Et de chaque côté, deux personnages de pierre portent le balcon !",
+    photo: commons(
+      'mirail-saint-francois',
+      'Fran Roy',
+      'CC BY-SA 4.0',
+      "Porte_de_l'H%C3%B4tel_Saint-Fran%C3%A7ois_rue_du_Mirail.jpg",
+      { x: 54, y: 27, zoom: 3 },
+    ),
+    hints: ['Rue du Mirail, du côté du cours Victor-Hugo.', 'Le numéro 22 est sculpté dans le bois de la porte.'],
+    story:
+      "Ces petits anges joufflus s'appellent des « putti » (un « putto », en italien). Les personnages qui soutiennent un balcon s'appellent des atlantes quand ce sont des hommes, et des cariatides quand ce sont des femmes. Et ceux-là, hommes ou femmes ? Regarde aussi la porte : on y lit encore le numéro 22.",
+  }),
+  place({
+    id: 'seed-menuts-cariatides',
+    title: 'Les dames de pierre de la rue des Menuts',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.83509,
+    lng: -0.568008,
+    challenge:
+      "Au rez-de-chaussée d'une vieille maison, des dames de pierre soutiennent le balcon, et une autre dame regarde les passants au-dessus d'une porte. Combien sont-elles en tout ?",
+    photo: commons('menuts-cariatides', 'Fran Roy', 'CC BY-SA 4.0', 'Rez-de-chauss%C3%A9e_13_rue_des_Menuts.jpg', {
+      x: 50,
+      y: 60,
+      zoom: 1.3,
+    }),
+    hints: ['Rue des Menuts, près de Saint-Michel.', 'Au numéro 13.'],
+    story:
+      "Une statue de femme qui sert de colonne, ça s'appelle une cariatide. Ici, elles sortent d'une sorte de gaine qui se rétrécit vers le bas, comme si elles n'avaient pas de jambes ! La façade est abîmée, mais la maison est protégée comme monument historique. Regarde bien leurs visages : sont-ils tous pareils ?",
+  }),
+  place({
+    id: 'seed-sainte-catherine-christ',
+    title: 'La couronne d’épines de la rue Sainte-Catherine',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.836014,
+    lng: -0.573482,
+    challenge:
+      "Au-dessus d'une fenêtre, sous un balcon, un visage sculpté porte une couronne… d'épines. Trouve-le au milieu de la foule de la rue Sainte-Catherine !",
+    photo: commons(
+      'sainte-catherine-christ',
+      'Langladure',
+      'CC BY-SA 4.0',
+      "Bordeaux_mascaron_t%C3%AAte_du_Christ_portant_une_couronne_d%27%C3%A9pines.jpg",
+      { x: 52, y: 26, zoom: 3 },
+    ),
+    hints: ['Rue Sainte-Catherine, juste après le cours Victor-Hugo quand on vient de la Victoire.', 'Au numéro 158, lève les yeux vers le premier étage.'],
+    story:
+      "C'est la tête du Christ : selon les Évangiles, on lui a posé une couronne d'épines sur la tête avant sa crucifixion. La rue Sainte-Catherine est l'une des plus longues rues piétonnes de France, et presque tout le monde y regarde les vitrines… Toi, tu sais maintenant qu'il faut lever les yeux !",
+  }),
+  place({
+    id: 'seed-grosse-cloche',
+    title: 'La Grosse Cloche',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.835446,
+    lng: -0.571357,
+    challenge:
+      "Entre deux tours pointues, une énorme cloche est suspendue au-dessus d'une horloge. Trouve-les ! Et tout en haut, regarde la girouette dorée : quel animal représente-t-elle ?",
+    photo: commons(
+      'grosse-cloche',
+      'Grand Parc – Bordeaux (Flickr)',
+      'CC BY 2.0',
+      'Bordeaux_-_La_Grosse_Cloche-cr.jpg',
+      { x: 49, y: 44, zoom: 2.5 },
+    ),
+    hints: ['Cours Victor-Hugo.', 'Elle enjambe une petite rue : on passe dessous !'],
+    story:
+      "La Grosse Cloche était le beffroi de l'ancien hôtel de ville de Bordeaux : on la sonnait pour appeler les habitants ou annoncer les grands événements. Elle date du XVᵉ siècle, et sa cloche pèse près de 8 tonnes ! La girouette est un léopard doré, un symbole de la Guyenne, l'ancien nom de la région.",
+  }),
+
+  // ---------- Saint-Michel / Sainte-Croix ----------
+  place({
+    id: 'seed-fleche-saint-michel',
+    title: 'La flèche Saint-Michel',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.834359,
+    lng: -0.565941,
+    challenge:
+      "Ce clocher géant se voit de très loin… et il n'est même pas collé à son église ! Trouve-le, puis cherche l'église dont il est le clocher.",
+    photo: commons('fleche-saint-michel', 'Kaelkael', 'CC BY-SA 3.0', 'Clocher-Saint-Michel.JPG', {
+      x: 50,
+      y: 20,
+      zoom: 2.5,
+    }),
+    hints: ['Quartier Saint-Michel, près de la Garonne.', 'Cherche le plus haut clocher de Bordeaux.'],
+    story:
+      "Avec ses 114 mètres, c'est la plus haute flèche du sud de la France ! Elle a été construite séparée de la basilique Saint-Michel, un peu comme un phare. Longtemps, son caveau a abrité des momies que l'on venait visiter en frissonnant.",
+  }),
+  place({
+    id: 'seed-sainte-croix-portail',
+    title: 'Le portail sculpté de Sainte-Croix',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.8311,
+    lng: -0.5615,
+    challenge:
+      "Autour d'une porte rouge, des arcs de pierre sont couverts de petits personnages, d'animaux et de feuillages sculptés il y a plus de 800 ans. Trouve un animal !",
+    photo: commons(
+      'sainte-croix-portail',
+      'William Ellison',
+      'CC BY-SA 4.0',
+      'Bordeaux_Ste-Croix_Portail_1.jpg',
+      { x: 50, y: 30, zoom: 2.5 },
+    ),
+    hints: ['Place Pierre-Renaudel, juste à côté de l’école des Beaux-Arts.', 'C’est la grande porte au milieu de la façade.'],
+    story:
+      "L'abbatiale Sainte-Croix a une façade romane du XIIᵉ siècle : c'est l'un des plus vieux monuments de Bordeaux. Les sculpteurs du Moyen Âge racontaient des histoires en images, car peu de gens savaient lire. Recule sur la place et regarde les deux tours : sont-elles pareilles ? L'une d'elles a été reconstruite bien plus tard, au XIXᵉ siècle.",
+  }),
+  place({
+    id: 'seed-chapelle-orthodoxe',
+    title: 'La croix à barre penchée',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.83007,
+    lng: -0.55957,
+    challenge:
+      "Sur la façade d'une petite chapelle, une croix n'est pas comme les autres : l'une de ses barres est penchée. Trouve-la !",
+    photo: commons('chapelle-orthodoxe', 'Symac', 'CC BY-SA 3.0', 'Bordeaux_-_Chapelle_orthodoxe.jpg', {
+      x: 50,
+      y: 42,
+      zoom: 3,
+    }),
+    hints: ['Rue Peyronnet, près de Sainte-Croix.', 'Lève les yeux : une petite cloche est posée sur le toit.'],
+    story:
+      "C'est une croix orthodoxe, comme on en voit surtout en Russie et en Europe de l'Est. La petite barre du haut représente l'écriteau cloué au-dessus du Christ, et la barre penchée du bas le support pour ses pieds. Et toi, de quel côté penche-t-elle ?",
   }),
 ]
