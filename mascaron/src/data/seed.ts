@@ -1696,17 +1696,17 @@ export const SEED_PLACES: Place[] = [
   }),
   place({
     id: 'seed-belcier-paludate',
-    title: 'Le blason du quai de Paludate',
+    title: 'Le caducée et les raisins du quai de Paludate',
     category: 'facade',
     difficulty: 2,
     lat: 44.827788,
     lng: -0.55199,
     challenge:
-      "Au-dessus de deux grandes portes en arc, un blason est sculpté dans la pierre, entouré de rubans. Trouve-le : que vois-tu dessus ?",
+      "Au-dessus de deux grandes portes en arc, un écusson est sculpté dans la pierre : deux serpents s'enroulent autour d'un bâton, entourés de grappes. Trouve-le : de quels fruits sont les grappes ?",
     photo: commons('belcier-paludate', 'Bétium217', 'CC BY-SA 4.0', 'Bordeaux_belcier_2017_0876.jpg', { x: 50, y: 50, zoom: 1 }),
     hints: ['Quai de Paludate, au numéro 78.', 'Côté Garonne, entre la gare et la MÉCA.'],
     story:
-      "Si c'est bien le blason de Bordeaux, tu devrais y voir un croissant de lune et des vagues : le croissant rappelle la courbe de la Garonne, qui a donné à Bordeaux son surnom de « port de la Lune ». Les grandes portes en arc laissaient passer les charrettes : ce bâtiment servait sans doute d'entrepôt ou d'atelier.",
+      "Ce sont des grappes de raisin ! Et les deux serpents enroulés autour d'un bâton, c'est un caducée : le symbole de Mercure, le dieu romain du commerce et des marchands. Raisin + commerce… ce bâtiment appartenait sans doute à un négociant en vin. Les grandes portes en arc laissaient passer les charrettes chargées de barriques. Attention, ne confonds pas avec le symbole des médecins et des pharmaciens, qui n'a souvent qu'un seul serpent !",
   }),
   place({
     id: 'seed-belcier-ecole',
