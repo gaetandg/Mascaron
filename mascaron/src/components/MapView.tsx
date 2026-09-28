@@ -1,7 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import * as maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import type { Place } from '../types'
+import { createElement } from 'react'
+import { renderToStaticMarkup } from 'react-dom/server'
+import type { CategoryId, Place } from '../types'
+import { CATEGORIES } from '../categories'
 import { paperize } from './paperMapStyle'
 
 // En développement, MapLibre trouve son worker tout seul (à côté de son propre fichier).
@@ -35,11 +38,26 @@ interface Props {
   draftPoint?: { lat: number; lng: number } | null
 }
 
+// Icône de la catégorie (dessin SVG), calculée une fois par catégorie
+const iconCache = new Map<CategoryId, string>()
+function categoryIconSvg(category: CategoryId) {
+  let svg = iconCache.get(category)
+  if (!svg) {
+    const { Icon } = CATEGORIES[category] ?? CATEGORIES.autre
+    svg = renderToStaticMarkup(createElement(Icon, { size: 17, strokeWidth: 2.2, 'aria-hidden': true }))
+    iconCache.set(category, svg)
+  }
+  return svg
+}
+
+// Cachet de cire : icône du type de lieu, rouge si à trouver, vert avec une coche si trouvé
 function pinElement(place: Place, isFound: boolean, isSelected: boolean) {
   const el = document.createElement('button')
   el.className = ['pin', isFound ? 'pin-found' : '', isSelected ? 'pin-selected' : ''].filter(Boolean).join(' ')
-  el.setAttribute('aria-label', isFound ? place.title : 'Lieu mystère')
-  el.innerHTML = `<span>${isFound ? '✓' : '?'}</span>`
+  const label = (CATEGORIES[place.category] ?? CATEGORIES.autre).label
+  el.setAttribute('aria-label', isFound ? `${place.title} (trouvé)` : `Lieu mystère : ${label}`)
+  el.title = isFound ? place.title : label
+  el.innerHTML = categoryIconSvg(place.category) + (isFound ? '<span class="pin-check" aria-hidden="true">✓</span>' : '')
   return el
 }
 

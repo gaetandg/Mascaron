@@ -65,7 +65,7 @@ export const SEED_PLACES: Place[] = [
       'Sylvain Machefert',
       'CC BY-SA 4.0',
       'Bordeaux_-_place_Nansouty_-_boite_%C3%A0_livres.jpg',
-      { x: 67, y: 52, zoom: 4 },
+      { x: 67, y: 52, zoom: 2 },
     ),
     hints: ['Pas loin de la fontaine.'],
     story:
@@ -115,11 +115,11 @@ export const SEED_PLACES: Place[] = [
     photo: panoramax('octroi-toulouse', 'AlbaireN', 'CC BY-SA 4.0', 'ce4a678d-9784-4a0f-a919-0443df2fe8f8', {
       x: 45,
       y: 45,
-      zoom: 1.6,
+      zoom: 1,
     }),
     hints: ['À la barrière de Toulouse, au bout du cours de la Somme.', 'Elle fait l’angle, avec une porte bleue.'],
     story:
-      "L'octroi, c'était une taxe sur ce qui entrait en ville : vin, viande, bois… Les « barrières » de Bordeaux (de Toulouse, de Bègles, Saint-Genès…) étaient les portes d'entrée où l'on payait. Le nom est resté, même si la taxe a disparu depuis longtemps.",
+      "L'octroi, c'était une taxe sur ce qui entrait en ville : vin, viande, bois… Les « barrières » de Bordeaux (de Toulouse, de Bègles, Saint-Genès…) étaient les portes d'entrée où l'on payait. Le nom est resté, même si la taxe a disparu depuis longtemps. Et ces pierres d'angle, longues puis courtes ? On appelle ça une chaîne d'angle « en harpe » : elles s'emboîtent dans la brique comme les dents d'une fermeture éclair, pour rendre le coin de la maison plus solide.",
   }),
   place({
     id: 'seed-fresque-croix-du-sud',
@@ -133,7 +133,7 @@ export const SEED_PLACES: Place[] = [
     photo: panoramax('fresque-croix-du-sud', 'trouyer', 'CC BY-SA 4.0', '8fdfccdf-56a0-4220-ba75-332ece9455ad', {
       x: 85,
       y: 36,
-      zoom: 2.5,
+      zoom: 1,
     }),
     hints: ['Regarde les grands murs sans fenêtre.', 'La maison abrite une laverie.'],
     story:
@@ -170,11 +170,72 @@ export const SEED_PLACES: Place[] = [
     photo: panoramax('croix-saint-genes', 'Bordeaux Métropole', ETALAB, '67b77492-cf40-46db-a375-782d6d48f00b', {
       x: 50,
       y: 31,
-      zoom: 3,
+      zoom: 1,
     }),
     hints: ["Tout près de l'ancien octroi de Saint-Genès.", 'Place Louis-Barthou, contre un vieux mur de pierre.'],
     story:
       "Autrefois, on plantait des croix au bord des routes, aux carrefours ou à l'entrée des villages. Celle-ci porte le Christ en croix : on appelle ça un calvaire. Sur le pilier de pierre juste à côté, une plaque est fixée : que raconte-t-elle ?",
+  }),
+
+  // ---------- Quartier Saint-Genès ----------
+  place({
+    id: 'seed-notre-dame-des-anges',
+    title: 'La dame aux anges de la rue de Pessac',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.82594,
+    lng: -0.58806,
+    challenge:
+      "Sur le grand pignon gris d'une église, un bas-relief montre une dame entourée d'anges. Et sous les arcades de l'entrée, deux petites têtes sculptées te regardent. Trouve-les !",
+    photo: commons(
+      'notre-dame-des-anges',
+      'JeanWilhelm',
+      'CC0',
+      '%C3%89glise_Notre_Dame_des_Anges_d%C3%A9cembre_2024.jpg',
+      { x: 44, y: 62, zoom: 2.5 },
+    ),
+    hints: ['Rue de Pessac, près de la gare de Bordeaux-Ségur.', 'L’entrée est sous trois grandes arcades, à côté d’un haut clocher carré.'],
+    story:
+      "C'est l'église Notre-Dame-des-Anges : la dame du bas-relief, c'est Marie (« Notre-Dame »), et les anges autour d'elle donnent son nom à l'église. Les petites têtes sculptées sous les arcades ressemblent à des mascarons : regarde-les bien, ont-elles des ailes ?",
+  }),
+  place({
+    id: 'seed-dames-de-la-foi',
+    title: 'La chapelle des Dames de la Foi',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.82548,
+    lng: -0.58215,
+    challenge:
+      "Cette carte postale a plus de 100 ans : elle montre la chapelle d'une grande école de la rue de Saint-Genès. Est-elle toujours là ? Cherche ses hautes fenêtres pointues et sa rosace.",
+    photo: commons(
+      'dames-de-la-foi',
+      'Auteur inconnu (carte postale, vers 1900-1920)',
+      'Domaine public',
+      'Bordeaux_-_Dames_de_la_Foi_1.jpg',
+    ),
+    hints: ['Au numéro 171 de la rue de Saint-Genès.', 'Essaie de l’apercevoir depuis le jardin des Dames de la Foi.'],
+    story:
+      "Les Dames de la Foi étaient des religieuses qui tenaient ici un pensionnat : d'autres cartes postales de la même époque montrent la cour de récréation, le parc et même une grotte de Lourdes. Une partie du parc est aujourd'hui un jardin public. Compare avec la carte postale : qu'est-ce qui a changé en 100 ans ?",
+  }),
+  place({
+    id: 'seed-christ-redempteur',
+    title: 'Le clocher carré du Christ-Rédempteur',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.81888,
+    lng: -0.58285,
+    challenge:
+      "Juste après la barrière Saint-Genès, un clocher carré se dresse à côté d'une petite chapelle aux portes rouges. Trouve-le, puis fais le tour : ses fenêtres en arc sont-elles les mêmes sur chaque face ?",
+    photo: commons(
+      'christ-redempteur',
+      'Symac',
+      'CC BY-SA 3.0',
+      'Chapelle_du_christ_r%C3%A9dempteur_(Talence).jpg',
+      { x: 73, y: 18, zoom: 1 },
+    ),
+    hints: ['Côté Talence, à deux pas de la barrière Saint-Genès.', 'Cherche une tour carrée plus haute que les maisons.'],
+    story:
+      "« Rédempteur », ça veut dire « celui qui sauve » : c'est un autre nom donné au Christ. Ici, tu n'es plus à Bordeaux mais à Talence : la limite entre les deux villes passe juste à côté, à la barrière Saint-Genès.",
   }),
 
   // ---------- Pavés de mémoire ----------
@@ -271,7 +332,7 @@ export const SEED_PLACES: Place[] = [
       'Sylvain Machefert',
       'CC BY-SA 4.0',
       'Bordeaux_-_rue_Malbec_-_boite_%C3%A0_livres.jpg',
-      { x: 54, y: 28, zoom: 3 },
+      { x: 54, y: 28, zoom: 1 },
     ),
     hints: ['Près d’un banc et d’un arbre.'],
     story: "Encore une ! Est-ce qu'elle ressemble à celle de la place Nansouty ? Regarde si tu y trouves un livre pour toi.",
@@ -289,7 +350,7 @@ export const SEED_PLACES: Place[] = [
       'Olivier432',
       'CC BY-SA 3.0',
       'Eglise_du_Sacr%C3%A9-Coeur_de_Bordeaux.jpg',
-      { x: 60.5, y: 77, zoom: 3 },
+      { x: 60.5, y: 77, zoom: 1 },
     ),
     hints: ['Les deux clochers pointus se voient de loin, cherche-les au-dessus des toits.', 'La rosace est au-dessus de la porte principale.'],
     story:
@@ -323,7 +384,7 @@ export const SEED_PLACES: Place[] = [
     photo: rb('coq-furtado', 'Bordeaux_-_Rue_Furtado_-_Relief_de_coq,_%C3%A0_l%27angle_de_la_rue_Fieff%C3%A9.jpg', {
       x: 47,
       y: 52,
-      zoom: 2.5,
+      zoom: 1,
     }),
     hints: ['À l’angle de la rue Furtado et de la rue Fieffé.', 'Lève les yeux, au-dessus du rez-de-chaussée.'],
     story:
@@ -342,11 +403,11 @@ export const SEED_PLACES: Place[] = [
     photo: rb('citernes', 'Bordeaux_-_Passage_des_Citernes_-_Vue_sur_l%27ancien_ch%C3%A2teau_d%27eau,_de_nuit.jpg', {
       x: 50,
       y: 18,
-      zoom: 2,
+      zoom: 1,
     }),
     hints: ['Passage des Citernes.', 'Viens à la tombée de la nuit : elles s’illuminent.'],
     story:
-      "C'est un ancien château d'eau : les cuves en hauteur gardaient de l'eau sous pression pour la distribuer. Il a été conservé au milieu du nouveau quartier. Juste à côté se cache un personnage de street art très célèbre : le Gouzou !",
+      "Il y a quatre cuves ! C'est un ancien château d'eau : les cuves en hauteur gardaient de l'eau sous pression pour la distribuer. Il a été conservé au milieu du nouveau quartier. Juste à côté se cache un personnage de street art très célèbre : le Gouzou !",
   }),
   place({
     id: 'seed-gouzou',
@@ -389,7 +450,7 @@ export const SEED_PLACES: Place[] = [
     photo: rb('sante-navale-monument', 'Bordeaux_-_All%C3%A9e_de_l%27%C3%89cole_Sant%C3%A9_Navale_-_Monument_aux_morts_01.jpg', {
       x: 50,
       y: 35,
-      zoom: 2,
+      zoom: 1,
     }),
     hints: ["Allée de l'École-de-Santé-Navale."],
     story:
@@ -436,7 +497,7 @@ export const SEED_PLACES: Place[] = [
       'Tylwyth Eldar',
       'CC BY-SA 4.0',
       'Bordeaux_-_Statuette_dans_sa_niche_01.jpg',
-      { x: 50, y: 40, zoom: 2 },
+      { x: 50, y: 40, zoom: 1 },
     ),
     hints: ['Cours de la Marne, vers les numéros 60-62.', 'Lève la tête, au niveau du premier étage.'],
     story:
@@ -489,7 +550,7 @@ export const SEED_PLACES: Place[] = [
     photo: rb(
       'victoire-nature',
       'Bordeaux_-_Place_de_la_Victoire_-_La_Nature_se_d%C3%A9voilant_devant_la_Science_(Louis-Ernest_Barrias)_01.jpg',
-      { x: 48, y: 20, zoom: 2.5 },
+      { x: 48, y: 20, zoom: 1 },
     ),
     hints: ["Devant l'ancienne faculté de médecine, place de la Victoire.", 'Elles sont devant la façade du bâtiment.'],
     story:
@@ -508,7 +569,7 @@ export const SEED_PLACES: Place[] = [
       'Chabe01',
       'CC BY-SA 4.0',
       'Fontaine_Wallace_Place_G%C3%A9n%C3%A9ral_Sarrail_-_Bordeaux_(FR33)_-_2022-09-10_-_1.jpg',
-      { x: 50, y: 36, zoom: 2.5 },
+      { x: 50, y: 36, zoom: 1 },
     ),
     hints: ['Place du Général-Sarrail, tout près de la place de la Victoire.', 'Elle est au milieu de la place piétonne, entre les terrasses.'],
     story:
@@ -525,7 +586,7 @@ export const SEED_PLACES: Place[] = [
     photo: rb('spiritains', 'Bordeaux_-_Rue_Gratiolet_-_Chapelle_des_Spiritains_-_Sommet_de_la_fa%C3%A7ade.jpg', {
       x: 50,
       y: 38,
-      zoom: 2.5,
+      zoom: 1,
     }),
     hints: ['Rue Gratiolet.', "La rue est étroite : recule autant que tu peux et lève la tête."],
     story:
@@ -542,7 +603,7 @@ export const SEED_PLACES: Place[] = [
     photo: rb(
       'leyteire-coquille',
       'Bordeaux_-_Rue_Leyteire_-_Plaque_Chemins_Saint-Jacques-de-Compostelle.jpg',
-      { x: 50, y: 50, zoom: 3 },
+      { x: 50, y: 50, zoom: 2 },
     ),
     hints: ['Rue Leyteire.', "Lis la petite ligne écrite sous le nom de la rue."],
     story:
@@ -559,11 +620,26 @@ export const SEED_PLACES: Place[] = [
     photo: rb(
       'larrieu-triton',
       'Bordeaux_-_Place_Amédée_Larrieu_-_Fontaine_(Raoul_Verlet)_-_Triton_terrassant_un_poisson_volant.jpg',
-      { x: 50, y: 40, zoom: 2 },
+      { x: 50, y: 40, zoom: 1 },
     ),
     hints: ['Place Amédée-Larrieu.', 'Il y a plusieurs fontaines sur la place : cherche celle du poisson volant.'],
     story:
-      "Un triton, dans la mythologie grecque, c'est une créature marine moitié homme, moitié poisson. Ces fontaines sont l'œuvre du sculpteur Raoul Verlet. Fais le tour de la place : quelles autres créatures marines trouves-tu ?",
+      "Un triton, dans la mythologie grecque, c'est une créature marine moitié homme, moitié poisson. Lève les yeux au-dessus de lui : la tête qui crache l'eau, sous l'inscription, c'est un mascaron ! Ces fontaines sont l'œuvre du sculpteur Raoul Verlet. Fais le tour de la place : quelles autres créatures marines trouves-tu ?",
+  }),
+
+  place({
+    id: 'seed-bourse-du-travail',
+    title: 'Le grand bas-relief de la Bourse du travail',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.832039,
+    lng: -0.577602,
+    challenge:
+      "Sur la façade d'un grand bâtiment aux lignes toutes droites, un immense bas-relief blanc est sculpté, plein de personnages. Trouve-le, puis lis la date gravée juste au-dessus !",
+    photo: commons('bourse-du-travail', 'JeanWilhelm', 'CC0', 'Bourse_du_Travail_Bordeaux.jpg', { x: 20, y: 50, zoom: 2.5 }),
+    hints: ['Cours Aristide-Briand.', 'Les mots « Bourse du travail » sont gravés juste au-dessus.'],
+    story:
+      "La Bourse du travail, c'est la maison des syndicats : les travailleurs s'y réunissent pour défendre leurs droits. Le bâtiment date des années 1930 et il est de style Art déco : des lignes droites, de grandes fenêtres et des sculptures très géométriques. Compte les personnages du bas-relief : que font-ils ? Chacun représente peut-être un métier…",
   }),
 
   // ---------- Rue du Mirail / cours Victor-Hugo ----------
@@ -581,7 +657,7 @@ export const SEED_PLACES: Place[] = [
       'Langladure',
       'CC BY-SA 3.0',
       'Bordeaux_Mascaron_rue_du_Mirail_marin.JPG',
-      { x: 50, y: 50, zoom: 1.3 },
+      { x: 50, y: 50, zoom: 1 },
     ),
     hints: ['Rue du Mirail.', "Il est au numéro 54, tout en haut de l'arc de la porte."],
     story:
@@ -619,11 +695,11 @@ export const SEED_PLACES: Place[] = [
     photo: commons('menuts-cariatides', 'Fran Roy', 'CC BY-SA 4.0', 'Rez-de-chauss%C3%A9e_13_rue_des_Menuts.jpg', {
       x: 50,
       y: 60,
-      zoom: 1.3,
+      zoom: 1,
     }),
     hints: ['Rue des Menuts, près de Saint-Michel.', 'Au numéro 13.'],
     story:
-      "Une statue de femme qui sert de colonne, ça s'appelle une cariatide. Ici, elles sortent d'une sorte de gaine qui se rétrécit vers le bas, comme si elles n'avaient pas de jambes ! La façade est abîmée, mais la maison est protégée comme monument historique. Regarde bien leurs visages : sont-ils tous pareils ?",
+      "Réponse : trois dames qui soutiennent le balcon, plus un buste au-dessus de la porte de droite, soit quatre en tout. Une statue de femme qui sert de colonne, ça s'appelle une cariatide. Ici, elles sortent d'une sorte de gaine qui se rétrécit vers le bas, comme si elles n'avaient pas de jambes ! La façade est abîmée, mais la maison est protégée comme monument historique. Regarde bien leurs visages : sont-ils tous pareils ?",
   }),
   place({
     id: 'seed-sainte-catherine-christ',
@@ -643,7 +719,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Rue Sainte-Catherine, juste après le cours Victor-Hugo quand on vient de la Victoire.', 'Au numéro 158, lève les yeux vers le premier étage.'],
     story:
-      "C'est la tête du Christ : selon les Évangiles, on lui a posé une couronne d'épines sur la tête avant sa crucifixion. La rue Sainte-Catherine est l'une des plus longues rues piétonnes de France, et presque tout le monde y regarde les vitrines… Toi, tu sais maintenant qu'il faut lever les yeux !",
+      "Ce visage sculpté au-dessus d'une fenêtre, c'est un mascaron ! Il représente la tête du Christ : selon les Évangiles, on lui a posé une couronne d'épines sur la tête avant sa crucifixion. La rue Sainte-Catherine est l'une des plus longues rues piétonnes de France, et presque tout le monde y regarde les vitrines… Toi, tu sais maintenant qu'il faut lever les yeux !",
   }),
   place({
     id: 'seed-grosse-cloche',
@@ -659,7 +735,7 @@ export const SEED_PLACES: Place[] = [
       'Grand Parc – Bordeaux (Flickr)',
       'CC BY 2.0',
       'Bordeaux_-_La_Grosse_Cloche-cr.jpg',
-      { x: 49, y: 44, zoom: 2.5 },
+      { x: 49, y: 44, zoom: 1 },
     ),
     hints: ['Cours Victor-Hugo.', 'Elle enjambe une petite rue : on passe dessous !'],
     story:
@@ -679,7 +755,7 @@ export const SEED_PLACES: Place[] = [
     photo: commons('fleche-saint-michel', 'Kaelkael', 'CC BY-SA 3.0', 'Clocher-Saint-Michel.JPG', {
       x: 50,
       y: 20,
-      zoom: 2.5,
+      zoom: 1,
     }),
     hints: ['Quartier Saint-Michel, près de la Garonne.', 'Cherche le plus haut clocher de Bordeaux.'],
     story:
@@ -717,7 +793,7 @@ export const SEED_PLACES: Place[] = [
     photo: commons('chapelle-orthodoxe', 'Symac', 'CC BY-SA 3.0', 'Bordeaux_-_Chapelle_orthodoxe.jpg', {
       x: 50,
       y: 42,
-      zoom: 3,
+      zoom: 2.5,
     }),
     hints: ['Rue Peyronnet, près de Sainte-Croix.', 'Lève les yeux : une petite cloche est posée sur le toit.'],
     story:
