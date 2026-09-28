@@ -391,67 +391,6 @@ export const SEED_PLACES: Place[] = [
       "Regarde bien ce qui entoure le coq : ce sont des grappes de raisin et des feuilles de vigne, très bordelais ! Qu'est-ce que le coq tient ou regarde ? À ton avis, pourquoi l'a-t-on sculpté ici ?",
   }),
 
-  place({
-    id: 'seed-requin-mer-marine',
-    title: 'Le requin d’argent de Bacalan',
-    category: 'sculpture',
-    difficulty: 1,
-    lat: 44.867441,
-    lng: -0.554225,
-    challenge:
-      "Devant un musée, un énorme requin brillant comme un miroir est suspendu à un portique de métal rouillé, la gueule grande ouverte. Trouve-le… si tu n'as pas peur !",
-    photo: commons('requin-mer-marine', 'CGE', 'CC0', 'Requin_de_Philippe_Pasqua_-_1.jpg', { x: 50, y: 50, zoom: 1 }),
-    hints: ['Devant le musée Mer Marine, à Bacalan.', 'Entre les bassins à flot et la Cité du Vin.'],
-    story:
-      "Ce requin est une sculpture de l'artiste Philippe Pasqua, installée devant le musée Mer Marine. Il est en acier poli, si brillant qu'on s'y voit comme dans un miroir. Suspendu comme une prise de pêche, il fait réfléchir à la place des requins, souvent chassés par les humains. Approche-toi : vois-tu ton reflet sur son flanc ?",
-  }),
-  place({
-    id: 'seed-formes-de-radoub',
-    title: 'Les formes de radoub',
-    category: 'monument',
-    difficulty: 2,
-    lat: 44.865717,
-    lng: -0.554423,
-    challenge:
-      "Près des bassins à flot, d'immenses bassins de pierre en forme de bateau sont… vides ! Trouve-les : à quoi pouvaient-ils servir ?",
-    photo: commons('formes-de-radoub', 'picotche', 'CC BY-SA 3.0', 'Formes_de_radoub_du_port_2012-09-26_14-07-16.jpg', {
-      x: 50,
-      y: 50,
-      zoom: 1,
-    }),
-    hints: ['Bacalan, entre les bassins à flot et la Garonne.', 'Ils ont la forme allongée d’une coque de bateau.'],
-    story:
-      "Ce sont des formes de radoub : on y faisait entrer un bateau, on fermait la porte, puis on vidait l'eau. Le bateau se retrouvait au sec, posé sur des cales, et on pouvait réparer ou nettoyer sa coque. « Radouber », ça veut dire réparer un navire ! Regarde les marches sur les côtés : les ouvriers descendaient par là.",
-  }),
-  place({
-    id: 'seed-magasin-vivres',
-    title: 'Le magasin des vivres de la Marine',
-    category: 'facade',
-    difficulty: 2,
-    lat: 44.8645,
-    lng: -0.549649,
-    challenge:
-      "Le long des rails du tram, un très long bâtiment de pierre aux fenêtres grillagées aligne ses arcades. Trouve-le : à ton avis, qu'est-ce qu'on y rangeait ?",
-    photo: commons('magasin-vivres', 'Symac', 'CC BY-SA 3.0', 'Magasin_aux_vivres,_Bordeaux_(2).jpg', { x: 50, y: 50, zoom: 1 }),
-    hints: ['Quai de Bacalan.', 'Un bâtiment très long et bas, au bord du tram.'],
-    story:
-      "C'était le magasin des vivres de la Marine : on y stockait la nourriture (biscuits, farine, viande salée…) destinée aux marins des navires de guerre. Un long voyage en mer demandait des tonnes de provisions ! Les grilles aux fenêtres protégeaient ces réserves précieuses.",
-  }),
-  place({
-    id: 'seed-plaque-favreau',
-    title: 'Le prêtre des dockers',
-    category: 'memoire',
-    difficulty: 3,
-    lat: 44.8697725,
-    lng: -0.5479997,
-    challenge:
-      "Rue Achard, une plaque de marbre avec une photo encadrée rend hommage à un homme qui était à la fois prêtre… et docker. Trouve-la et lis son nom.",
-    photo: commons('plaque-favreau', 'Als33120', 'CC BY-SA 4.0', 'Bacalan-rueAchard-04.jpg', { x: 50, y: 50, zoom: 1 }),
-    hints: ['Rue Achard, à Bacalan.', 'Cherche près de l’église Saint-Rémi.'],
-    story:
-      "C'est Michel Favreau, un « prêtre-ouvrier » : au lieu de rester seulement à l'église, il travaillait comme docker sur le port, pour vivre comme les ouvriers du quartier. Il est mort dans un accident au travail, au dock n°2, le 7 avril 1951 : il n'avait même pas 30 ans. Bacalan était un quartier de travailleurs du port, et les habitants se souviennent de lui.",
-  }),
-
   // ---------- Belcier ----------
   place({
     id: 'seed-citernes',
