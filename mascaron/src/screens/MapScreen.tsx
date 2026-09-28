@@ -4,6 +4,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 import { CATEGORIES, CATEGORY_IDS } from '../categories'
 import type { CategoryId } from '../types'
 import { MapView } from '../components/MapView'
+import { Mascot } from '../components/Mascot'
 import { PlaceSheet } from '../components/PlaceSheet'
 import { usePlaces } from '../data/places'
 import { useFound } from '../data/progress'
@@ -63,6 +64,7 @@ export function MapScreen() {
 
       <div className="map-top">
         <div className="brand">
+          <Mascot mood={foundCount > 0 ? 'happy' : 'idle'} size={38} className="brand-logo" />
           <span className="brand-name">Mascaron</span>
           <span className="brand-score">
             <strong>{foundCount}</strong> / {places.length}
