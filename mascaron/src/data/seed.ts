@@ -1025,4 +1025,84 @@ export const SEED_PLACES: Place[] = [
     story:
       "Juste en face, c'est le pont de pierre, le plus ancien pont de Bordeaux sur la Garonne. La porte de Bourgogne a été construite au XVIIIᵉ siècle, quand on a remplacé les vieilles portes des remparts par de grandes portes élégantes, comme la porte Dijeaux ou la porte d'Aquitaine. Les as-tu toutes trouvées ?",
   }),
+
+  // ---------- Centre : la chasse aux mascarons ----------
+  place({
+    id: 'seed-mascaron-hercule',
+    title: 'Hercule de la rue Émile-Duployé',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.840373,
+    lng: -0.569561,
+    challenge: "Au-dessus d'une porte, un homme barbu à l'air costaud te regarde passer. C'est un héros très célèbre ! Trouve-le.",
+    photo: commons('mascaron-hercule', 'Als33120', 'CC BY-SA 4.0', 'Bordeaux-P1070376.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Rue Émile-Duployé, près de la place de la Bourse.', 'Au numéro 4 : le numéro est juste à côté de lui.'],
+    story:
+      "C'est un mascaron qui représente Hercule, le héros de la mythologie, célèbre pour sa force et ses douze travaux. On le montre souvent coiffé de la peau du lion de Némée, qu'il avait vaincu à mains nues : la vois-tu sur sa tête ?",
+  }),
+  place({
+    id: 'seed-mascaron-faune',
+    title: 'Le faune de la rue Fernand-Philippart',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.841166,
+    lng: -0.570656,
+    challenge:
+      "Un visage barbu avec des cornes enroulées et un gros nœud sur la tête sourit au-dessus d'une fenêtre. Trouve-le ! Attention, il a beaucoup de voisins…",
+    photo: commons(
+      'mascaron-faune',
+      'Romainbehar',
+      'CC0',
+      'Bordeaux_-_Rue_Fernand-Philippart_-_Mascaron_aux_cornes_et_au_n%C5%93ud.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Rue Fernand-Philippart, juste derrière la place de la Bourse.', 'Toute la façade est couverte de mascarons : cherche celui qui a des cornes.'],
+    story:
+      "C'est un mascaron ! Avec ses cornes et son sourire malicieux, on dirait un faune, un esprit des bois de la mythologie, mi-homme mi-bouc. Dans cette rue, toute une façade est décorée de visages : compte combien tu en trouves.",
+  }),
+  place({
+    id: 'seed-mascaron-belier',
+    title: 'La tête à cornes de la place Porto-Riche',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.841837,
+    lng: -0.572242,
+    challenge:
+      "Au-dessus d'une fenêtre ovale, ce n'est pas un visage humain mais une tête d'animal à cornes, avec une guirlande. Trouve-la !",
+    photo: commons('mascaron-belier', 'Langladure', 'CC BY-SA 3.0', 'Bordeaux_mascaron_place_Georges_Porto_Rich%C3%A9.JPG', {
+      x: 50,
+      y: 40,
+      zoom: 1,
+    }),
+    hints: ['Place Georges-de-Porto-Riche, près de la place du Parlement.', 'Lève les yeux vers le premier étage : la fenêtre est ronde comme un œil.'],
+    story:
+      "Les mascarons ne sont pas toujours des visages humains : on sculptait aussi des têtes d'animaux. Celle-ci ressemble à un bouc ou à un bélier : à toi de décider ! Une fenêtre ronde ou ovale comme celle-ci s'appelle un « œil-de-bœuf ».",
+  }),
+  place({
+    id: 'seed-mascaron-lion',
+    title: 'Le lion de la rue Vital-Carles',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.838994,
+    lng: -0.577923,
+    challenge: "Au-dessus d'une porte, un lion à la crinière bouclée montre les dents. Trouve-le !",
+    photo: commons('mascaron-lion', 'Als33120', 'CC BY-SA 4.0', 'Bordeaux-P1090184.jpg', { x: 50, y: 40, zoom: 1 }),
+    hints: ['Rue Vital-Carles, entre la cathédrale et le cours de l’Intendance.', 'Au numéro 44.'],
+    story:
+      "Un mascaron en forme de lion ! Le lion, roi des animaux, symbolise la force et le courage : placé au-dessus d'une porte, il montre qu'on est chez des gens importants… et il fait un peu peur aux visiteurs. Promène-toi dans la rue Vital-Carles : d'autres visages t'attendent au-dessus des portes des numéros 16, 30 et 40.",
+  }),
+  place({
+    id: 'seed-mascaron-gambetta',
+    title: 'La jeune fille de la place Gambetta',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.841583,
+    lng: -0.579863,
+    challenge:
+      "Au-dessus d'une fenêtre, le visage d'une jeune fille aux cheveux bouclés, avec un petit nœud, regarde la place. Trouve-la !",
+    photo: commons('mascaron-gambetta', 'Thomon', 'CC BY-SA 4.0', '2_place_Gambetta_mascaron.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Place Gambetta.', 'Au numéro 2.'],
+    story:
+      "Encore un mascaron ! Tous ne font pas peur : certains représentent de jeunes visages souriants, des saisons ou des déesses. La place Gambetta a été construite au XVIIIᵉ siècle : fais le tour des façades, combien d'autres mascarons trouves-tu ?",
+  }),
 ]
