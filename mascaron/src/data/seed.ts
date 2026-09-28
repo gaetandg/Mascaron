@@ -1513,6 +1513,38 @@ export const SEED_PLACES: Place[] = [
       "Un jardin botanique, c'est un jardin où l'on cultive des plantes pour les étudier et les faire connaître. Celui de la Bastide a été ouvert en 2003. Regarde les petites étiquettes : elles donnent le nom de chaque plante, souvent en latin. Et toi, quelle fleur as-tu découverte ?",
   }),
   place({
+    id: 'seed-pont-de-pierre',
+    title: 'Les arches du pont de pierre',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.83847,
+    lng: -0.56278,
+    challenge:
+      "Le plus vieux pont de Bordeaux traverse la Garonne sur une longue file d'arches en briques et en pierre. Compte ses arches !",
+    photo: commons('pont-de-pierre', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Pont_de_pierre_R02.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Entre la porte de Bourgogne et la place de Stalingrad.', 'Pour bien compter, regarde-le depuis les quais, pas depuis le pont.'],
+    story:
+      "Il y a 17 arches ! On raconte que c'est parce que « Napoléon Bonaparte » compte 17 lettres : c'est lui qui avait ordonné sa construction. C'est sans doute une légende, mais elle est jolie. Le pont a été terminé en 1822 : avant lui, pour traverser la Garonne, il fallait prendre un bateau. Regarde aussi les médaillons blancs entre les arches.",
+  }),
+  place({
+    id: 'seed-darwin',
+    title: 'La grande fresque de Darwin',
+    category: 'street-art',
+    difficulty: 1,
+    lat: 44.848975,
+    lng: -0.560053,
+    challenge:
+      "Dans une ancienne caserne de la rive droite, les murs des hangars sont couverts de peintures géantes. Trouve le visage de femme peint au milieu de grands hexagones bleus !",
+    photo: commons('darwin', 'A1AA1A', 'CC BY-SA 4.0', 'Darwin_-_hangars.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Quai des Queyries, sur la rive droite.', 'C’est le lieu appelé « Darwin », dans l’ancienne caserne Niel.'],
+    story:
+      "Darwin est installé dans l'ancienne caserne Niel, où vivaient des soldats. Aujourd'hui, c'est un lieu plein de vie : ateliers, skatepark, restaurants… et des murs entiers couverts de street art, qui changent souvent. Promène-toi entre les hangars : combien de fresques trouves-tu ? Attention, celle de la photo a peut-être déjà été repeinte !",
+  }),
+  place({
     id: 'seed-trinite-grand-parc',
     title: 'Le clocher-flèche du Grand Parc',
     category: 'eglise',
