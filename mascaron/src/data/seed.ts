@@ -1613,4 +1613,127 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est l'église de la Trinité, construite en même temps que la cité du Grand Parc, ce quartier de grands immeubles bâti à partir des années 1960. Pas de pierre sculptée ni de gargouilles ici : c'est une église moderne, en béton, avec des formes très simples. Compare avec la flèche Saint-Michel ou les clochers de Saint-Louis : lequel préfères-tu ?",
   }),
+
+  // ---------- Bacalan ----------
+  place({
+    id: 'seed-cite-du-vin',
+    title: 'La carafe géante de la Cité du Vin',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.862418,
+    lng: -0.550044,
+    challenge:
+      "Au bord de la Garonne, un bâtiment tout en courbes brille au soleil, avec une tour de verre qui se tortille vers le ciel. Trouve-le : à quoi te fait-il penser ?",
+    photo: panoramax('cite-du-vin', 'Hindediou', 'CC BY-SA 4.0', '12ec998f-6621-42f1-ac5e-b46dcf70bf60', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Quartier de Bacalan, au bord du fleuve.', 'Arrêt de tram « La Cité du Vin ».'],
+    story:
+      "La Cité du Vin a ouvert en 2016. Ses architectes voulaient que sa forme évoque le vin qui tourne dans un verre qu'on fait tourbillonner, ou les remous de la Garonne. Certains y voient aussi une carafe ! Bordeaux est connue dans le monde entier pour ses vins, et ce musée raconte leur histoire.",
+  }),
+  place({
+    id: 'seed-bassins-a-flot',
+    title: 'La vieille grue des bassins à flot',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.867559,
+    lng: -0.558822,
+    challenge:
+      "Au bord d'un grand bassin où dorment des bateaux, une vieille grue de métal rouillé tend son bras vers le ciel. Trouve-la !",
+    photo: commons('bassins-a-flot', 'Zairon', 'CC BY-SA 4.0', 'Bordeaux_Bassin_%C3%A0_Flot_10.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Quartier de Bacalan, aux bassins à flot.', 'Juste en face de l’énorme bloc de béton de la base sous-marine.'],
+    story:
+      "Les bassins à flot ont été creusés au XIXᵉ siècle : grâce à des écluses, l'eau y reste toujours au même niveau, même quand la marée fait monter et descendre la Garonne. Les bateaux pouvaient ainsi charger et décharger tranquillement. Les grues comme celle-ci soulevaient les marchandises : elles sont restées comme souvenir du port.",
+  }),
+  place({
+    id: 'seed-base-sous-marine',
+    title: 'La base sous-marine',
+    category: 'memoire',
+    difficulty: 1,
+    lat: 44.869909,
+    lng: -0.558644,
+    challenge:
+      "Un bâtiment gigantesque en béton, sans fenêtres, au toit épais comme une muraille. Il a été construit pendant la guerre pour cacher… des sous-marins ! Trouve-le.",
+    photo: commons('base-sous-marine', 'Rc1959', 'CC BY-SA 4.0', 'Base_sous-marine_de_Bordeaux.20151222_133211.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier de Bacalan, au bout des bassins à flot.', 'Impossible de le rater : c’est le plus gros bloc de béton du quartier.'],
+    story:
+      "Pendant la Seconde Guerre mondiale, l'armée allemande qui occupait Bordeaux a fait construire cette base pour abriter ses sous-marins, avec un toit en béton de plusieurs mètres d'épaisseur pour résister aux bombes. Regarde le bord du toit : le béton est abîmé par endroits. Aujourd'hui, ce lieu de mémoire accueille des expositions d'art.",
+  }),
+  place({
+    id: 'seed-pont-chaban',
+    title: 'Le pont qui se lève',
+    category: 'monument',
+    difficulty: 1,
+    lat: 44.859048,
+    lng: -0.552582,
+    challenge:
+      "Quatre hautes tours grises au-dessus de la Garonne… et entre elles, la route peut monter comme un ascenseur ! Trouve ce pont.",
+    photo: commons('pont-chaban', 'Prométhée33', 'CC BY-SA 3.0', 'Pont_Jacques-Chaban-Delmas_lev%C3%A9_01.JPG', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Entre Bacalan et la Bastide.', 'Tout près de la Cité du Vin.'],
+    story:
+      "C'est le pont Jacques-Chaban-Delmas, inauguré en 2013. C'est un pont levant : la partie centrale monte le long des quatre piliers pour laisser passer les grands bateaux, comme les paquebots de croisière et les grands voiliers. Sur la photo, il est levé ! Si tu as de la chance, tu le verras peut-être monter.",
+  }),
+
+  // ---------- Belcier ----------
+  place({
+    id: 'seed-belcier-sarrette',
+    title: 'Le visage de la rue Sarrette',
+    category: 'sculpture',
+    difficulty: 3,
+    lat: 44.82315,
+    lng: -0.552267,
+    challenge: "Au-dessus d'une porte en bois, un visage de femme entouré de volutes veille sur la rue. Trouve-le !",
+    photo: commons('belcier-sarrette', 'Bétium217', 'CC BY-SA 4.0', 'Bordeaux_belcier_2017_0827.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Rue Sarrette, à Belcier.', 'Marche en levant les yeux au-dessus des portes.'],
+    story:
+      "C'est un mascaron ! Même dans Belcier, un quartier d'ouvriers et d'usines, entre la gare et la Garonne, on décorait les façades. La rue porte le nom de Bernard Sarrette, le fondateur du Conservatoire de musique de Paris.",
+  }),
+  place({
+    id: 'seed-belcier-paludate',
+    title: 'Le blason du quai de Paludate',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.827788,
+    lng: -0.55199,
+    challenge:
+      "Au-dessus de deux grandes portes en arc, un blason est sculpté dans la pierre, entouré de rubans. Trouve-le : que vois-tu dessus ?",
+    photo: commons('belcier-paludate', 'Bétium217', 'CC BY-SA 4.0', 'Bordeaux_belcier_2017_0876.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Quai de Paludate, au numéro 78.', 'Côté Garonne, entre la gare et la MÉCA.'],
+    story:
+      "Si c'est bien le blason de Bordeaux, tu devrais y voir un croissant de lune et des vagues : le croissant rappelle la courbe de la Garonne, qui a donné à Bordeaux son surnom de « port de la Lune ». Les grandes portes en arc laissaient passer les charrettes : ce bâtiment servait sans doute d'entrepôt ou d'atelier.",
+  }),
+  place({
+    id: 'seed-belcier-ecole',
+    title: 'L’école de filles de Belcier',
+    category: 'plaque',
+    difficulty: 2,
+    lat: 44.82419,
+    lng: -0.551328,
+    challenge:
+      "Au-dessus de la porte d'une école, trois mots sont gravés dans la pierre. Trouve-les : pourquoi seraient-ils bizarres aujourd'hui ?",
+    photo: commons('belcier-ecole', 'Bétium217', 'CC BY-SA 4.0', 'Bordeaux_belcier_2017_0817.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Place Ferdinand-Buisson, à Belcier.', 'Lève les yeux au-dessus de la porte d’entrée.'],
+    story:
+      "Il est écrit « ÉCOLE DE FILLES » ! Autrefois, les filles et les garçons n'allaient pas dans la même école. Aujourd'hui, c'est une école pour tout le monde, mais l'inscription est restée. La place porte le nom de Ferdinand Buisson, qui a participé à la création de l'école publique, gratuite et laïque, à la fin du XIXᵉ siècle.",
+  }),
+  place({
+    id: 'seed-belcier-beck',
+    title: 'Le belvédère de la rue Beck',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.82203,
+    lng: -0.550368,
+    challenge:
+      "Tout en haut d'un toit d'ardoise, une petite terrasse entourée d'une rambarde domine le quartier, comme une vigie. Trouve-la !",
+    photo: commons('belcier-beck', 'Bétium217', 'CC BY-SA 4.0', 'Bordeaux_belcier_2017_0795.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Rue Beck, au numéro 26.', 'Lève les yeux au-dessus des lucarnes.'],
+    story:
+      "Une petite terrasse comme celle-ci, au sommet d'un toit, s'appelle un belvédère : c'est un endroit d'où l'on a une belle vue. D'en haut, on devait voir la Garonne et les bateaux. Le quartier Belcier doit son nom à François de Belcier, un juriste bordelais du XVIᵉ siècle.",
+  }),
 ]
