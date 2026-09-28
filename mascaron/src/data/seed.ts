@@ -611,12 +611,12 @@ export const SEED_PLACES: Place[] = [
   }),
   place({
     id: 'seed-larrieu-triton',
-    title: 'Le triton de la place Amédée-Larrieu',
+    title: 'Le poisson volant de la place Amédée-Larrieu',
     category: 'fontaine',
     difficulty: 1,
     lat: 44.83037,
     lng: -0.58148,
-    challenge: 'Dans une fontaine, un personnage mi-homme mi-poisson se bat avec un poisson… qui a des ailes !',
+    challenge: 'Dans une fontaine, un jeune garçon se bat avec un gros poisson… qui a des ailes !',
     photo: rb(
       'larrieu-triton',
       'Bordeaux_-_Place_Amédée_Larrieu_-_Fontaine_(Raoul_Verlet)_-_Triton_terrassant_un_poisson_volant.jpg',
@@ -624,7 +624,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Place Amédée-Larrieu.', 'Il y a plusieurs fontaines sur la place : cherche celle du poisson volant.'],
     story:
-      "Un triton, dans la mythologie grecque, c'est une créature marine moitié homme, moitié poisson. Lève les yeux au-dessus de lui : la tête qui crache l'eau, sous l'inscription, c'est un mascaron ! Ces fontaines sont l'œuvre du sculpteur Raoul Verlet. Fais le tour de la place : quelles autres créatures marines trouves-tu ?",
+      "L'œuvre s'appelle « Triton terrassant un poisson volant ». Dans la mythologie grecque, un triton est mi-homme mi-poisson… mais celui-ci a bien des jambes : regarde-le ! Le poisson, lui, a de grandes nageoires en forme d'ailes. Lève les yeux au-dessus d'eux : la tête qui crache l'eau, sous l'inscription, c'est un mascaron ! Ces fontaines sont l'œuvre du sculpteur Raoul Verlet. Fais le tour de la place : quelles autres créatures marines trouves-tu ?",
   }),
 
   place({
@@ -1168,6 +1168,7 @@ export const SEED_PLACES: Place[] = [
     lat: 44.840242,
     lng: -0.560206,
     challenge: "De l'autre côté du pont de pierre, un lion géant, tout bleu, veille sur une place. Trouve-le !",
+    photo: panoramax('lion-bleu', 'AlbaireN', 'CC BY-SA 4.0', '6193b3ec-488c-4717-9cdf-f02cb5c3736b', { x: 55, y: 60, zoom: 1 }),
     hints: ['Rive droite, place de Stalingrad.', 'Juste au bout du pont de pierre : impossible de le rater !'],
     story:
       "C'est « Le Lion », une sculpture de l'artiste Xavier Veilhan, installée en 2005. Le lion n'a pas été choisi par hasard : un léopard (un cousin du lion) figure sur le blason de Bordeaux, et c'est aussi la girouette dorée de la Grosse Cloche. Tourne autour : que regarde-t-il ?",

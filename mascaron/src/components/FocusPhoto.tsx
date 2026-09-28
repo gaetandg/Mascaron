@@ -35,8 +35,9 @@ export function FocusPhoto({ photo, zoomed, fit = 'cover', className, onClick }:
 
   const f = photo.focus ?? { x: 50, y: 50, zoom: 1 }
   let imgStyle: React.CSSProperties = { objectFit: fit }
+  let boxStyle: React.CSSProperties | undefined
 
-  if (zoomed && imgRatio) {
+  if (zoomed && imgRatio && f.zoom > 1) {
     // Taille de l'image (en % du cadre) pour couvrir le cadre, multipliée par le zoom
     const wider = imgRatio > boxRatio
     const w = (wider ? imgRatio / boxRatio : 1) * f.zoom * 100
@@ -45,10 +46,15 @@ export function FocusPhoto({ photo, zoomed, fit = 'cover', className, onClick }:
     const left = clamp(50 - (f.x / 100) * w, 100 - w, 0)
     const top = clamp(50 - (f.y / 100) * h, 100 - h, 0)
     imgStyle = { position: 'absolute', width: `${w}%`, height: `${h}%`, left: `${left}%`, top: `${top}%`, maxWidth: 'none' }
+  } else if (fit === 'contain' && imgRatio) {
+    // Photo entière : le cadre prend la forme de la photo (dans des limites raisonnables), sans bandes vides
+    // (pour une photo en hauteur, le cadre rétrécit en largeur plutôt que de devenir immense)
+    const ratio = clamp(imgRatio, 0.6, 1.9)
+    boxStyle = { aspectRatio: String(ratio), width: `min(100%, calc(62vh * ${ratio.toFixed(3)}))`, marginInline: 'auto' }
   }
 
   return (
-    <div ref={boxRef} className={`focus-photo ${className ?? ''}`} onClick={onClick}>
+    <div ref={boxRef} className={`focus-photo ${className ?? ''}`} style={boxStyle} onClick={onClick}>
       <img
         src={photo.url}
         alt=""
