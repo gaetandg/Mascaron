@@ -1508,6 +1508,59 @@ export const SEED_PLACES: Place[] = [
       "C'était la distillerie Sécrestat, une fabrique de liqueurs et d'apéritifs. Aux Chartrons, beaucoup de négociants et de fabricants de boissons avaient leurs bâtiments près du port, pour charger facilement les bouteilles sur les bateaux. Une usine aussi jolie qu'un palais, ça montrait que l'entreprise était riche et sérieuse !",
   }),
 
+  place({
+    id: 'seed-temple-chartrons',
+    title: 'Le temple à colonnes des Chartrons',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.849778,
+    lng: -0.572486,
+    challenge:
+      "On dirait un temple grec, avec son fronton en triangle et ses grosses colonnes rondes… mais c'est un lieu de culte ! Trouve-le : combien de colonnes vois-tu sur la façade ?",
+    photo: commons('temple-chartrons', 'Gzen92', 'CC BY-SA 4.0', 'Temple_des_Chartrons_(Bordeaux).jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Aux Chartrons, près du cours Xavier-Arnozan.', 'Cherche une façade claire avec un triangle au sommet.'],
+    story:
+      "Il y a quatre colonnes ! C'est le temple des Chartrons, un temple protestant construit au XIXᵉ siècle. Beaucoup de négociants en vin des Chartrons venaient d'Angleterre, de Hollande ou d'Allemagne, et ils étaient protestants : ils avaient besoin d'un lieu de culte. Chez les protestants, on dit « temple » plutôt qu'« église ».",
+  }),
+  place({
+    id: 'seed-wallace-arnozan',
+    title: 'L’autre fontaine Wallace',
+    category: 'fontaine',
+    difficulty: 1,
+    lat: 44.849136,
+    lng: -0.572944,
+    challenge:
+      "Tu connais peut-être déjà la fontaine Wallace de la place Sarrail, près de la Victoire… Il en existe une autre ! Trouve-la, à l'ombre des arbres d'un grand cours.",
+    photo: commons(
+      'wallace-arnozan',
+      'Chabe01',
+      'CC BY-SA 4.0',
+      'Fontaine_Wallace_Cours_Xavier_Arnozan_-_Bordeaux_(FR33)_-_2022-09-10_-_1.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Cours Xavier-Arnozan, aux Chartrons.', 'Juste à côté du temple des Chartrons.'],
+    story:
+      "Comme celle de la place Sarrail, elle a quatre dames qui portent un dôme : la Bonté, la Simplicité, la Charité et la Sobriété. Ces fontaines ont été imaginées au XIXᵉ siècle pour que tout le monde puisse boire gratuitement. Si tu as trouvé les deux, tu es un vrai chasseur de fontaines Wallace !",
+  }),
+  place({
+    id: 'seed-eglise-grecque',
+    title: 'La cloche de l’église grecque',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.86192,
+    lng: -0.56945,
+    challenge:
+      "Une petite église couleur sable a sa cloche bien visible, suspendue dans une arche tout en haut de la façade. Trouve-la, et regarde les drapeaux à côté de la porte !",
+    photo: commons('eglise-grecque', 'JeanWilhelm', 'CC0', '%C3%89glise_orthodoxe_grecque_rue_du_Jardin_public.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rue du Jardin-Public, vers le nord des Chartrons.', 'Un portail bleu et blanc, comme le drapeau grec.'],
+    story:
+      "C'est une église orthodoxe grecque. Le bleu et le blanc du portail rappellent le drapeau de la Grèce ! Les communautés venues d'autres pays, souvent grâce au port et au commerce, ont construit leurs propres lieux de culte à Bordeaux. Compare avec la croix orthodoxe à barre penchée de la rue Peyronnet.",
+  }),
+
   // ---------- Bastide / Grand Parc ----------
   place({
     id: 'seed-sainte-marie-bastide',
