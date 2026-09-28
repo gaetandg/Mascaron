@@ -13,14 +13,15 @@ Projet perso de Gaëtan (usage familial, en pensant à une ouverture future). Ga
 
 ## Décisions
 
-- **Photos** : pas de Google Street View (conditions d'utilisation). Utiliser Wikimedia Commons, Mapillary ou des photos perso, en notant auteur, licence et source.
+- **Photos** : pas de Google Street View (conditions d'utilisation). Utiliser Wikimedia Commons, Panoramax (photos de rue libres d'OpenStreetMap France / IGN : on extrait une vue des panoramas 360°), Mapillary ou des photos perso, en notant auteur, licence et source. Positions : géocodeur IGN (data.geopf.fr) ou coordonnées des photos.
 - **Stack** : React + TypeScript + Vite (PWA à venir), carte MapLibre + tuiles OpenFreeMap. Plus tard, Capacitor pour Android/iOS.
 - **À venir** : Supabase pour les lieux partagés et les **comptes joueurs facultatifs** (synchroniser les lieux trouvés entre appareils ; sans compte, la progression reste sur l'appareil). Hébergement sur GitHub Pages (Gaëtan a un compte GitHub).
 - Contenu généré par Claude = toujours marqué « à vérifier » tant que la famille n'est pas passée sur place. Ne pas inventer de faits : rester prudent dans les anecdotes. Gaëtan connaît le quartier et corrige (position de la fresque Fonfrède, plaque de la rue Saint-Jean en métal incrusté, etc.) : ses corrections font foi.
 - **Direction artistique** : « carnet d'explorateur » (papier crème, encre sépia, cachets de cire bordeaux, carte OpenStreetMap restylée en sépia, tampon « Trouvé » animé, carnet façon polaroïds scotchés). Polices : Fraunces (titres), Caveat (manuscrit), Nunito (texte). Mascotte : un petit mascaron dessiné au trait, qui parle dans une bulle (indices, bravo).
 - **Difficulté** de 1 à 3 affichée sur chaque lieu.
 - **Lieux de mémoire** (pavés de mémoire, monument aux morts) : traités comme n'importe quel autre lieu (choix de Gaëtan).
-- 32 lieux de départ autour de Nansouty / Saint-Genès / Victoire (voir `mascaron/src/data/seed.ts`). Les photos viennent de Wikimedia Commons ; 10 lieux n'ont pas de photo libre disponible (octrois, croix Saint-Genès, fresques dont celle du square de la Croix-du-Sud, Gouzou, pavés de mémoire) : à photographier sur place avec le mode créateur.
+- 40 lieux de départ autour de Nansouty / Saint-Genès / Victoire, étendus vers la rue du Mirail, Saint-Michel et Sainte-Croix (voir `mascaron/src/data/seed.ts`). Photos : Wikimedia Commons et Panoramax. 5 lieux n'ont pas encore de photo (fresque de Rouge Hartley au square de la Croix-du-Sud, Gouzou, pavés de mémoire) : à photographier sur place avec le mode créateur.
+- Fresque du square de la Croix-du-Sud (rue Jean-Mermoz) : œuvre de Rouge Hartley (confirmé par Gaëtan).
 
 ## Code
 
