@@ -173,13 +173,18 @@ a {
 .brand {
   align-self: flex-start;
   display: flex;
-  align-items: baseline;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
   background: var(--card);
   border: 1.5px solid var(--line);
   border-radius: 12px;
   padding: 6px 14px;
   box-shadow: 0 3px 12px rgba(59, 42, 30, 0.15);
+}
+
+.brand-logo {
+  flex: none;
+  margin: -4px 0 -4px -6px;
 }
 
 .brand-name {
