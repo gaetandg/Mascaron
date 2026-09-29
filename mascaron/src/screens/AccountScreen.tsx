@@ -2,7 +2,7 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AUTH_REDIRECT, enabledProviders, supabase } from '../data/supabase'
 import { authReturnError, consumeLoginRedirect, expectLogin, recoveryDone, useAccount } from '../data/account'
-import { useFound, useSyncStatus } from '../data/progress'
+import { signOutAndClear, useFound, useSyncStatus } from '../data/progress'
 import { Mascot } from '../components/Mascot'
 
 type Mode = 'login' | 'signup' | 'magic' | 'reset'
@@ -55,10 +55,13 @@ function LoggedIn({ email }: { email?: string }) {
         {sync === 'ok' && `Carnet sauvegardé en ligne : ${n} lieu${n > 1 ? 'x' : ''} trouvé${n > 1 ? 's' : ''}.`}
         {sync === 'error' && "Le carnet n'a pas pu être sauvegardé en ligne pour l'instant (pas de réseau ?). Il reste sur ce téléphone."}
       </p>
-      <button className="btn btn-ghost" onClick={() => void supabase.auth.signOut()}>
+      <button className="btn btn-ghost" onClick={() => void signOutAndClear()}>
         Se déconnecter
       </button>
-      <p className="account-note">Même déconnecté, ton carnet reste sur ce téléphone.</p>
+      <p className="account-note">
+        En te déconnectant, ton carnet est retiré de ce téléphone (pratique si vous le partagez) : il revient dès que
+        tu te reconnectes.
+      </p>
     </div>
   )
 }
