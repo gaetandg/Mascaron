@@ -58,9 +58,6 @@ function overviewBounds(places: Place[]) {
   return b
 }
 
-// En dessous de ce zoom, les cachets sont réduits à de simples pastilles
-const FAR_ZOOM = 14
-
 // Marges pour que les lieux ne passent pas sous l'en-tête et les boutons
 const OVERVIEW_PADDING = { top: 130, bottom: 40, left: 40, right: 60 }
 
@@ -184,11 +181,6 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
         stopUser = () => userListeners.delete(showUser)
         showUser()
         watchUser()
-
-        // Vue de loin : petits cachets pour ne pas couvrir toute la ville
-        const updateFar = () => containerRef.current?.classList.toggle('map-far', m.getZoom() < FAR_ZOOM)
-        m.on('zoom', updateFar)
-        updateFar()
 
         m.on('moveend', () => {
           const c = m.getCenter()
