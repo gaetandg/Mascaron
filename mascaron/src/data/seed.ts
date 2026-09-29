@@ -1850,4 +1850,108 @@ export const SEED_PLACES: Place[] = [
     story:
       "Une petite terrasse comme celle-ci, au sommet d'un toit, s'appelle un belvédère : c'est un endroit d'où l'on a une belle vue. D'en haut, on devait voir la Garonne et les bateaux. Le quartier Belcier doit son nom à François de Belcier, un juriste bordelais du XVIᵉ siècle.",
   }),
+
+  // ---------- Fondaudège ----------
+  place({
+    id: 'seed-saint-ferdinand',
+    title: 'Le clocher de Saint-Ferdinand',
+    category: 'eglise',
+    difficulty: 1,
+    lat: 44.85021,
+    lng: -0.58719,
+    challenge:
+      "Au bout d'une rue, une grande église sombre dresse son clocher carré, avec une horloge ronde tout en haut. Trouve-la : quelle heure indique l'horloge ?",
+    photo: commons('saint-ferdinand', 'Sylvain Machefert / Symac', 'CC BY-SA 3.0', '%C3%89glise_Saint-Ferdinand,_Bordeaux.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier Fondaudège, côté nord.', 'Son clocher dépasse des toits des échoppes.'],
+    story:
+      "L'église Saint-Ferdinand a été construite au XIXᵉ siècle, quand le quartier se remplissait de maisons et d'habitants. Regarde les grandes fenêtres pointues et les contreforts, ces piliers collés aux murs qui les empêchent de s'écarter. Quant à l'heure, c'est à toi de la noter !",
+  }),
+  place({
+    id: 'seed-carmes-stereo',
+    title: 'L’église des Carmes, d’hier à aujourd’hui',
+    category: 'eglise',
+    difficulty: 2,
+    lat: 44.8517,
+    lng: -0.57784,
+    challenge:
+      "Cette vieille photo en double (on la regardait avec des lunettes spéciales pour voir en relief !) montre une église avec un clocher pointu. Trouve-la et compare : qu'est-ce qui a changé ?",
+    photo: commons(
+      'carmes-stereo',
+      'Rijksmuseum (photo stéréoscopique ancienne)',
+      'CC0',
+      'Exterieur_van_de_%C3%89glise_des_Carmes_te_Bordeaux_%C3%89glise_des_Carmes,_%C3%A0_Bordeaux_(titel_op_object),_RP-F-F06375.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Entre Fondaudège et les Chartrons, près du cours Portal.', 'Aujourd’hui, c’est la chapelle d’une résidence.'],
+    story:
+      "Ce type de photo s'appelle une vue stéréoscopique : deux photos presque identiques, prises côte à côte, comme vues par l'œil gauche et l'œil droit. Dans un appareil spécial, elles donnaient l'illusion du relief, un peu comme la 3D ! Elle a sans doute été prise au XIXᵉ siècle, quand ces photos en relief étaient à la mode. L'église des Carmes était celle d'un couvent de carmes, des religieux.",
+  }),
+  place({
+    id: 'seed-labottiere',
+    title: 'La porte bleue du petit hôtel Labottière',
+    category: 'facade',
+    difficulty: 2,
+    lat: 44.849046,
+    lng: -0.582216,
+    challenge:
+      "Une porte bleu canard, en arc, entre deux fenêtres à barreaux, avec une guirlande sculptée au-dessus. Trouve-la, et regarde ce qui sert à frapper à la porte !",
+    photo: commons('labottiere', 'Sylvain Machefert / Symac', 'CC BY-SA 3.0', 'Petit_h%C3%B4tel_Labotti%C3%A8re.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier Fondaudège, près du Jardin public.', 'Une maison basse en pierre, avec un petit toit d’ardoise.'],
+    story:
+      "C'est le petit hôtel Labottière, une maison ancienne, sans doute du XVIIIᵉ siècle. Un « hôtel », autrefois, c'était la grande maison d'une famille riche en ville, pas un endroit où l'on dort en voyage ! L'objet en métal fixé sur la porte s'appelle un heurtoir : avant les sonnettes, on le soulevait pour frapper.",
+  }),
+  place({
+    id: 'seed-rosa-bonheur',
+    title: 'Rosa Bonheur sur la terrasse',
+    category: 'sculpture',
+    difficulty: 1,
+    lat: 44.847803,
+    lng: -0.579308,
+    challenge:
+      "Sur la terrasse du Jardin public, une dame de marbre blanc est assise, un carnet de dessin sur les genoux. Trouve-la et lis son nom et ses dates sur le socle.",
+    photo: commons('rosa-bonheur', 'Didier-CTP', 'CC BY-SA 4.0', 'Statue-Rosa-Bonheur_face_10-2018.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Jardin public, sur la terrasse devant les arcades.', 'Côté cours de Verdun.'],
+    story:
+      "C'est Rosa Bonheur, une peintre née à Bordeaux en 1822, célèbre dans le monde entier pour ses tableaux d'animaux : chevaux, vaches, lions… À une époque où les femmes artistes étaient rares, elle est devenue l'une des peintres les plus connues de son temps. La statue a été sculptée par Gaston Veuvenot Leroux et installée en 1910.",
+  }),
+  place({
+    id: 'seed-berger-flute',
+    title: 'Le berger à la flûte',
+    category: 'sculpture',
+    difficulty: 2,
+    lat: 44.847879,
+    lng: -0.579639,
+    challenge:
+      "Dans un massif de fleurs du Jardin public, un jeune berger de pierre est assis sur un rocher et joue de la flûte. Trouve-le !",
+    photo: commons('berger-flute', 'Symac / Sylvain Machefert', 'CC BY-SA 4.0', 'Berger_jouant_de_la_fl%C3%BBte,_octobre_2014.JPG', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Jardin public, près des bâtiments en pierre.', 'Pas loin de Rosa Bonheur et du garçon sur sa chimère.'],
+    story:
+      "Cette statue s'appelle « Berger jouant de la flûte », du sculpteur Henri-Charles Maniglier. Le temps et la pluie ont un peu usé la pierre : ses mains et sa flûte sont abîmées. Tends l'oreille : entends-tu une musique ? Non ? C'est normal, c'est une flûte de pierre !",
+  }),
+  place({
+    id: 'seed-guignol-guerin',
+    title: 'Le théâtre de Guignol',
+    category: 'autre',
+    difficulty: 1,
+    lat: 44.84825,
+    lng: -0.57703,
+    challenge:
+      "Dans le Jardin public, un petit théâtre à rideaux rouges accueille des marionnettes qui se donnent des coups de bâton ! Trouve le castelet de Guignol.",
+    photo: commons('guignol-guerin', 'Guignol Guérin', 'CC BY-SA 4.0', 'Castelet_du_Guignol_Guerin.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Jardin public.', 'Les spectacles n’ont pas lieu tous les jours : renseigne-toi avant !'],
+    story:
+      "Le Guignol Guérin joue pour les enfants de Bordeaux depuis 1853 : c'est l'un des plus vieux théâtres de marionnettes de France ! Guignol est une marionnette née à Lyon, qui se moque des gendarmes et des méchants. Si tu assistes à un spectacle, crie bien fort pour le prévenir quand le voleur arrive !",
+  }),
 ]
