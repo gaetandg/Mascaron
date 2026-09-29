@@ -2065,4 +2065,104 @@ export const SEED_PLACES: Place[] = [
     story:
       "Le Guignol Guérin joue pour les enfants de Bordeaux depuis 1853 : c'est l'un des plus vieux théâtres de marionnettes de France ! Guignol est une marionnette née à Lyon, qui se moque des gendarmes et des méchants. Si tu assistes à un spectacle, crie bien fort pour le prévenir quand le voleur arrive !",
   }),
+  // ---------- Curiosités et nature (toute la ville) ----------
+  place({
+    id: 'seed-miroir-eau',
+    title: "Le miroir d'eau",
+    category: 'autre',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.84169,
+    lng: -0.56908,
+    challenge:
+      'Sur les quais, face à la place de la Bourse, le sol devient un immense miroir. Regarde bien dans le reflet : trouve la flèche Saint-Michel… la tête en bas !',
+    photo: commons('miroir-eau', 'Léna', 'CC BY 3.0', 'Miroir_d%27eau_Bordeaux_3.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Face à la place de la Bourse, entre la route et la Garonne.', 'Tourne-toi vers le pont de pierre.'],
+    story:
+      "C'est le miroir d'eau, ouvert en 2006 : une immense dalle de pierre recouverte de seulement 2 centimètres d'eau, juste assez pour refléter le ciel et les façades. De temps en temps, il se vide puis souffle un brouillard d'eau : attends un peu pour le voir ! La grande pointe qui se reflète, c'est bien la flèche Saint-Michel, le plus haut clocher de Bordeaux (114 mètres). Attention : il est souvent arrêté en hiver.",
+  }),
+  place({
+    id: 'seed-parc-bordelais-cygnes',
+    title: 'Les cygnes du parc Bordelais',
+    category: 'nature',
+    quartier: 'cauderan',
+    difficulty: 1,
+    lat: 44.853644,
+    lng: -0.6041,
+    challenge:
+      "Dans ce grand parc, cherche l'étang au pied d'un gros rocher. Qui nage ici, avec un bec orange et une bosse noire ?",
+    photo: commons(
+      'parc-bordelais-cygne',
+      'Matthew Perosi',
+      'CC BY-SA 3.0',
+      'Friendly_goose_at_Parc_Bordelais_-_panoramio.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ["C'est dans le parc Bordelais, à Caudéran.", "Suis les allées jusqu'à l'eau, près des rochers."],
+    story:
+      "Le parc Bordelais a ouvert à la fin du XIXᵉ siècle : c'est l'un des plus grands parcs de la ville, avec ses allées, ses grands arbres et ses étangs. L'oiseau au bec orange avec une bosse noire, c'est un cygne tuberculé : la bosse s'appelle un « tubercule ». Sur la photo, il n'a pas l'air timide ! Mais ne lui donne pas de pain : ce n'est pas bon pour les oiseaux.",
+  }),
+  place({
+    id: 'seed-dom-bedos-ginkgos',
+    title: 'Les arbres aux éventails du square Dom-Bedos',
+    category: 'nature',
+    quartier: 'saint-michel',
+    difficulty: 2,
+    lat: 44.83107,
+    lng: -0.56028,
+    challenge:
+      "Derrière l'église Sainte-Croix, un square cache une rangée d'arbres dont les feuilles ont la forme de petits éventails. En automne, ils deviennent jaune d'or. Trouve-les et ramasse une feuille !",
+    photo: commons(
+      'dom-bedos-ginkgos',
+      'Tylwyth Eldar',
+      'CC BY-SA 4.0',
+      'Bordeaux_-_Square_Dom_Bedos_12.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ["C'est le square Dom-Bedos, juste derrière l'église Sainte-Croix.", 'Les arbres sont alignés devant le grand bâtiment, au bord de la pelouse.'],
+    story:
+      "Ces arbres sont sans doute des ginkgos : vérifie, leurs feuilles ressemblent à de petits éventails. Le ginkgo est un arbre très ancien : sa famille existait déjà au temps des dinosaures ! On l'appelle aussi « l'arbre aux quarante écus ». Et Dom Bedos ? C'était un moine du XVIIIᵉ siècle, grand fabricant d'orgues : c'est lui qui a construit l'orgue de l'église Sainte-Croix, juste à côté.",
+  }),
+  place({
+    id: 'seed-jardin-mairie',
+    title: 'Le jardin caché de la mairie',
+    category: 'nature',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.83775,
+    lng: -0.58105,
+    challenge:
+      "Derrière l'hôtel de ville se cache un jardin, entre les deux ailes du musée des Beaux-Arts. Cette carte postale a plus de 100 ans : retrouve l'endroit d'où le photographe a pris la photo !",
+    photo: commons(
+      'jardin-mairie',
+      'Anonyme (carte postale ancienne)',
+      'Domaine public',
+      'Bordeaux_-_Jardin_de_la_Mairie.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ["On y entre par le cours d'Albret, entre les deux ailes du musée.", "Mets-toi face à la grande façade de l'hôtel de ville."],
+    story:
+      "Le grand bâtiment, c'est le palais Rohan, construit au XVIIIᵉ siècle pour un archevêque de Bordeaux, Ferdinand Maximilien Mériadec de Rohan : le quartier Mériadeck porte son nom ! Il est devenu l'hôtel de ville au XIXᵉ siècle. Les deux bâtiments qui encadrent le jardin abritent le musée des Beaux-Arts. Le petit poème en haut de la carte postale est écrit en gascon, la langue d'autrefois de la région. Compare avec aujourd'hui : qu'est-ce qui a changé ?",
+  }),
+  place({
+    id: 'seed-parc-floral-japon',
+    title: 'La lanterne du jardin japonais',
+    category: 'nature',
+    quartier: 'bacalan',
+    difficulty: 2,
+    lat: 44.90244,
+    lng: -0.56282,
+    challenge:
+      "Au parc floral, près du lac, un petit jardin japonais se cache derrière un portail en bois. Trouve la lanterne de pierre au bord de l'eau !",
+    photo: commons(
+      'parc-floral-fukuoka',
+      'Jefunky',
+      'CC BY-SA 4.0',
+      'Parc_floral_de_Bordeaux%2C_pavillon_de_Fukuoka_2.jpg',
+      { x: 56, y: 62, zoom: 1.5 },
+    ),
+    hints: ['Parc floral de Bordeaux, au nord de la ville, près du lac.', 'Cherche le portail en bois de style japonais.'],
+    story:
+      "Cette lanterne de pierre s'appelle un « tōrō » : dans les jardins japonais, elle éclairait les chemins la nuit. Le jardin porte le nom de Fukuoka, une ville du Japon jumelée avec Bordeaux. Le parc floral a été créé au début des années 1990 pour une grande fête des fleurs, les Floralies. Et pourquoi l'eau est-elle si verte sur la photo ? Ce sont des lentilles d'eau, de toutes petites plantes qui flottent à la surface.",
+  }),
 ]

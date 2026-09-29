@@ -15,8 +15,9 @@ export const QUARTIERS: { id: QuartierId; label: string }[] = [
   { id: 'centre', label: 'Centre' },
   { id: 'meriadeck', label: 'Mériadeck – Saint-Bruno' },
   { id: 'saint-seurin', label: 'Saint-Seurin – Fondaudège' },
+  { id: 'cauderan', label: 'Caudéran' },
   { id: 'chartrons', label: 'Chartrons – Grand Parc' },
-  { id: 'bacalan', label: 'Bacalan' },
+  { id: 'bacalan', label: 'Bacalan – Le Lac' },
   { id: 'bastide', label: 'La Bastide' },
   { id: 'ailleurs', label: 'Ailleurs' },
 ]

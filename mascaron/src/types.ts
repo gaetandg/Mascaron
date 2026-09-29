@@ -19,6 +19,7 @@ export type QuartierId =
   | 'centre'
   | 'meriadeck'
   | 'saint-seurin'
+  | 'cauderan'
   | 'chartrons'
   | 'bacalan'
   | 'bastide'
