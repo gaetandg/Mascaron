@@ -107,3 +107,22 @@ onSessionChange(() => {
   lastUser = user
   void sync()
 })
+
+/**
+ * Déconnexion : le carnet est d'abord sauvegardé dans le compte, puis retiré de ce téléphone
+ * (utile quand plusieurs joueurs partagent le même téléphone). Il revient à la prochaine connexion.
+ */
+export async function signOutAndClear(): Promise<boolean> {
+  await sync()
+  if (
+    syncStatus !== 'ok' &&
+    !confirm(
+      "Ton carnet n'a pas pu être sauvegardé en ligne (pas de réseau ?). Si tu te déconnectes maintenant, les derniers lieux trouvés seront perdus. Se déconnecter quand même ?",
+    )
+  )
+    return false
+  await supabase.auth.signOut()
+  persist({})
+  return true
+}
+
