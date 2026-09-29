@@ -24,6 +24,7 @@ Projet perso de Gaëtan (usage familial, en pensant à une ouverture future). Ga
 - Fresque du square de la Croix-du-Sud (rue Jean-Mermoz) : œuvre de Rouge Hartley (confirmé par Gaëtan).
 - **Zoom des photos** : on ne zoome par défaut (`focus.zoom` > 1) que si l'on cherche un petit détail ; sinon `zoom: 1` pour montrer la photo entière (les zooms forts pixelisent).
 - Quand une photo montre un mascaron, l'anecdote (texte « trouvé ») le signale. Si le défi pose une question qui a une vraie réponse (combien, lequel…), l'anecdote donne la réponse ; les questions d'observation libre (« à quoi ça te fait penser ? ») sont expliquées aussi quand c'est possible.
+- **Carnet** : un album rangé par quartier (Nansouty, Saint-Genès, Victoire, Saint-Michel, Belcier, Centre, Mériadeck, Saint-Seurin – Fondaudège, Chartrons – Grand Parc, Bacalan, La Bastide). Chaque lieu a sa case fixe : les cases trouvées (photo + tampon) sont mêlées aux cases vides, qui ne montrent **aucun indice** (juste « ? »). Limites des quartiers : IRIS Insee 2024 (open data Bordeaux Métropole, jeu `se_iri24_s`), l'IRIS « Nansouty » coupé au cours de la Somme (Saint-Genès à l'ouest). Chaque lieu de départ a un champ `quartier` ; un lieu créé dans l'app prend celui du lieu de départ le plus proche. Pas de Google Maps.
 - **Carte** : chaque cachet montre l'icône du type de lieu ; rouge = à trouver, vert avec coche = trouvé. Bouton « Types » : légende, compteurs par type et filtre.
 
 ## Code

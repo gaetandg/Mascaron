@@ -1000,6 +1000,66 @@ label.check {
   line-height: 1;
 }
 
+/* Carnet rangé par quartier */
+.quartier-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.quartier-nav button {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1.5px dashed var(--line);
+  background: transparent;
+  color: var(--ink-soft);
+  font: 600 0.85rem var(--font-body);
+  cursor: pointer;
+}
+
+.quartier-nav button b {
+  color: var(--ink);
+}
+
+.quartier-nav button.quartier-done {
+  border-style: solid;
+  border-color: var(--moss-dark);
+  background: var(--moss);
+  color: #fff;
+}
+
+.quartier-nav button.quartier-done b {
+  color: #fff;
+}
+
+.quartier {
+  scroll-margin-top: 12px;
+  margin-top: 26px;
+}
+
+.quartier-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0 0 16px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--line);
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+}
+
+.quartier-count {
+  font: 700 1.3rem var(--font-hand);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.quartier-count-done {
+  color: var(--moss-dark);
+}
+
 /* ---------- Créateur ---------- */
 
 .creator-list {
