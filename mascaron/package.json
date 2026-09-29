@@ -13,6 +13,7 @@
     "prebuild": "npm run copy-maplibre"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.117.2",
     "lucide-react": "^1.48.0",
     "maplibre-gl": "^6.11.2",
     "react": "^19.2.8",
