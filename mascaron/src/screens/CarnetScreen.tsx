@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { usePlaces } from '../data/places'
 import { useFound } from '../data/progress'
-import { CATEGORIES, CATEGORY_IDS } from '../categories'
+import { CATEGORIES } from '../categories'
 import { QUARTIERS, quartierOf } from '../quartiers'
 import { FocusPhoto } from '../components/FocusPhoto'
 import { Mascot } from '../components/Mascot'
@@ -12,12 +12,6 @@ export function CarnetScreen() {
   const places = usePlaces()
   const found = useFound()
   const foundCount = places.filter((p) => found[p.id]).length
-
-  const byCategory = CATEGORY_IDS.map((c) => ({
-    c,
-    total: places.filter((p) => p.category === c).length,
-    done: places.filter((p) => p.category === c && found[p.id]).length,
-  })).filter((x) => x.total > 0)
 
   // Un album par quartier : chaque lieu garde toujours sa case (même ordre),
   // trouvé ou pas, pour voir les trous qui restent à remplir.
@@ -39,20 +33,6 @@ export function CarnetScreen() {
         </div>
         <Mascot mood={foundCount > 0 ? 'happy' : 'idle'} size={64} />
       </header>
-
-      <ul className="collection">
-        {byCategory.map(({ c, total, done }) => {
-          const { Icon, label } = CATEGORIES[c]
-          return (
-            <li key={c} className={done === total ? 'collection-done' : ''} title={label}>
-              <Icon size={16} aria-hidden />
-              <span>
-                {done}/{total}
-              </span>
-            </li>
-          )
-        })}
-      </ul>
 
       {foundCount === 0 && (
         <div className="empty">
