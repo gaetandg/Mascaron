@@ -371,13 +371,6 @@ a {
   text-align: center;
 }
 
-.pin-draft span {
-  display: block;
-  color: var(--paper);
-  font: 700 17px var(--font-title);
-  line-height: 1;
-}
-
 .pin-found {
   background: var(--moss);
   border-color: var(--moss-dark);
@@ -389,12 +382,6 @@ a {
     0 0 0 3px var(--card),
     0 0 0 5px var(--gold),
     0 4px 10px rgba(59, 42, 30, 0.35);
-}
-
-.pin-draft {
-  background: var(--gold);
-  border-color: #8a6420;
-  cursor: default;
 }
 
 /* ---------- Fiche lieu ---------- */
@@ -1053,103 +1040,4 @@ label.check {
 
 .quartier-count-done {
   color: var(--moss-dark);
-}
-
-/* ---------- Créateur ---------- */
-
-.creator-list {
-  list-style: none;
-  padding: 0;
-  margin: 16px 0;
-}
-
-.creator-list a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 11px 12px;
-  background: var(--card);
-  border: 1px solid var(--paper-2);
-  border-radius: 12px;
-  margin-bottom: 6px;
-  text-decoration: none;
-  color: var(--ink);
-}
-
-.creator-icon {
-  color: var(--ink-soft);
-  flex-shrink: 0;
-}
-
-.creator-title {
-  flex: 1;
-}
-
-.creator-tools {
-  margin-top: 28px;
-}
-
-.editor section {
-  background: var(--card);
-  border: 1px solid var(--paper-2);
-  border-radius: var(--radius);
-  padding: 14px;
-  margin-bottom: 14px;
-}
-
-.editor-map {
-  position: relative;
-  height: 280px;
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-.editor-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.editor-photos p {
-  margin: 0 0 4px;
-}
-
-.editor-photo {
-  aspect-ratio: 4 / 3;
-}
-
-.editor-full {
-  position: relative;
-  cursor: crosshair;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.editor-full img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.focus-dot {
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  margin: -11px 0 0 -11px;
-  border: 3px solid #fff;
-  border-radius: 50%;
-  background: rgba(184, 134, 47, 0.6);
-  box-shadow: 0 0 0 2px var(--wine);
-  pointer-events: none;
-}
-
-.file-btn {
-  flex-direction: row;
-  margin: 0;
-}
-
-.editor-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
 }
