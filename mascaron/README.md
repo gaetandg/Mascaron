@@ -17,9 +17,9 @@ Puis ouvrir http://localhost:5173 (sur un téléphone du même Wi-Fi : l'adresse
 
 ## Organisation
 
-- `src/data/seed.ts` : lieux livrés avec l'app (photos dans `public/seed/`)
-- `src/data/places.ts` : lieux créés avec le mode créateur (stockés dans le navigateur pour l'instant)
+- `src/data/seed.ts` : tous les lieux (photos dans `public/seed/`), ajoutés et corrigés par Claude
+- `src/quartiers.ts` : quartiers du carnet
 - `src/data/progress.ts` : lieux trouvés (stockés dans le navigateur pour l'instant)
-- `src/screens/` : Carte, Carnet, Mode créateur
+- `src/screens/` : Carte, Carnet
 
 Stack : React + TypeScript + Vite, carte MapLibre + OpenFreeMap (OpenStreetMap).

@@ -90,9 +90,8 @@ interface Props {
   found?: Record<string, string>
   selectedId?: string | null
   onSelect?: (id: string) => void
-  /** Mode créateur : clic sur la carte pour placer un point */
-  onMapClick?: (lngLat: { lat: number; lng: number }) => void
-  draftPoint?: { lat: number; lng: number } | null
+  /** Clic sur le fond de carte (hors cachet) */
+  onMapClick?: () => void
 }
 
 // Icône de la catégorie (dessin SVG), calculée une fois par catégorie
@@ -118,11 +117,10 @@ function pinElement(place: Place, isFound: boolean, isSelected: boolean) {
   return el
 }
 
-export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, draftPoint }: Props) {
+export function MapView({ places, found = {}, selectedId, onSelect, onMapClick }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const mapRef = useRef<maplibregl.Map | null>(null)
   const markersRef = useRef<maplibregl.Marker[]>([])
-  const draftRef = useRef<maplibregl.Marker | null>(null)
   const clickRef = useRef(onMapClick)
   clickRef.current = onMapClick
   const placesRef = useRef(places)
@@ -141,19 +139,15 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
         if (cancelled) return
         const selected = placesRef.current.find((p) => p.id === selectedId)
         // À l'ouverture de l'app : tout Bordeaux (et le joueur). Sinon : la dernière vue, ou le point / lieu visé.
-        const overview = !draftPoint && !selected && !lastView
+        const overview = !selected && !lastView
         const m = new maplibregl.Map({
           container: containerRef.current!,
           style,
           ...(overview
             ? { bounds: overviewBounds(placesRef.current), fitBoundsOptions: { padding: OVERVIEW_PADDING } }
             : {
-                center: draftPoint
-                  ? [draftPoint.lng, draftPoint.lat]
-                  : selected
-                    ? [selected.lng, selected.lat]
-                    : (lastView?.center ?? START),
-                zoom: draftPoint || selected ? Math.max(lastView?.zoom ?? 0, 16) : (lastView?.zoom ?? 14.2),
+                center: selected ? [selected.lng, selected.lat] : (lastView?.center ?? START),
+                zoom: selected ? Math.max(lastView?.zoom ?? 0, 16) : (lastView?.zoom ?? 14.2),
               }),
           attributionControl: { compact: true },
         })
@@ -186,7 +180,7 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
           const c = m.getCenter()
           lastView = { center: [c.lng, c.lat], zoom: m.getZoom() }
         })
-        m.on('click', (e) => clickRef.current?.({ lat: e.lngLat.lat, lng: e.lngLat.lng }))
+        m.on('click', () => clickRef.current?.())
         map = m
         mapRef.current = m
         if (import.meta.env.DEV) (window as unknown as { __map: maplibregl.Map }).__map = m
@@ -198,7 +192,6 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
       map?.remove()
       mapRef.current = null
       markersRef.current = []
-      draftRef.current = null
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -217,25 +210,6 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
       return new maplibregl.Marker({ element: el }).setLngLat([p.lng, p.lat]).addTo(map)
     })
   }, [ready, places, found, selectedId, onSelect])
-
-  // Point en cours de création
-  useEffect(() => {
-    const map = mapRef.current
-    if (!map) return
-    if (!draftPoint) {
-      draftRef.current?.remove()
-      draftRef.current = null
-      return
-    }
-    if (!draftRef.current) {
-      const el = document.createElement('div')
-      el.className = 'pin pin-draft'
-      el.innerHTML = '<span>+</span>'
-      draftRef.current = new maplibregl.Marker({ element: el }).setLngLat([draftPoint.lng, draftPoint.lat]).addTo(map)
-    } else {
-      draftRef.current.setLngLat([draftPoint.lng, draftPoint.lat])
-    }
-  }, [ready, draftPoint])
 
   // Centrer sur le lieu sélectionné
   useEffect(() => {
