@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { AUTH_REDIRECT, enabledProviders, supabase } from '../data/supabase'
-import { recoveryDone, useAccount } from '../data/account'
+import { authReturnError, recoveryDone, useAccount } from '../data/account'
 import { useFound, useSyncStatus } from '../data/progress'
 import { Mascot } from '../components/Mascot'
 
@@ -62,7 +62,7 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [busy, setBusy] = useState(false)
-  const [error, setError] = useState('')
+  const [error, setError] = useState(authReturnError ?? '')
   const [info, setInfo] = useState('')
   const [google, setGoogle] = useState(false)
 
