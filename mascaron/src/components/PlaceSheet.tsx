@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Footprints, X } from 'lucide-react'
 import type { Place } from '../types'
 import { CATEGORIES } from '../categories'
 import { markFound, unmarkFound } from '../data/progress'
+import { useAccount } from '../data/account'
 import { FocusPhoto, PhotoCredit } from './FocusPhoto'
 import { Mascot } from './Mascot'
 import { Difficulty, Stamp } from './Stamp'
@@ -11,6 +13,23 @@ interface Props {
   place: Place
   foundAt?: string
   onClose: () => void
+}
+
+// Proposition de compte : une seule fois, au premier lieu trouvé sans être connecté
+const ASKED_KEY = 'mascaron.loginAsked'
+function alreadyAsked() {
+  try {
+    return localStorage.getItem(ASKED_KEY) === '1'
+  } catch {
+    return true
+  }
+}
+function rememberAsked() {
+  try {
+    localStorage.setItem(ASKED_KEY, '1')
+  } catch {
+    // tant pis : on pourra redemander
+  }
 }
 
 const formatDate = (iso: string) =>
@@ -48,12 +67,18 @@ function GameContent({ place, foundAt }: { place: Place; foundAt?: string }) {
   const [hintsShown, setHintsShown] = useState(0)
   const [zoomed, setZoomed] = useState(true)
   const [justFound, setJustFound] = useState(false)
+  const [askLogin, setAskLogin] = useState(false)
+  const { session, ready } = useAccount()
   const isFound = Boolean(foundAt)
   const canZoom = Boolean(place.photo?.focus && place.photo.focus.zoom > 1)
 
   function handleFound() {
     markFound(place.id)
     setJustFound(true)
+    if (ready && !session && !alreadyAsked()) {
+      setAskLogin(true)
+      rememberAsked()
+    }
     setZoomed(false)
   }
 
@@ -136,6 +161,22 @@ function GameContent({ place, foundAt }: { place: Place; foundAt?: string }) {
             <p className="story-title">Le savais-tu ?</p>
             <p>{place.story}</p>
           </div>
+          {askLogin && (
+            <div className="ask-login">
+              <p>
+                <b>Garde ton carnet précieusement !</b> Avec un compte (facultatif), tes trouvailles sont sauvegardées et tu
+                les retrouves sur un autre téléphone.
+              </p>
+              <div className="ask-login-actions">
+                <button className="link" onClick={() => setAskLogin(false)}>
+                  Plus tard
+                </button>
+                <Link className="btn btn-primary" to="/compte">
+                  Me connecter
+                </Link>
+              </div>
+            </div>
+          )}
           <p className="found-note">
             Trouvé le {formatDate(foundAt!)} ·{' '}
             <button className="link" onClick={() => unmarkFound(place.id)}>
