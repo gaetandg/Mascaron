@@ -10,6 +10,20 @@ export type CategoryId =
   | 'memoire'
   | 'autre'
 
+export type QuartierId =
+  | 'nansouty'
+  | 'saint-genes'
+  | 'victoire'
+  | 'saint-michel'
+  | 'belcier'
+  | 'centre'
+  | 'meriadeck'
+  | 'saint-seurin'
+  | 'chartrons'
+  | 'bacalan'
+  | 'bastide'
+  | 'ailleurs'
+
 export interface Photo {
   /** URL de l'image (chemin public, URL distante ou data URL pour les lieux créés localement) */
   url: string
@@ -25,6 +39,8 @@ export interface Place {
   id: string
   title: string
   category: CategoryId
+  /** Quartier (pour ranger le carnet). Absent : déduit du lieu de départ le plus proche. */
+  quartier?: QuartierId
   lat: number
   lng: number
   /** Ce qu'il faut repérer une fois sur place */
