@@ -356,19 +356,6 @@ a {
   display: block;
 }
 
-/* Vue de loin (toute la ville) : petites pastilles sans icône */
-.map-far .pin:not(.pin-selected):not(.pin-draft) {
-  width: 16px;
-  height: 16px;
-  border-width: 1.5px;
-  box-shadow: 0 1px 3px rgba(59, 42, 30, 0.35);
-}
-
-.map-far .pin:not(.pin-selected):not(.pin-draft) svg,
-.map-far .pin:not(.pin-selected):not(.pin-draft) .pin-check {
-  display: none;
-}
-
 /* Petite coche des lieux trouvés */
 .pin-check {
   position: absolute;
