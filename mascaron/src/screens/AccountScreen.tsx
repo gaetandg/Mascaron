@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { AUTH_REDIRECT, enabledProviders, supabase } from '../data/supabase'
-import { authReturnError, recoveryDone, useAccount } from '../data/account'
+import { authReturnError, consumeLoginRedirect, expectLogin, recoveryDone, useAccount } from '../data/account'
 import { useFound, useSyncStatus } from '../data/progress'
 import { Mascot } from '../components/Mascot'
 
@@ -21,6 +22,11 @@ function frError(message: string) {
 
 export function AccountScreen() {
   const { session, recovering, ready } = useAccount()
+  const navigate = useNavigate()
+  // Connexion réussie (mot de passe, lien e-mail, Google) : direction la carte
+  useEffect(() => {
+    if (session && !recovering && consumeLoginRedirect()) navigate('/')
+  }, [session, recovering, navigate])
   return (
     <div className="screen screen-page account">
       <header className="page-header carnet-header">
@@ -84,8 +90,10 @@ function Login() {
     const opts = { emailRedirectTo: AUTH_REDIRECT }
     let err: { message: string } | null = null
     if (mode === 'login') {
+      expectLogin()
       err = (await supabase.auth.signInWithPassword({ email, password })).error
     } else if (mode === 'signup') {
+      expectLogin()
       const r = await supabase.auth.signUp({ email, password, options: opts })
       err = r.error
       if (!err && !r.data.session) setInfo('Presque fini ! Clique sur le lien reçu par e-mail pour confirmer ton adresse.')
@@ -96,7 +104,10 @@ function Login() {
       err = (await supabase.auth.resetPasswordForEmail(email, { redirectTo: AUTH_REDIRECT })).error
       if (!err) setInfo('Ouvre le lien reçu par e-mail pour choisir un nouveau mot de passe.')
     }
-    if (err) setError(frError(err.message))
+    if (err) {
+      expectLogin(false)
+      setError(frError(err.message))
+    }
     setBusy(false)
   }
 

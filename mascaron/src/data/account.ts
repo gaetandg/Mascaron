@@ -24,8 +24,22 @@ function readAuthReturn(): string | null {
       ? 'Ce lien a expiré ou a déjà servi. Connecte-toi avec ton mot de passe, ou demande un nouveau lien.'
       : (description ?? 'La connexion a échoué.')
   }
-  if (search.has('code')) history.replaceState(null, '', `${location.pathname}${location.search}#/compte`)
+  if (search.has('code')) {
+    history.replaceState(null, '', `${location.pathname}${location.search}#/compte`)
+    loginRedirect = true
+  }
   return null
+}
+
+// Après une connexion, on renvoie le joueur sur la carte
+let loginRedirect = false
+export function expectLogin(on = true) {
+  loginRedirect = on
+}
+export function consumeLoginRedirect() {
+  const r = loginRedirect
+  loginRedirect = false
+  return r
 }
 
 /** Message à afficher si le lien de connexion n'a pas marché */
