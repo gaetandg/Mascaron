@@ -25,8 +25,68 @@ function loadPaperStyle() {
   return paperStyle
 }
 
-// Dernière vue de la carte, conservée quand on change d'écran
-let lastView: { center: [number, number]; zoom: number } = { center: START, zoom: 14.2 }
+// Dernière vue de la carte, conservée quand on change d'écran (vide à l'ouverture de l'app)
+let lastView: { center: [number, number]; zoom: number } | null = null
+
+// Position du joueur (GPS), suivie dès l'ouverture de l'app et partagée par toutes les cartes
+let userPos: [number, number] | null = null
+const userListeners = new Set<() => void>()
+let watching = false
+function watchUser() {
+  if (watching || !('geolocation' in navigator)) return
+  watching = true
+  navigator.geolocation.watchPosition(
+    (pos) => {
+      userPos = [pos.coords.longitude, pos.coords.latitude]
+      userListeners.forEach((l) => l())
+    },
+    () => {},
+    { enableHighAccuracy: true, maximumAge: 10_000 },
+  )
+}
+
+// Au-delà de cette distance de Bordeaux (en degrés, ~20 km), on ne cherche pas à montrer le joueur sur la vue d'ensemble
+const NEAR = 0.25
+
+// Vue d'ensemble : tous les lieux (tout Bordeaux), plus le joueur s'il est dans les parages
+function overviewBounds(places: Place[]) {
+  const b = new maplibregl.LngLatBounds()
+  places.forEach((p) => b.extend([p.lng, p.lat]))
+  if (b.isEmpty()) b.extend([START, START])
+  const c = b.getCenter()
+  if (userPos && Math.abs(userPos[0] - c.lng) < NEAR && Math.abs(userPos[1] - c.lat) < NEAR) b.extend(userPos)
+  return b
+}
+
+// En dessous de ce zoom, les cachets sont réduits à de simples pastilles
+const FAR_ZOOM = 14
+
+// Marges pour que les lieux ne passent pas sous l'en-tête et les boutons
+const OVERVIEW_PADDING = { top: 130, bottom: 40, left: 40, right: 60 }
+
+// Bouton « me localiser » : centre la carte sur le point GPS
+class LocateControl implements maplibregl.IControl {
+  private box?: HTMLDivElement
+  onAdd(map: maplibregl.Map) {
+    this.box = document.createElement('div')
+    this.box.className = 'maplibregl-ctrl maplibregl-ctrl-group'
+    const btn = document.createElement('button')
+    btn.type = 'button'
+    btn.className = 'maplibregl-ctrl-geolocate'
+    btn.title = 'Me localiser'
+    btn.setAttribute('aria-label', 'Me localiser')
+    btn.innerHTML = '<span class="maplibregl-ctrl-icon" aria-hidden="true"></span>'
+    btn.addEventListener('click', () => {
+      watchUser()
+      if (userPos) map.flyTo({ center: userPos, zoom: Math.max(map.getZoom(), 16) })
+    })
+    this.box.appendChild(btn)
+    return this.box
+  }
+  onRemove() {
+    this.box?.remove()
+  }
+}
 
 interface Props {
   places: Place[]
@@ -68,32 +128,68 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
   const draftRef = useRef<maplibregl.Marker | null>(null)
   const clickRef = useRef(onMapClick)
   clickRef.current = onMapClick
+  const placesRef = useRef(places)
+  placesRef.current = places
 
   const [ready, setReady] = useState(false)
 
   useEffect(() => {
     let map: maplibregl.Map | null = null
     let cancelled = false
+    let stopUser = () => {}
     // Le style est chargé avant de créer la carte (changer de style après coup bloque MapLibre)
     loadPaperStyle()
       .catch(() => STYLE_URL)
       .then((style) => {
         if (cancelled) return
+        const selected = placesRef.current.find((p) => p.id === selectedId)
+        // À l'ouverture de l'app : tout Bordeaux (et le joueur). Sinon : la dernière vue, ou le point / lieu visé.
+        const overview = !draftPoint && !selected && !lastView
         const m = new maplibregl.Map({
           container: containerRef.current!,
           style,
-          center: draftPoint ? [draftPoint.lng, draftPoint.lat] : lastView.center,
-          zoom: draftPoint ? Math.max(lastView.zoom, 17) : lastView.zoom,
+          ...(overview
+            ? { bounds: overviewBounds(placesRef.current), fitBoundsOptions: { padding: OVERVIEW_PADDING } }
+            : {
+                center: draftPoint
+                  ? [draftPoint.lng, draftPoint.lat]
+                  : selected
+                    ? [selected.lng, selected.lat]
+                    : (lastView?.center ?? START),
+                zoom: draftPoint || selected ? Math.max(lastView?.zoom ?? 0, 16) : (lastView?.zoom ?? 14.2),
+              }),
           attributionControl: { compact: true },
         })
         m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right')
-        m.addControl(
-          new maplibregl.GeolocateControl({
-            positionOptions: { enableHighAccuracy: true },
-            trackUserLocation: true,
-          }),
-          'top-right',
-        )
+        m.addControl(new LocateControl(), 'top-right')
+
+        // Point GPS du joueur
+        const dot = document.createElement('div')
+        dot.className = 'user-dot'
+        const userMarker = new maplibregl.Marker({ element: dot })
+        let touched = false
+        m.on('dragstart', () => (touched = true))
+        m.on('zoomstart', (e) => {
+          if (e.originalEvent) touched = true
+        })
+        const showUser = () => {
+          if (!userPos) return
+          userMarker.setLngLat(userPos).addTo(m)
+          // Première position reçue hors de la vue d'ensemble : on élargit pour montrer le joueur
+          if (overview && !touched && !m.getBounds().contains(userPos)) {
+            m.fitBounds(overviewBounds(placesRef.current), { padding: OVERVIEW_PADDING, duration: 600 })
+          }
+        }
+        userListeners.add(showUser)
+        stopUser = () => userListeners.delete(showUser)
+        showUser()
+        watchUser()
+
+        // Vue de loin : petits cachets pour ne pas couvrir toute la ville
+        const updateFar = () => containerRef.current?.classList.toggle('map-far', m.getZoom() < FAR_ZOOM)
+        m.on('zoom', updateFar)
+        updateFar()
+
         m.on('moveend', () => {
           const c = m.getCenter()
           lastView = { center: [c.lng, c.lat], zoom: m.getZoom() }
@@ -106,6 +202,7 @@ export function MapView({ places, found = {}, selectedId, onSelect, onMapClick, 
       })
     return () => {
       cancelled = true
+      stopUser()
       map?.remove()
       mapRef.current = null
       markersRef.current = []
