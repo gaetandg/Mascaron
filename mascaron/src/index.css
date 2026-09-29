@@ -632,6 +632,26 @@ a {
   margin: 0;
 }
 
+.ask-login {
+  background: var(--card);
+  border: 1.5px solid var(--gold);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 8px 0;
+}
+
+.ask-login p {
+  margin: 0 0 8px;
+  line-height: 1.45;
+}
+
+.ask-login-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}
+
 .story-title {
   font-family: var(--font-hand);
   font-size: 1.4rem;
