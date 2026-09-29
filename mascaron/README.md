@@ -19,7 +19,8 @@ Puis ouvrir http://localhost:5173 (sur un téléphone du même Wi-Fi : l'adresse
 
 - `src/data/seed.ts` : tous les lieux (photos dans `public/seed/`), ajoutés et corrigés par Claude
 - `src/quartiers.ts` : quartiers du carnet
-- `src/data/progress.ts` : lieux trouvés (stockés dans le navigateur pour l'instant)
-- `src/screens/` : Carte, Carnet
+- `src/data/progress.ts` : lieux trouvés (sur le téléphone, et en ligne si le joueur a un compte)
+- `src/data/supabase.ts`, `src/data/account.ts` : comptes joueurs (Supabase) ; `supabase/schema.sql` : tables et règles de sécurité
+- `src/screens/` : Carte, Carnet, Compte
 
 Stack : React + TypeScript + Vite, carte MapLibre + OpenFreeMap (OpenStreetMap).
