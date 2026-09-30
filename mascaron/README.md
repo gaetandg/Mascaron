@@ -22,5 +22,6 @@ Puis ouvrir http://localhost:5173 (sur un téléphone du même Wi-Fi : l'adresse
 - `src/data/progress.ts` : lieux trouvés (sur le téléphone, et en ligne si le joueur a un compte)
 - `src/data/supabase.ts`, `src/data/account.ts` : comptes joueurs (Supabase) ; `supabase/schema.sql` : tables et règles de sécurité
 - `src/screens/` : Carte, Carnet, Compte
+- `sw.js`, `public/manifest.webmanifest`, `public/icons/`, `src/data/install.ts` : app installable sur l'écran d'accueil et utilisable sans réseau (le service worker n'est actif que dans l'app construite, pas avec `npm run dev`)
 
 Stack : React + TypeScript + Vite, carte MapLibre + OpenFreeMap (OpenStreetMap).

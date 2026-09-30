@@ -16,7 +16,7 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
 })
 
 /** Adresse où revenir après un lien de connexion (e-mail) ou Google */
-export const AUTH_REDIRECT = new URL(import.meta.env.BASE_URL, location.origin).href
+export const AUTH_REDIRECT = new URL(import.meta.env.BASE_URL, location.href).href
 
 /** Fournisseurs de connexion activés dans Supabase (Google…) */
 export async function enabledProviders(): Promise<Record<string, boolean>> {

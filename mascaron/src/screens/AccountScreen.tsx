@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { AUTH_REDIRECT, enabledProviders, supabase } from '../data/supabase'
 import { authReturnError, consumeLoginRedirect, expectLogin, recoveryDone, useAccount } from '../data/account'
 import { signOutAndClear, useFound, useSyncStatus } from '../data/progress'
+import { install, isInstalled, isIos, useCanInstall } from '../data/install'
 import { Mascot } from '../components/Mascot'
 
 type Mode = 'login' | 'signup' | 'magic' | 'reset'
@@ -37,6 +38,7 @@ export function AccountScreen() {
         <Mascot mood={session ? 'happy' : 'idle'} size={64} />
       </header>
       {!ready ? null : recovering && session ? <NewPassword /> : session ? <LoggedIn email={session.user.email} /> : <Login />}
+      {!isInstalled && <InstallCard />}
     </div>
   )
 }
@@ -62,6 +64,38 @@ function LoggedIn({ email }: { email?: string }) {
         En te déconnectant, ton carnet est retiré de ce téléphone (pratique si vous le partagez) : il revient dès que
         tu te reconnectes.
       </p>
+    </div>
+  )
+}
+
+/** Ajouter Mascaron à l'écran d'accueil, comme une vraie app */
+function InstallCard() {
+  const canInstall = useCanInstall()
+  return (
+    <div className="account-card">
+      <h2>Mascaron sur ton écran d'accueil</h2>
+      <p className="account-note">Installe l'app : elle s'ouvre en plein écran, d'un seul geste, même avec peu de réseau.</p>
+      {canInstall ? (
+        <button className="btn btn-primary btn-big" onClick={() => void install()}>
+          Installer l'app
+        </button>
+      ) : isIos ? (
+        <>
+          <p>
+            Dans Safari, touche le bouton <b>Partager</b> (le carré avec une flèche vers le haut), puis{' '}
+            <b>« Sur l'écran d'accueil »</b>.
+          </p>
+          <p className="account-note">
+            Sur iPhone, l'app installée a son propre carnet, séparé de celui de Safari : connecte-toi à ton compte pour y
+            retrouver tes lieux trouvés.
+          </p>
+        </>
+      ) : (
+        <p>
+          Ouvre le menu du navigateur (les trois points <b>⋮</b>), puis choisis <b>« Installer l'application »</b> ou{' '}
+          <b>« Ajouter à l'écran d'accueil »</b>.
+        </p>
+      )}
     </div>
   )
 }
