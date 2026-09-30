@@ -2165,4 +2165,99 @@ export const SEED_PLACES: Place[] = [
     story:
       "Cette lanterne de pierre s'appelle un « tōrō » : dans les jardins japonais, elle éclairait les chemins la nuit. Le jardin porte le nom de Fukuoka, une ville du Japon jumelée avec Bordeaux. Le parc floral a été créé au début des années 1990 pour une grande fête des fleurs, les Floralies. Et pourquoi l'eau est-elle si verte sur la photo ? Ce sont des lentilles d'eau, de toutes petites plantes qui flottent à la surface.",
   }),
+
+  // ---------- Églises, porte et monument (Centre, Sainte-Croix, Caudéran) ----------
+  place({
+    id: 'seed-porte-monnaie',
+    title: 'La porte de la Monnaie',
+    category: 'monument',
+    quartier: 'saint-michel',
+    difficulty: 1,
+    lat: 44.833123,
+    lng: -0.561852,
+    challenge:
+      'Cette porte de pierre, plus petite et plus simple que ses grandes sœurs, se dresse pile entre deux quais. Sur ses piliers, deux plaques bleues donnent leurs noms : lesquels ?',
+    photo: commons('porte-monnaie', 'Sylvain Machefert', 'CC BY-SA 3.0', 'Porte_de_la_monnaie_depuis_les_quais.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Sur les quais, entre le pont de pierre et le pont Saint-Jean.', 'Tout près du conservatoire de musique, côté Sainte-Croix.'],
+    story:
+      "Sur la photo, à gauche, c'est le quai Sainte-Croix ; à droite, le quai de la Monnaie. La porte a été construite en 1758 et 1759 pour que les habitants du quartier puissent rejoindre le port à travers les remparts. Elle doit son nom à l'hôtel de la Monnaie, au bout de la rue qui part de l'arche : c'est là qu'on fabriquait les pièces de monnaie du royaume ! Autrefois, on écrivait même « Monnoye ». Passe sous la porte et remonte la rue pour voir l'ancien atelier.",
+  }),
+  place({
+    id: 'seed-notre-dame-chapelet',
+    title: 'Le cadeau du ciel de Notre-Dame',
+    category: 'eglise',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.8428,
+    lng: -0.57625,
+    challenge:
+      "Au-dessus de la grande porte de cette église toute sculptée, un homme à genoux reçoit un cadeau venu du ciel, entouré d'anges. Qu'est-ce que c'est ? Le nom de la place te donnera un indice !",
+    photo: commons('notre-dame-chapelet', 'Christophe Finot', 'CC BY-SA 2.5', 'Bordeaux_-_Eglise_Notre-Dame_1.jpg', {
+      x: 37,
+      y: 63,
+      zoom: 2,
+    }),
+    hints: ['Tout près du Grand-Théâtre, rue Mably.', "L'église donne sur la place du Chapelet."],
+    story:
+      "C'est un chapelet (on dit aussi un « rosaire ») ! La scène montre la Vierge Marie qui le donne à saint Dominique, le fondateur des moines dominicains, qui ont construit cette église entre 1684 et 1707. C'est cette remise du chapelet qui a donné son nom à la place. La façade, de style baroque, s'inspire d'une célèbre église de Rome, le Gesù. Autre curiosité : contrairement à presque toutes les églises, son entrée est tournée vers l'est. Dans les niches, quatre statues représentent de grands savants de l'Église : saint Ambroise, saint Augustin, saint Jérôme et saint Grégoire.",
+  }),
+  place({
+    id: 'seed-saint-pierre-horloge',
+    title: "L'horloge cachée de Saint-Pierre",
+    category: 'eglise',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.839795,
+    lng: -0.570261,
+    challenge:
+      "Tout en haut de la façade de cette église gothique, juste sous la croix, une petite rosace ronde cache un objet qu'on n'attend pas dans une église. Lequel ?",
+    photo: commons('saint-pierre-horloge', 'Chris06', 'CC BY-SA 4.0', '2023_Eglise_Saint-Pierre_de_Bordeaux_%282%29.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Au cœur du quartier Saint-Pierre, sur la place du même nom.', 'Lève la tête bien au-dessus du grand vitrail.'],
+    story:
+      "Une horloge ! Elle est logée dans une rosace de pierre, comme au centre d'une fleur. L'église Saint-Pierre est très ancienne : il y avait déjà une église ici il y a plus de 1 400 ans, près du port antique de Bordeaux, là où une petite rivière, la Devèze, se jetait dans la Garonne. La rivière s'est peu à peu envasée et le quartier a été construit par-dessus. L'église d'aujourd'hui a été rebâtie du XIVᵉ au XVᵉ siècle, puis remaniée en 1882.",
+  }),
+  place({
+    id: 'seed-cauderan-saint-amand',
+    title: "La rosace de l'église de Caudéran",
+    category: 'eglise',
+    quartier: 'cauderan',
+    difficulty: 1,
+    lat: 44.85168,
+    lng: -0.614871,
+    challenge:
+      'Au cœur de Caudéran, cherche un grand clocher pointu qui se voit de loin. Puis trouve la grande rosace ronde au-dessus de la porte : à quoi te fait-elle penser, une fleur ou une roue ?',
+    photo: commons('cauderan-saint-amand', 'PA', 'CC BY-SA 4.0', '%C3%89glise_Caud%C3%A9ran.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Au centre de Caudéran, dans le vieux bourg de Saint-Amand.', 'La grande porte en bois est juste sous la rosace.'],
+    story:
+      "Les deux ! Une rosace, c'est un grand vitrail rond découpé dans la pierre : ses rayons partent du centre comme ceux d'une roue, et ses lobes font comme des pétales. Cette église porte le nom de saint Amand, car Caudéran s'est formé autour du bourg de Saint-Amand. Et Caudéran n'a pas toujours été un quartier de Bordeaux : c'était une commune à part entière, avec son propre maire, jusqu'en 1965 ! Son nom est aussi celui d'une petite rivière, la Caudéran.",
+  }),
+  place({
+    id: 'seed-cauderan-monument',
+    title: 'Le monument aux morts de Caudéran',
+    category: 'memoire',
+    quartier: 'cauderan',
+    difficulty: 1,
+    lat: 44.850827,
+    lng: -0.606782,
+    challenge:
+      "Sur cette vieille carte postale, un soldat lève le bras tout en haut d'une colonne, et deux canons entourent le monument. Retrouve-le : les canons sont-ils toujours là ?",
+    photo: commons(
+      'cauderan-monument',
+      'Auteur inconnu (carte postale ancienne)',
+      'Domaine public',
+      'Caud%C3%A9ran_-_Monument_aux_morts_1.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['À Caudéran, sur la place du Monument-aux-Morts.', 'Cherche une haute colonne surmontée d’une statue de soldat.'],
+    story:
+      "Ce monument rend hommage aux habitants de Caudéran morts pendant la Première Guerre mondiale. Sur la carte postale, on lit « 1914-1918 – Aux héros de la Grande Guerre », et les longs murs autour portent des listes de noms. Le soldat du haut est un « poilu » : c'est comme ça qu'on appelait les soldats français de 14-18. En dessous, une femme lève une grande palme, symbole d'hommage et de victoire. Et les canons ? À toi de voir ! Regarde aussi si d'autres dates ont été ajoutées depuis.",
+  }),
 ]
