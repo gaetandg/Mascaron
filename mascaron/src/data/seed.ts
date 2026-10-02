@@ -429,7 +429,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Passage des Citernes.', 'Viens à la tombée de la nuit : elles s’illuminent.'],
     story:
-      "Il y a quatre cuves ! C'est un ancien château d'eau : les cuves en hauteur gardaient de l'eau sous pression pour la distribuer. Il a été conservé au milieu du nouveau quartier. Juste à côté se cache un personnage de street art très célèbre : le Gouzou !",
+      "Il y a quatre cuves, numérotées de 1 à 4… en partant de la droite ! C'est un ancien château d'eau : les cuves en hauteur gardaient de l'eau sous pression pour la distribuer. Il a été conservé au milieu du nouveau quartier. Juste à côté se cache un personnage de street art très célèbre : le Gouzou !",
   }),
   place({
     id: 'seed-gouzou',
@@ -529,7 +529,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Cours de la Marne, vers les numéros 60-62.', 'Lève la tête, au niveau du premier étage.'],
     story:
-      "On trouve à Bordeaux beaucoup de niches avec des statuettes : des saints, des personnages, parfois des vierges. Celui-ci est bien étrange : observe-le, que tient-il au bout de son bras levé ? Sous la niche, des lettres sont gravées dans la pierre : arrives-tu à les lire ?",
+      "On trouve à Bordeaux beaucoup de niches avec des statuettes : des saints, des personnages, parfois des vierges. Celui-ci est bien étrange : au bout de son bras levé, il brandit… une tête ! Sous la niche, des lettres sont gravées dans la pierre : on y devine « SAINT » et « JEAN ». Arrives-tu à lire le reste ?",
   }),
 
   // ---------- Place de la Victoire ----------
@@ -675,7 +675,7 @@ export const SEED_PLACES: Place[] = [
     photo: commons('bourse-du-travail', 'JeanWilhelm', 'CC0', 'Bourse_du_Travail_Bordeaux.jpg', { x: 20, y: 50, zoom: 2.5 }),
     hints: ['Cours Aristide-Briand.', 'Les mots « Bourse du travail » sont gravés juste au-dessus.'],
     story:
-      "La Bourse du travail, c'est la maison des syndicats : les travailleurs s'y réunissent pour défendre leurs droits. Le bâtiment date des années 1930 et il est de style Art déco : des lignes droites, de grandes fenêtres et des sculptures très géométriques. Compte les personnages du bas-relief : que font-ils ? Chacun représente peut-être un métier…",
+      "La date gravée, c'est 1936. La Bourse du travail, c'est la maison des syndicats : les travailleurs s'y réunissent pour défendre leurs droits. Le bâtiment date des années 1930 et il est de style Art déco : des lignes droites, de grandes fenêtres et des sculptures très géométriques. Compte les personnages du bas-relief : que font-ils ? Chacun représente peut-être un métier…",
   }),
 
   // ---------- Rue du Mirail / cours Victor-Hugo ----------
@@ -719,7 +719,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Rue du Mirail, du côté du cours Victor-Hugo.', 'Le numéro 22 est sculpté dans le bois de la porte.'],
     story:
-      "Ces petits anges joufflus s'appellent des « putti » (un « putto », en italien). Les personnages qui soutiennent un balcon s'appellent des atlantes quand ce sont des hommes, et des cariatides quand ce sont des femmes. Et ceux-là, hommes ou femmes ? Regarde aussi la porte : on y lit encore le numéro 22.",
+      "Ces petits anges joufflus s'appellent des « putti » (un « putto », en italien). Les personnages qui soutiennent un balcon s'appellent des atlantes quand ce sont des hommes, et des cariatides quand ce sont des femmes. Regarde bien leurs gestes : ils ne font pas que porter le balcon ! Et sur la porte, on lit encore le numéro 22.",
   }),
   place({
     id: 'seed-menuts-cariatides',
@@ -841,7 +841,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Rue Peyronnet, près de Sainte-Croix.', 'Lève les yeux : une petite cloche est posée sur le toit.'],
     story:
-      "C'est une croix orthodoxe, comme on en voit surtout en Russie et en Europe de l'Est. La petite barre du haut représente l'écriteau cloué au-dessus du Christ, et la barre penchée du bas le support pour ses pieds. Et toi, de quel côté penche-t-elle ?",
+      "C'est une croix orthodoxe, comme on en voit surtout en Russie et en Europe de l'Est. La petite barre du haut représente l'écriteau cloué au-dessus du Christ, et la barre penchée du bas le support pour ses pieds. Ici, quand on est face à la chapelle, la barre du bas descend vers la droite.",
   }),
 
   // ---------- Centre : place de la Bourse / Saint-Pierre ----------
@@ -997,7 +997,7 @@ export const SEED_PLACES: Place[] = [
     photo: commons('porte-dijeaux', 'Gzen92', 'CC BY-SA 4.0', 'Porte_Dijeaux_(Bordeaux).jpg', { x: 50, y: 30, zoom: 1 }),
     hints: ['Place Gambetta, côté centre-ville.', 'Elle fait le bout de la rue Porte-Dijeaux.'],
     story:
-      "La porte Dijeaux a été construite au XVIIIᵉ siècle, à l'endroit d'une ancienne porte des remparts. Son nom viendrait du latin « porta Jovis », la porte de Jupiter, le roi des dieux romains. Aujourd'hui, les remparts ont disparu : il ne reste que la porte, comme un décor au milieu de la rue.",
+      "Sous une couronne, le blason montre un château : c'est le blason de Bordeaux (on dit que ce château représente la Grosse Cloche). Et juste en dessous, sur la pierre du milieu de l'arc, un visage barbu te regarde : c'est un mascaron ! La porte Dijeaux a été construite au XVIIIᵉ siècle, à l'endroit d'une ancienne porte des remparts. Son nom viendrait du latin « porta Jovis », la porte de Jupiter, le roi des dieux romains. Aujourd'hui, les remparts ont disparu : il ne reste que la porte, comme un décor au milieu de la rue.",
   }),
 
   // ---------- Centre : Grand-Théâtre / Quinconces / quais ----------
@@ -1354,7 +1354,7 @@ export const SEED_PLACES: Place[] = [
     lat: 44.84759,
     lng: -0.58271,
     challenge:
-      "Au milieu des maisons, de vieux murs de briques et de pierres percés de grandes arches… Ce sont les restes d'un monument vieux de près de 2 000 ans ! Trouve-les et compte les arches du grand mur.",
+      "Au milieu des maisons, de vieux murs de briques et de pierres percés de grandes arches… Ce sont les restes d'un monument vieux de près de 2 000 ans ! Trouve-les, et regarde bien les murs : de quoi sont faites les fines rayures rouges ?",
     photo: commons('palais-gallien', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Palais_Gallien_R01.jpg', {
       x: 50,
       y: 50,
@@ -1362,7 +1362,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Rue du Docteur-Albert-Barraud, quartier Fondaudège.', 'Les ruines se voient à travers les grilles, entre les immeubles.'],
     story:
-      "Malgré son nom, ce n'était pas un palais : c'était un amphithéâtre romain, comme une arène, où des milliers de spectateurs venaient voir des combats et des spectacles, à l'époque où Bordeaux s'appelait Burdigala. Il a été construit autour du IIᵉ siècle. Regarde bien les murs : les Romains alternaient des rangées de petites pierres et des rangées de briques rouges.",
+      "Malgré son nom, ce n'était pas un palais : c'était un amphithéâtre romain, comme une arène, où des milliers de spectateurs venaient voir des combats et des spectacles, à l'époque où Bordeaux s'appelait Burdigala. Il a été construit autour du IIᵉ siècle. Et les rayures rouges ? Ce sont des rangées de briques : les Romains alternaient des rangées de petites pierres et des rangées de briques, pour rendre les murs plus solides.",
   }),
   place({
     id: 'seed-saint-seurin-portail',
@@ -1373,7 +1373,7 @@ export const SEED_PLACES: Place[] = [
     lat: 44.843212,
     lng: -0.585719,
     challenge:
-      "Sous un grand porche, des dizaines de saints de pierre sont alignés de chaque côté de la porte, et au-dessus, une foule de petits personnages. Trouve ce portail : combien de statues comptes-tu d'un seul côté ?",
+      "Sous un grand porche, des dizaines de saints de pierre sont alignés de chaque côté de la porte, et au-dessus, une foule de petits personnages. Trouve ce portail : qui est assis tout au milieu, au-dessus de la porte, les mains levées ?",
     photo: commons(
       'saint-seurin-portail',
       'Zairon',
@@ -1383,7 +1383,7 @@ export const SEED_PLACES: Place[] = [
     ),
     hints: ['Basilique Saint-Seurin, place des Martyrs-de-la-Résistance.', 'Ce n’est pas l’entrée principale : fais le tour, le porche est sur le côté.'],
     story:
-      "La basilique Saint-Seurin est l'une des plus anciennes églises de Bordeaux : sous elle se cache une crypte et une nécropole (un ancien cimetière) de l'Antiquité. Ce portail sculpté date du Moyen Âge. Les pèlerins en route vers Saint-Jacques-de-Compostelle s'arrêtaient ici : la basilique fait partie des monuments classés au patrimoine mondial de l'Unesco au titre des chemins de Compostelle.",
+      "C'est le Christ, entouré d'anges : juste en dessous, de petits personnages sortent de leurs tombeaux. Comme au portail royal de la cathédrale, c'est le Jugement dernier ! Parmi les grands saints alignés, cherche celui qui tient des clés : c'est saint Pierre. La basilique Saint-Seurin est l'une des plus anciennes églises de Bordeaux : sous elle se cache une crypte et une nécropole (un ancien cimetière) de l'Antiquité. Ce portail sculpté date du Moyen Âge. Les pèlerins en route vers Saint-Jacques-de-Compostelle s'arrêtaient ici : la basilique fait partie des monuments classés au patrimoine mondial de l'Unesco au titre des chemins de Compostelle.",
   }),
   place({
     id: 'seed-alhambra-mascaron',
@@ -1455,7 +1455,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Place Picard, aux Chartrons.', 'Elle est bien plus petite que celle de New York…'],
     story:
-      "C'est une réplique de la statue de la Liberté du sculpteur Bartholdi, celle qui accueille les bateaux à New York. Bordeaux avait déjà une statue comme celle-ci à la fin du XIXᵉ siècle, mais elle a disparu pendant la Seconde Guerre mondiale, quand l'occupant fondait le métal des statues. Celle-ci l'a remplacée bien plus tard. Que tient-elle dans sa main gauche ?",
+      "C'est une réplique de la statue de la Liberté du sculpteur Bartholdi, celle qui accueille les bateaux à New York. Bordeaux avait déjà une statue comme celle-ci à la fin du XIXᵉ siècle, mais elle a disparu pendant la Seconde Guerre mondiale, quand l'occupant fondait le métal des statues. Celle-ci l'a remplacée bien plus tard. Dans sa main gauche, elle tient une tablette : sur celle de New York est gravée la date de l'indépendance des États-Unis, le 4 juillet 1776.",
   }),
   place({
     id: 'seed-saint-louis-chartrons',
