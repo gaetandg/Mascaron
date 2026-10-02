@@ -2355,4 +2355,63 @@ export const SEED_PLACES: Place[] = [
     story:
       "Tu ressors rue des Piliers-de-Tutelle ! Le passage traverse le pâté de maisons en diagonale, ce qui est très rare. La Galerie bordelaise a été construite en 1833 et 1834 par l'architecte Gabriel-Joseph Durand, pour faire aussi bien que les célèbres passages couverts de Paris. La verrière laisse entrer la lumière pour les boutiques, à l'abri de la pluie.",
   }),
+  place({
+    id: 'seed-saint-remi',
+    title: "L'église cachée de la rue Jouannet",
+    category: 'eglise',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.841783,
+    lng: -0.57197,
+    challenge:
+      "Dans une rue étroite, une vieille église se cache entre les immeubles : on ne voit que son clocher et un bout de façade. Trouve-la ! Elle ne sert plus pour la messe : à quoi sert-elle aujourd'hui ?",
+    photo: commons('saint-remi', 'Sylvain Machefert', 'CC BY-SA 3.0', '%C3%89glise_Saint-R%C3%A9mi_de_Bordeaux%2C_vue_d%27ensemble.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier Saint-Pierre, rue Jouannet, tout près de la place de la Bourse.', 'Cherche une grande banderole rouge.'],
+    story:
+      "C'est devenu un lieu d'expositions, l'« Espace Saint-Rémi » ! L'église Saint-Rémi est très ancienne : une première église romane au XIᵉ siècle, puis une reconstruction en style gothique à partir du XIVᵉ siècle, l'époque de son clocher. Selon une vieille tradition, elle aurait été bâtie à l'emplacement d'un temple romain dédié à Jupiter, près d'un mur romain. Toute petite aujourd'hui, sa paroisse s'étendait autrefois jusqu'à Bacalan ! Elle a été fermée à la Révolution, puis vendue aux enchères en 1792.",
+  }),
+  place({
+    id: 'seed-saint-paul',
+    title: 'Le saint déguisé de Saint-Paul',
+    category: 'eglise',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.836457,
+    lng: -0.572862,
+    challenge:
+      "Cette église a été construite par les Jésuites. À l'intérieur, au-dessus de l'autel, saint François Xavier s'envole vers le ciel. Pendant la Révolution, des fidèles l'ont « déguisé » pour le sauver. Si l'église est ouverte, entre le voir : à ton avis, en quoi l'ont-ils déguisé ?",
+    photo: commons(
+      'saint-paul',
+      'Chris06',
+      'CC BY-SA 4.0',
+      '2023_%C3%89glise_Saint-Paul-Saint-Fran%C3%A7ois-Xavier_Bordeaux_%282%29.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Rue des Ayres, tout près du cours Victor-Hugo.', 'Cherche le clocher surmonté d’un petit dôme.'],
+    story:
+      "En révolutionnaire ! Pendant la Révolution, on détruisait les statues religieuses. Pour sauver celle-ci, des fidèles lui ont mis un bonnet phrygien (le bonnet des révolutionnaires), lui ont dessiné une moustache au charbon et lui ont mis une hache et une lance dans les mains. La statue avait l'air si ridicule qu'on l'a laissée tranquille ! Elle a été sculptée par Guillaume Coustou quand il avait 28 ans. L'église, de style baroque, a été construite entre 1661 et 1673, grâce aux dons d'Olive de Lestonnac.",
+  }),
+  place({
+    id: 'seed-cour-mably',
+    title: 'Le cloître de la cour Mably',
+    category: 'monument',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.842983,
+    lng: -0.576661,
+    challenge:
+      "Derrière une porte de la rue Mably se cache une grande cour entourée d'arcades, très calme en plein centre-ville. Entre et lève les yeux : de quelle église voit-on dépasser le clocher ?",
+    photo: commons('cour-mably', 'Gzen92', 'CC BY-SA 4.0', 'Couvent_des_Jacobins_-_cour_Mably_%28Bordeaux%29.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rue Mably, tout près du Grand-Théâtre.', "La cour est collée à une église toute sculptée que tu as peut-être déjà trouvée."],
+    story:
+      "C'est le clocher de l'église Notre-Dame, juste à côté ! Cette cour était le cloître du couvent des Dominicains (on les appelait aussi les Jacobins), construit à la fin du XVIIᵉ siècle en même temps que l'église. Les moines s'y promenaient à l'abri des arcades. Le couvent avait deux cloîtres : celui-ci est le seul qui reste. Aujourd'hui, la cour accueille souvent des expositions et des événements.",
+  }),
 ]
