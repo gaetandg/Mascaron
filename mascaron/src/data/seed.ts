@@ -47,7 +47,7 @@ export const SEED_PLACES: Place[] = [
       'Jean Barreau (carte postale ancienne)',
       'Domaine public',
       'Bordeaux_-_Place_Nansouty_-_la_fontaine.jpg',
-      { x: 33, y: 66, zoom: 3 },
+      { x: 33, y: 66, zoom: 2 },
     ),
     hints: ['Elle est sur la place Nansouty elle-même.', "Le visage est juste au-dessus du bassin, là où coulait l'eau."],
     story:
@@ -303,7 +303,7 @@ export const SEED_PLACES: Place[] = [
     lat: 44.82244,
     lng: -0.56945,
     challenge: 'Juste au-dessus du nom de la rue, une toute petite plaque se cache. Trouve-la et lis ce qui est écrit dessus.',
-    photo: rb('galard-plaque', 'Bordeaux_-_Rue_de_Galard_-_Plaque.jpg', { x: 51, y: 50, zoom: 5 }),
+    photo: rb('galard-plaque', 'Bordeaux_-_Rue_de_Galard_-_Plaque.jpg', { x: 51, y: 50, zoom: 4 }),
     hints: ["Cherche la plaque bleue « Rue de Galard » sur l'angle d'une maison.", 'Le numéro est suivi de « Arr ».'],
     story:
       "« 6ᵉ Arr » : ces petites plaques indiquent l'ancien arrondissement (une sorte de quartier administratif) de la rue. Bonus : sur la même maison, lève les yeux vers la frise sculptée en haut du mur. Et va voir la rue de la Réole, toute proche : même numéro ?",
