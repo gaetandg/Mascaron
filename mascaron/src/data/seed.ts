@@ -2395,6 +2395,41 @@ export const SEED_PLACES: Place[] = [
     story:
       "En révolutionnaire ! Pendant la Révolution, on détruisait les statues religieuses. Pour sauver celle-ci, des fidèles lui ont mis un bonnet phrygien (le bonnet des révolutionnaires), lui ont dessiné une moustache au charbon et lui ont mis une hache et une lance dans les mains. La statue avait l'air si ridicule qu'on l'a laissée tranquille ! Elle a été sculptée par Guillaume Coustou quand il avait 28 ans. L'église, de style baroque, a été construite entre 1661 et 1673, grâce aux dons d'Olive de Lestonnac.",
   }),
+  // ---------- Mériadeck et Caudéran ----------
+  place({
+    id: 'seed-porte-chartreuse',
+    title: 'La grande porte de la Chartreuse',
+    category: 'monument',
+    quartier: 'meriadeck',
+    difficulty: 1,
+    lat: 44.835505,
+    lng: -0.594174,
+    challenge:
+      "Derrière cette grande porte de pierre, surmontée d'une croix, s'étend le plus grand cimetière de Bordeaux. Un peintre espagnol très célèbre y a été enterré. Lequel ?",
+    photo: commons('porte-chartreuse', 'Sylvain Machefert', 'CC BY-SA 3.0', 'Porte_du_cimeti%C3%A8re_de_la_chartreuse%2C_Bordeaux.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place du 11-Novembre, tout près de l’église Saint-Bruno.', 'Son nom commence par un G… et il a peint des rois d’Espagne.'],
+    story:
+      "C'est Francisco Goya ! Il a passé ses dernières années à Bordeaux et y est mort en 1828. Son corps a ensuite été ramené en Espagne, à Madrid, mais un monument lui rend toujours hommage dans le cimetière. Le cimetière de la Chartreuse est le plus ancien et le plus grand de Bordeaux : il a été aménagé à la fin du XVIIIᵉ siècle sur les jardins d'un couvent de moines chartreux, dont il ne resterait que cette porte. Avant, tout le quartier était un marais ! Sur les côtés de la porte, regarde les anges sculptés.",
+  }),
+  place({
+    id: 'seed-le-vaincu',
+    title: 'Le géant à genoux du parc Bordelais',
+    category: 'sculpture',
+    quartier: 'cauderan',
+    difficulty: 2,
+    lat: 44.85115,
+    lng: -0.603962,
+    challenge:
+      "Dans le parc, un géant de marbre est à genoux contre un gros bloc de pierre, la tête baissée. Pourquoi ne peut-il pas se relever ? Regarde bien ses mains.",
+    photo: rb('le-vaincu', 'Bordeaux_-_Parc_bordelais_-_Le_Vaincu_%28Gabrielle_Dumontet%29_01.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Parc Bordelais, à Caudéran.', 'Cherche une grande sculpture blanche près des allées, au milieu des arbres.'],
+    story:
+      "Ses mains sont attachées dans son dos ! Cette sculpture s'appelle « Le Vaincu » (ou « La Force enchaînée »). Elle a été sculptée en 1900 par Gabrielle Dumontet, une artiste née à Bordeaux, à une époque où les femmes sculptrices étaient rares. Elle racontait que si l'homme se relevait, il mesurerait quatre mètres de haut ! L'œuvre appartient au musée des Beaux-Arts et a été installée dans le parc en 1952. Cherche la signature de l'artiste et la date, gravées en bas à droite.",
+  }),
   place({
     id: 'seed-cour-mably',
     title: 'Le cloître de la cour Mably',
