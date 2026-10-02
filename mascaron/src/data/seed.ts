@@ -2260,4 +2260,99 @@ export const SEED_PLACES: Place[] = [
     story:
       "Ce monument rend hommage aux habitants de Caudéran morts pendant la Première Guerre mondiale. Sur la carte postale, on lit « 1914-1918 – Aux héros de la Grande Guerre », et les longs murs autour portent des listes de noms. Le soldat du haut est un « poilu » : c'est comme ça qu'on appelait les soldats français de 14-18. En dessous, une femme lève une grande palme, symbole d'hommage et de victoire. Et les canons ? À toi de voir ! Regarde aussi si d'autres dates ont été ajoutées depuis.",
   }),
+
+  // ---------- Hyper-centre : place Camille-Jullian et alentours ----------
+  place({
+    id: 'seed-jaguar-victor-hugo',
+    title: 'La Jaguar suspendue dans le vide',
+    category: 'sculpture',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.835094,
+    lng: -0.571917,
+    challenge:
+      "En hauteur, sur la façade d'un parking, une vieille voiture verte a l'air d'avoir défoncé le mur… et d'être sur le point de tomber ! Trouve-la, puis regarde bien : comment tient-elle ?",
+    photo: commons('jaguar-victor-hugo', 'Van de Schaufel', 'CC BY 4.0', 'Parkhaus_in_Bordeaux.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['Sur le cours Victor-Hugo, sur la façade du parking.', 'Lève la tête : elle est à plusieurs étages du sol.'],
+    story:
+      "Pas d'inquiétude, ce n'est pas un accident : c'est une œuvre d'art ! Cette vieille Jaguar anglaise (un modèle des années 1950-1960) a été installée au début des années 1990, quand le parking a été rénové. L'idée vient de l'architecte bordelais Jean-François Dosso. La voiture repose en fait sur la structure du parking (regarde les poteaux en dessous), et on lui a retiré son moteur pour qu'elle soit plus légère. Depuis, elle fait sursauter les passants !",
+  }),
+  place({
+    id: 'seed-camille-jullian-colonne',
+    title: 'La colonne romaine de la place Camille-Jullian',
+    category: 'monument',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.838841,
+    lng: -0.572375,
+    challenge:
+      "Cette colonne est faite de vraies pierres romaines. Mais regarde bien : le chapiteau (le haut d'une colonne sculpté de feuilles) se trouve à un drôle d'endroit. Où ?",
+    photo: commons('camille-jullian-colonne', 'Als33120', 'CC BY-SA 4.0', 'Bordeaux%2C_Monument_%C3%A0_Camille_Jullian.JPG', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place Camille-Jullian, au croisement de la rue Saint-Siméon et de la rue du Pas-Saint-Georges.', 'Compare le haut et le bas de la colonne.'],
+    story:
+      "Il y en a deux ! Un en haut, comme d'habitude, et un autre… en dessous, qui sert de socle : la colonne est posée sur un chapiteau. Ces pierres ont été découvertes en 1921 dans le mur d'enceinte de la ville romaine, Burdigala. Le monument rend hommage à Camille Jullian (1859-1933), le grand historien des Gaulois et de Bordeaux, qui s'est passionné pour les fouilles et les inscriptions du Bordeaux romain. Lis l'inscription gravée sur le socle : c'est la ville de Bordeaux qui rend hommage à « son historien ».",
+  }),
+  place({
+    id: 'seed-utopia-saint-simeon',
+    title: "Le cinéma dans l'église",
+    category: 'eglise',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.839068,
+    lng: -0.572356,
+    challenge:
+      "Sur la place Camille-Jullian, un cinéma a un drôle d'air : grande fenêtre pointue, vitrail, gros contreforts de pierre… Qu'était ce bâtiment avant ?",
+    photo: commons(
+      'utopia-saint-simeon',
+      'Patrick Despoix',
+      'CC BY-SA 4.0',
+      '013_-_Cin%C3%A9ma_Utopia_Saint-Sim%C3%A9on_Place_Camille_Jullian_-_Bordeaux.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Place Camille-Jullian, côté nord.', 'Son nom est écrit sur les panneaux de la terrasse.'],
+    story:
+      "Une église ! L'église Saint-Siméon, construite entre le XIVᵉ et le XVIIᵉ siècle. Après la Révolution, elle a eu plein d'autres vies : on y a fabriqué du salpêtre (pour la poudre à canon), puis elle est devenue en 1836 une école pour les mousses, les apprentis marins. En 1892, une fabrique de conserves s'y installe : on raconte que c'est là qu'a été inventée la petite clé qui ouvre les boîtes de sardines ! Elle a ensuite servi de garage, avant de devenir le cinéma Utopia en 1999.",
+  }),
+  place({
+    id: 'seed-fontaine-saint-projet',
+    title: 'Les deux rivières de la fontaine Saint-Projet',
+    category: 'fontaine',
+    quartier: 'centre',
+    difficulty: 2,
+    lat: 44.838625,
+    lng: -0.574208,
+    challenge:
+      "Tout en haut de cette fontaine, une femme et un vieux barbu sont allongés. Ils représentent deux choses qui ont fait naître Bordeaux : lesquelles ? Bonus : entre eux, trouve le symbole de la ville.",
+    photo: commons('fontaine-saint-projet', 'Marc Ryckaert (MJJR)', 'CC BY-SA 3.0', 'Bordeaux_Fontaine_StProjet_R01.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place Saint-Projet, sur la rue Sainte-Catherine.', 'La fontaine est dans le mur, au fond de la place.'],
+    story:
+      "Deux rivières : le Peugue et la Devèze ! C'est à l'endroit où elles se jetaient dans la Garonne que Bordeaux est née. Entre les deux statues, les trois croissants de lune entremêlés, c'est le symbole de Bordeaux, le « port de la Lune ». La fontaine date de 1715 et a été sculptée par Michiel van der Voort, un artiste venu des Pays-Bas du Sud. Plus bas, cherche les coquilles Saint-Jacques et les trophées marins (gouvernail, trident…). Et son eau est potable : appuie sur un des trois robinets !",
+  }),
+  place({
+    id: 'seed-galerie-bordelaise',
+    title: 'Le passage secret de la Galerie bordelaise',
+    category: 'facade',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.841531,
+    lng: -0.574012,
+    challenge:
+      "Rue Sainte-Catherine, une grande arche ouvre sur un passage couvert d'une verrière. Entre, traverse-le jusqu'au bout : dans quelle rue ressors-tu ?",
+    photo: commons('galerie-bordelaise', 'Guiguilacagouille', 'CC BY-SA 3.0', 'Galerie_Bordelaise_1.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Rue Sainte-Catherine, pas loin du Grand-Théâtre.', "L'entrée ressemble à une grande porte en arc."],
+    story:
+      "Tu ressors rue des Piliers-de-Tutelle ! Le passage traverse le pâté de maisons en diagonale, ce qui est très rare. La Galerie bordelaise a été construite en 1833 et 1834 par l'architecte Gabriel-Joseph Durand, pour faire aussi bien que les célèbres passages couverts de Paris. La verrière laisse entrer la lumière pour les boutiques, à l'abri de la pluie.",
+  }),
 ]
