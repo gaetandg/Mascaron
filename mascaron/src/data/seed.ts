@@ -2449,4 +2449,51 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est le clocher de l'église Notre-Dame, juste à côté ! Cette cour était le cloître du couvent des Dominicains (on les appelait aussi les Jacobins), construit à la fin du XVIIᵉ siècle en même temps que l'église. Les moines s'y promenaient à l'abri des arcades. Le couvent avait deux cloîtres : celui-ci est le seul qui reste. Aujourd'hui, la cour accueille souvent des expositions et des événements.",
   }),
+  // ---------- Repérés par Gaëtan en se baladant ----------
+  place({
+    id: 'seed-sainte-croix-chevalier',
+    title: 'Le chevalier de Sainte-Croix',
+    category: 'sculpture',
+    quartier: 'saint-michel',
+    difficulty: 2,
+    lat: 44.83118,
+    lng: -0.56165,
+    challenge:
+      "Sur la façade de l'église Sainte-Croix, un chevalier à cheval est sculpté dans la pierre. Trouve-le ! Que combat-il, sous les sabots de son cheval ?",
+    photo: commons(
+      'sainte-croix-chevalier',
+      'Chris06',
+      'CC BY-SA 4.0',
+      '2023_Abbatiale_Sainte_Croix_(Bordeaux)_(01).jpg',
+      { x: 32, y: 47, zoom: 2.5 },
+    ),
+    hints: [
+      'Lève les yeux : il est à mi-hauteur, pas au niveau des portes.',
+      'Regarde au-dessus de la petite porte rouge, à gauche du grand portail.',
+    ],
+    story:
+      "Le chevalier porte un casque, une cotte de mailles et un bouclier, et il plante sa lance dans une créature couchée sous son cheval, sans doute un dragon : c'est la pose de saint Georges terrassant le dragon. Les églises romanes de la région ont souvent un cavalier sculpté sur leur façade. Celle de Sainte-Croix a été beaucoup restaurée au XIXᵉ siècle : regarde, l'arc au-dessus du chevalier est pointu, alors que les arcs plus anciens de l'église sont tout ronds.",
+  }),
+  place({
+    id: 'seed-fronton-quai',
+    title: 'Le fronton de pelote basque des quais',
+    category: 'autre',
+    quartier: 'belcier',
+    difficulty: 1,
+    lat: 44.83257,
+    lng: -0.5588,
+    challenge:
+      'Au bord de la Garonne, près du pont Saint-Jean, un grand mur rouge au sommet arrondi attend les joueurs. Trouve-le ! Que dit l’inscription tout en haut du mur ?',
+    photo: panoramax('fronton-quai', 'Bordeaux Métropole', ETALAB, 'bd09b894-9de4-4e7e-82a3-66add05e84f6', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: [
+      'Sur les quais, côté ville, un peu avant le pont Saint-Jean quand on vient du centre.',
+      'Cherche les grands projecteurs et les grilles blanches.',
+    ],
+    story:
+      "C'est un fronton de pelote basque, un jeu venu du Pays basque : on frappe une petite balle très dure contre le mur, à main nue, avec une raquette en bois (la pala) ou avec un grand panier en osier attaché au bras (la chistera). Les lignes au sol marquent les limites du terrain, et les projecteurs permettent de jouer le soir. Sur la photo prise en 2021, l'inscription en haut du mur dit « Bordeaux ma ville sportive ». Est-ce toujours la même ?",
+  }),
 ]
