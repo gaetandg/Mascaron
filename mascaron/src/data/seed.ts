@@ -2525,4 +2525,85 @@ export const SEED_PLACES: Place[] = [
     story:
       "Ces petites œuvres discrètes sont signées par des artistes de rue comme Diamantaire ou Céramique F2B. Elles font penser aux célèbres « Space Invaders » de l'artiste Invader : depuis la fin des années 1990, il colle dans les rues du monde entier des petits extraterrestres en carreaux de mosaïque, inspirés d'un jeu vidéo de 1978 ; Bordeaux en a eu aussi. Le nombre de mosaïques change avec le temps (certaines sont décollées, d'autres ajoutées) : note ton score dans ton carnet !",
   }),
+  // ---------- Saint-Augustin ----------
+  place({
+    id: 'seed-stade-anneaux',
+    title: 'La tour aux anneaux du stade Chaban-Delmas',
+    category: 'monument',
+    quartier: 'saint-augustin',
+    difficulty: 1,
+    lat: 44.82868,
+    lng: -0.5998,
+    challenge:
+      "À l'entrée du grand stade, une haute tour blanche monte vers le ciel. Trouve-la ! Combien d'anneaux sont dessinés à son pied ?",
+    photo: panoramax('stade-anneaux', 'Bordeaux Métropole', ETALAB, '17fdd70e-2970-4cfb-a2fd-3620024ee9c3', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Le stade est tout près de l’hôpital Pellegrin.', 'Fais le tour du stade jusqu’aux grandes portes rouges.'],
+    story:
+      "Il y a 5 anneaux : ce sont les anneaux des Jeux olympiques, un pour chaque continent. Le stade a été inauguré en 1938, pour la Coupe du monde de football qui avait lieu en France : on l'appelait alors le parc Lescure. Il porte depuis 2001 le nom de Jacques Chaban-Delmas, ancien maire de Bordeaux. Sa tour toute droite et ses lignes simples sont typiques du style « art déco » de cette époque. Aujourd'hui, on y joue surtout au rugby.",
+  }),
+  place({
+    id: 'seed-saint-augustin',
+    title: "L'église Saint-Augustin",
+    category: 'eglise',
+    quartier: 'saint-augustin',
+    difficulty: 1,
+    lat: 44.83261,
+    lng: -0.61072,
+    challenge:
+      'Au cœur du quartier Saint-Augustin, une église dresse son clocher pointu. Trouve son horloge et sa rosace ronde. Combien de portes bleues vois-tu sur la façade ?',
+    photo: commons('saint-augustin', 'JeanWilhelm', 'CC0', '%C3%89glise_saint_augustin_bordeaux17_02_25.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Place de l’Église-Saint-Augustin.', 'Lève les yeux vers le clocher : l’horloge est juste au-dessus de la rosace.'],
+    story:
+      "Sur la photo, il y a 2 portes bleues, de chaque côté du grand porche du milieu. La rosace, c'est la fenêtre ronde au-dessus des trois fenêtres étroites. Le quartier et l'église portent le nom de saint Augustin, un évêque d'Afrique du Nord qui a vécu il y a plus de 1 600 ans et dont les livres sont encore lus aujourd'hui.",
+  }),
+  place({
+    id: 'seed-chartreuse-caoulet',
+    title: 'La chartreuse le Caoulet',
+    category: 'facade',
+    quartier: 'saint-augustin',
+    difficulty: 2,
+    lat: 44.823329,
+    lng: -0.595555,
+    challenge:
+      "Derrière une haie, une longue maison de pierre sans étage cache un œil rond tout en haut de sa façade. Trouve-le !",
+    photo: commons(
+      'chartreuse-caoulet',
+      'Symac / Sylvain Machefert',
+      'CC BY-SA 3.0',
+      'Chartreuse_le_Caoulet_-_Bordeaux_(201202)_-_3.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Dans le quartier Saint-Augustin, au sud du stade Chaban-Delmas.', 'Regarde le haut du mur arrondi, au-dessus des fenêtres.'],
+    story:
+      "C'est une « chartreuse » : à Bordeaux, on appelle ainsi les élégantes maisons de campagne, souvent tout en longueur et sans étage, que les riches Bordelais faisaient construire hors de la ville, surtout au XVIIIᵉ siècle. Aujourd'hui, la ville les a rattrapées ! La fenêtre ronde s'appelle un « œil-de-bœuf ». C'est une maison privée : on la regarde depuis la rue.",
+  }),
+  place({
+    id: 'seed-carmes-haut-brion',
+    title: 'La vigne cachée dans la ville',
+    category: 'nature',
+    quartier: 'saint-augustin',
+    difficulty: 2,
+    lat: 44.822345,
+    lng: -0.610047,
+    challenge:
+      'En pleine ville, derrière des grilles, poussent de vrais rangs de vigne qui servent à faire du vin, avec un petit château à tourelle au fond. Trouve-les !',
+    photo: commons(
+      'carmes-haut-brion',
+      'Philippe Labeguerie',
+      'CC BY 3.0',
+      'Photographie_Ch%C3%A2teau_les_Carmes-Haut-Brion.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Rue des Carmes, dans le quartier Saint-Augustin.', 'Regarde à travers les grilles et les portails.'],
+    story:
+      "C'est le château Les Carmes Haut-Brion, l'un des très rares vignobles encore à l'intérieur de Bordeaux. Son nom vient des Carmes, des moines qui ont cultivé ces vignes pendant longtemps. C'est une propriété privée : on la regarde depuis la rue, sans entrer.",
+  }),
 ]
