@@ -2726,4 +2726,64 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est l'église Notre-Dame-de-Lourdes du Cypressat. Son nom rappelle Lourdes, dans les Pyrénées, où une jeune fille, Bernadette, a dit avoir vu la Vierge Marie en 1858. Le symbole du cercle est une croix dont chaque bras se termine par de petites boules arrondies, entourée de deux arcs de pierre comme des ailes.",
   }),
+  // ---------- Caudéran / Saint-Seurin ouest ----------
+  place({
+    id: 'seed-mascaron-compas',
+    title: 'Le mascaron au compas de la rue Mexico',
+    category: 'sculpture',
+    quartier: 'cauderan',
+    difficulty: 2,
+    lat: 44.849107,
+    lng: -0.59882,
+    challenge:
+      "Au-dessus d'une grande porte, un visage de pierre aux boucles d'oreilles cache deux outils. Trouve-le ! Quels sont ces deux outils ?",
+    photo: commons(
+      'mascaron-compas',
+      'Langladure',
+      'CC BY-SA 3.0',
+      'Bordeaux_Mascaron_art_d%C3%A9co_symbole_ma%C3%A7on.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Rue Mexico, près de l’avenue Charles-de-Gaulle.', 'Cherche la porte au numéro 9.'],
+    story:
+      "Un compas posé sur la tête et une équerre en forme de triangle sur le visage ! Ce visage sculpté est un mascaron. Le compas et l'équerre sont les outils des bâtisseurs ; ensemble, ils forment aussi le symbole des francs-maçons, une association dont les membres se disent « bâtisseurs ». Le cadre en marches d'escalier est typique du style art déco, des années 1920-1930.",
+  }),
+  place({
+    id: 'seed-villa-jeanne',
+    title: 'Les gardiens de la villa Jeanne',
+    category: 'facade',
+    quartier: 'saint-seurin',
+    difficulty: 1,
+    lat: 44.855201,
+    lng: -0.595075,
+    challenge:
+      "Une villa au toit d'ardoise pointu, avec des briques, de la pierre sculptée et des fenêtres rondes. Deux statues couchées gardent son portail : lions ou sphinx ?",
+    photo: commons('villa-jeanne', 'Florent Martin', 'CC BY-SA 3.0', 'Maison_dite_Villa_Jeanne.JPG', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Juste de l’autre côté du boulevard, au Bouscat, avenue de la Libération.', 'Cherche le numéro 41 sur les piliers du portail.'],
+    story:
+      "Un gardien couché sur chaque pilier du portail ! Avec leur corps d'animal et leur tête coiffée d'une sorte de foulard, on dirait des sphinx, ces lions à tête humaine de l'Égypte ancienne : regarde bien leur visage et décide. C'est la villa Jeanne, construite en 1898 par l'architecte Bertrand-Alfred Duprat et son fils Cyprien-Alfred. Elle mélange plein de styles à la fois, briques, pierre sculptée, ardoise et pointes de métal sur le toit : on appelle ça l'« éclectisme ». C'est une maison privée : on l'admire depuis le trottoir.",
+  }),
+  place({
+    id: 'seed-tour-333',
+    title: 'La tour aux trois 3',
+    category: 'autre',
+    quartier: 'saint-seurin',
+    difficulty: 1,
+    lat: 44.852056,
+    lng: -0.591454,
+    challenge:
+      "Rue Ulysse-Gayon, une tour coiffée d'un grand chapeau plat, comme une soucoupe volante, porte des chiffres géants. Trouve-la ! Qu'est-il écrit ?",
+    photo: rb('tour-333', 'Bordeaux_-_Rue_Ulysse_Gayon_-_Vue_sur_la_tour_%C3%A0_l%27angle_de_la_rue_Ernest_Renan.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['À l’angle de la rue Ulysse-Gayon et de la rue Ernest-Renan.', 'Lève les yeux : c’est tout en haut.'],
+    story:
+      "On y lit « 3 3 3 », trois fois le chiffre 3, chacun précédé d'un petit point. Mystère : nous n'avons pas encore trouvé ce que veulent dire ces chiffres ! Si tu le découvres en te renseignant dans le quartier, dis-le-nous. Le grand toit plat qui dépasse tout autour fait penser à l'architecture des années 1950-1960.",
+  }),
 ]
