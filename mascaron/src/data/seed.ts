@@ -1727,7 +1727,7 @@ export const SEED_PLACES: Place[] = [
     }),
     hints: ['Entre la porte de Bourgogne et la place de Stalingrad.', 'Pour bien compter, regarde-le depuis les quais, pas depuis le pont.'],
     story:
-      "Il y a 17 arches ! On raconte que c'est parce que « Napoléon Bonaparte » compte 17 lettres : c'est lui qui avait ordonné sa construction. C'est sans doute une légende, mais elle est jolie. Le pont a été terminé en 1822 : avant lui, pour traverser la Garonne, il fallait prendre un bateau. Regarde aussi les médaillons blancs entre les arches.",
+      "Il y a 17 arches ! On raconte que c'est parce que « Napoléon Bonaparte » compte 17 lettres : c'est lui qui avait ordonné sa construction. Mais c'est une légende : le projet prévoyait 19 arches, et deux ont été retirées en 1819, en cours de chantier. Le pont a été ouvert en 1822 : avant lui, pour traverser la Garonne, il fallait prendre un bateau. Regarde aussi les médaillons blancs au-dessus de chaque pile : ils devaient recevoir le monogramme (les initiales) du roi Louis XVIII, qui régnait quand le pont a été fini.",
   }),
   place({
     id: 'seed-darwin',
@@ -2828,5 +2828,44 @@ export const SEED_PLACES: Place[] = [
     hints: ['Quartier Ginko, au nord de la ville, près du lac.', 'Pas de clocher : c’est le mur lui-même qui monte en pointe.'],
     story:
       "C'est l'église Notre-Dame-du-Lac, construite récemment, en même temps que le quartier Ginko, un « éco-quartier » sorti de terre près du lac depuis les années 2000. Elle n'a pas de clocher classique : son mur se relève en pointe, comme une vague qui se dresse, une voile ou une flèche. Chacun y voit autre chose : et toi ?",
+  }),
+  // ---------- Pont de pierre et Bacalan (idées de Gaëtan) ----------
+  place({
+    id: 'seed-pont-de-pierre-lampadaires',
+    title: 'Les lampadaires du pont de pierre',
+    category: 'monument',
+    quartier: 'bastide',
+    difficulty: 1,
+    lat: 44.839292,
+    lng: -0.561333,
+    challenge:
+      "Au milieu du pont de pierre, de grands lampadaires noirs portent tout un bouquet de lanternes. Combien de lanternes sur un grand lampadaire ? Et les lampadaires du pont sont-ils tous pareils ?",
+    photo: panoramax('pont-de-pierre-lampadaires', 'Bordeaux Métropole', ETALAB, '377ed3a0-7dbd-4fc0-aeee-ad3c62a9328a', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Marche sur le trottoir du pont, vers le milieu.', 'Les grands lampadaires sont posés sur de gros socles qui dépassent de la rambarde.'],
+    story:
+      "Un grand lampadaire porte 4 lanternes autour d'un haut mât (selon d'où tu regardes, certaines se cachent derrière les autres !). Entre les grands, des lampadaires plus petits en portent moins. Ils ont l'air anciens, mais ils ont été dessinés dans les années 1980, en même temps que les rambardes, par les architectes Jean de Giacinto, Alain Loisier et Bernard Nivelle, dans le style des lampadaires du XIXᵉ siècle. Depuis 2018, les voitures ne passent plus sur le pont : seulement le tram, les bus, les vélos et les piétons. Profites-en pour admirer la Garonne !",
+  }),
+  place({
+    id: 'seed-vivres-de-l-art',
+    title: "La roue dentée des Vivres de l'Art",
+    category: 'sculpture',
+    quartier: 'bacalan',
+    difficulty: 2,
+    lat: 44.864553,
+    lng: -0.549553,
+    challenge:
+      "Rue Achard, un vieux bâtiment en pierre abrite des ateliers d'artistes. Une de ses arches est fermée par un grand disque de métal découpé, avec une roue dentée au milieu. Trouve-la !",
+    photo: panoramax('vivres-de-l-art', 'Bordeaux Métropole', ETALAB, 'f681d29a-27d1-45cf-9c40-7c7a344626ce', {
+      x: 55,
+      y: 65,
+      zoom: 1,
+    }),
+    hints: ['Au coin de la rue Achard, le long des rails du tram.', 'Juste à côté, un jardin est rempli de sculptures en ferraille.'],
+    story:
+      "Ces bâtiments sont les anciens magasins des Vivres de la Marine, construits à partir de 1786 par l'ingénieur Joseph Teulère : on y fabriquait et on y rangeait la nourriture et les provisions des navires de la marine royale. Depuis 2008, le sculpteur Jean-François Buisson y a installé « Les Vivres de l'Art » : des ateliers, une galerie et, sur la place Victor-Raulin juste à côté, un jardin bordé de sculptures. Il soude de vieux objets en métal pour leur donner une nouvelle vie : regarde bien, une roue de machine peut devenir une œuvre d'art !",
   }),
 ]
