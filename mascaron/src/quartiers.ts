@@ -14,6 +14,7 @@ export const QUARTIERS: { id: QuartierId; label: string }[] = [
   { id: 'belcier', label: 'Belcier – Sacré-Cœur' },
   { id: 'centre', label: 'Centre' },
   { id: 'meriadeck', label: 'Mériadeck – Saint-Bruno' },
+  { id: 'saint-augustin', label: 'Saint-Augustin' },
   { id: 'saint-seurin', label: 'Saint-Seurin – Fondaudège' },
   { id: 'cauderan', label: 'Caudéran' },
   { id: 'chartrons', label: 'Chartrons – Grand Parc' },

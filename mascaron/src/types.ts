@@ -18,6 +18,7 @@ export type QuartierId =
   | 'belcier'
   | 'centre'
   | 'meriadeck'
+  | 'saint-augustin'
   | 'saint-seurin'
   | 'cauderan'
   | 'chartrons'
