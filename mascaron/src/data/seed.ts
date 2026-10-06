@@ -2496,4 +2496,33 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est un fronton de pelote basque, un jeu venu du Pays basque : on frappe une petite balle très dure contre le mur, à main nue, avec une raquette en bois (la pala) ou avec un grand panier en osier attaché au bras (la chistera). Les lignes au sol marquent les limites du terrain, et les projecteurs permettent de jouer le soir. Sur la photo prise en 2021, l'inscription en haut du mur dit « Bordeaux ma ville sportive ». Est-ce toujours la même ?",
   }),
+  // ---------- Pixel art ----------
+  place({
+    id: 'seed-rousselle-pixels',
+    title: 'Le chantier en pixels de la rue de la Rousselle',
+    category: 'street-art',
+    quartier: 'centre',
+    difficulty: 1,
+    lat: 44.83756,
+    lng: -0.568723,
+    challenge:
+      "Rue de la Rousselle, des ouvriers et des animaux dessinés en gros carrés de couleur, comme dans un vieux jeu vidéo, construisent un château imaginaire. Trouve-les ! Lequel est ton préféré ?",
+    hints: ['Vers les numéros 19 et 21 de la rue de la Rousselle.', 'Regarde les grands panneaux qui ferment un terrain sans maison.'],
+    story:
+      "C'est « Château Rousselle », une œuvre en pixel art des artistes Landroïd et Vincent Sereks (collectif 1000 m²), peinte en octobre 2023. Le pixel art, c'est dessiner avec de petits carrés, comme les images des premiers jeux vidéo. Elle a été faite là où d'anciens immeubles se sont effondrés : un chantier imaginaire sur un vrai terrain vide ! Les œuvres de chantier ne restent pas toujours longtemps : si elle a disparu, dis-le-nous. Toute la rue de la Rousselle est d'ailleurs pleine de fresques : ouvre l'œil !",
+  }),
+  place({
+    id: 'seed-palais-mini-mosaiques',
+    title: 'Les mini-mosaïques de la place du Palais',
+    category: 'street-art',
+    quartier: 'centre',
+    difficulty: 3,
+    lat: 44.838387,
+    lng: -0.569388,
+    challenge:
+      'Sur les murs de la place du Palais, des artistes ont collé de toutes petites mosaïques en carreaux de couleur, comme des pixels de jeu vidéo. Ouvre grand les yeux : combien en trouves-tu ?',
+    hints: ['Autour de la place, près de la porte Cailhau.', 'Regarde en hauteur, au-dessus des portes et au coin des murs.'],
+    story:
+      "Ces petites œuvres discrètes sont signées par des artistes de rue comme Diamantaire ou Céramique F2B. Elles font penser aux célèbres « Space Invaders » de l'artiste Invader : depuis la fin des années 1990, il colle dans les rues du monde entier des petits extraterrestres en carreaux de mosaïque, inspirés d'un jeu vidéo de 1978 ; Bordeaux en a eu aussi. Le nombre de mosaïques change avec le temps (certaines sont décollées, d'autres ajoutées) : note ton score dans ton carnet !",
+  }),
 ]
