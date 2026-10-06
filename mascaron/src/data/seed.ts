@@ -2786,4 +2786,43 @@ export const SEED_PLACES: Place[] = [
     story:
       "On y lit « 3 3 3 », trois fois le chiffre 3, chacun précédé d'un petit point. Mystère : nous n'avons pas encore trouvé ce que veulent dire ces chiffres ! Si tu le découvres en te renseignant dans le quartier, dis-le-nous. Le grand toit plat qui dépasse tout autour fait penser à l'architecture des années 1950-1960.",
   }),
+  // ---------- Grand Parc, Le Lac ----------
+  place({
+    id: 'seed-salle-fetes-grand-parc',
+    title: 'La mosaïque de la salle des fêtes du Grand Parc',
+    category: 'facade',
+    quartier: 'chartrons',
+    difficulty: 1,
+    lat: 44.857122,
+    lng: -0.578857,
+    challenge:
+      "Au Grand Parc, une grande salle est couverte d'une mosaïque géante de rectangles de couleur. Au milieu, un symbole noir est dessiné : que représente-t-il ?",
+    photo: panoramax('salle-fetes-grand-parc', 'Bordeaux Métropole', ETALAB, '79a9a310-7673-4b78-99bf-6a4a6c7c9cb2', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Au cœur de la cité du Grand Parc.', 'Cherche le grand toit plat posé sur des piliers, au-dessus des portes vitrées.'],
+    story:
+      "Ce sont trois croissants de lune entrelacés, l'emblème de Bordeaux ! On surnomme Bordeaux le « port de la Lune », car la Garonne y dessine une grande courbe en forme de croissant. La salle des fêtes a été construite dans les années 1960, en même temps que les grands immeubles du Grand Parc. Fermée pendant des années, elle a été rénovée et a rouvert en 2018.",
+  }),
+  place({
+    id: 'seed-notre-dame-du-lac',
+    title: "L'église en forme de vague",
+    category: 'eglise',
+    quartier: 'bacalan',
+    difficulty: 1,
+    lat: 44.87745,
+    lng: -0.5704,
+    challenge:
+      "Dans le quartier Ginko, près du lac, un grand mur gris monte vers le ciel comme une vague, avec une immense croix incrustée dedans. Trouve-le ! À quoi te fait penser sa forme ?",
+    photo: panoramax('notre-dame-du-lac', 'Bordeaux Métropole', ETALAB, '5df12979-2899-4b67-936c-b09916eed168', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['Quartier Ginko, au nord de la ville, près du lac.', 'Pas de clocher : c’est le mur lui-même qui monte en pointe.'],
+    story:
+      "C'est l'église Notre-Dame-du-Lac, construite récemment, en même temps que le quartier Ginko, un « éco-quartier » sorti de terre près du lac depuis les années 2000. Elle n'a pas de clocher classique : son mur se relève en pointe, comme une vague qui se dresse, une voile ou une flèche. Chacun y voit autre chose : et toi ?",
+  }),
 ]
