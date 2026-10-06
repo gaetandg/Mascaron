@@ -1117,3 +1117,13 @@ label.check {
   font-size: 0.88rem;
 }
 
+.account-legal {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 18px 0 8px;
+}
+
+.account-legal a {
+  color: var(--ink-soft);
+}

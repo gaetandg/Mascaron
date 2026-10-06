@@ -39,6 +39,10 @@ export function AccountScreen() {
       </header>
       {!ready ? null : recovering && session ? <NewPassword /> : session ? <LoggedIn email={session.user.email} /> : <Login />}
       {!isInstalled && <InstallCard />}
+      <p className="account-legal">
+        <a href={`${import.meta.env.BASE_URL}confidentialite.html`}>Confidentialité</a> ·{' '}
+        <a href={`${import.meta.env.BASE_URL}conditions.html`}>Conditions d'utilisation</a>
+      </p>
     </div>
   )
 }
