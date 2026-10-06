@@ -259,7 +259,8 @@ export const SEED_PLACES: Place[] = [
     lat: 44.821321,
     lng: -0.576235,
     challenge:
-      'Au sol, deux petits pavés dorés portent les prénoms de deux sœurs. Trouve-les : en quelle année est née la plus jeune ?',
+      'Au sol, deux petits pavés dorés portent les prénoms de deux sœurs. Trouve-les : en quelle année est née la plus jeune ? (La photo montre d’autres pavés de mémoire de Bordeaux, pour que tu saches à quoi ils ressemblent.)',
+    photo: commons('paves-memoire', 'Christian Michelides', 'CC BY-SA 4.0', 'Stolpersteine_in_Bordeaux_4.jpg', { x: 50, y: 45, zoom: 1 }),
     hints: ['Marche en regardant le trottoir, devant les portes.', 'Les pavés sont carrés, pas plus grands que ta main.'],
     story:
       "« Ici habitait… » Marcelle Borruel, née en 1928, et Ginette Borruel, née en 1937, ont été arrêtées le 10 janvier 1944, internées à Drancy puis déportées à Auschwitz, où elles ont été assassinées le 20 janvier 1944. Ginette avait 6 ou 7 ans. Ces pavés, posés en 2022, font partie des « Stolpersteine » imaginés par l'artiste Gunter Demnig : ils rappellent les victimes du nazisme devant leur dernier domicile.",
@@ -273,7 +274,8 @@ export const SEED_PLACES: Place[] = [
     lat: 44.821472,
     lng: -0.577695,
     challenge:
-      'Deux pavés dorés, avec le même nom de famille, sont scellés dans le trottoir. Trouve-les : en quelle année ont-ils été arrêtés ?',
+      'Deux pavés dorés, avec le même nom de famille, sont scellés dans le trottoir. Trouve-les : en quelle année ont-ils été arrêtés ? (La photo montre d’autres pavés de mémoire de Bordeaux, pour que tu saches à quoi ils ressemblent.)',
+    photo: commons('paves-memoire', 'Christian Michelides', 'CC BY-SA 4.0', 'Stolpersteine_in_Bordeaux_4.jpg', { x: 50, y: 45, zoom: 1 }),
     hints: ['Marche en regardant le trottoir, devant les portes.', 'Ils sont côte à côte, au pied d’une maison.'],
     story:
       "« Ici habitait… » Robert Bret, né en 1906, arrêté le 22 novembre 1940, interné au fort du Hâ, assassiné au camp de Souge. Georgette Bret, née en 1905, arrêtée le 28 août 1942, internée au fort du Hâ puis à Romainville, déportée en 1943 à Auschwitz, où elle a été assassinée. Ces pavés ont été posés en 2025.",
@@ -287,7 +289,8 @@ export const SEED_PLACES: Place[] = [
     lat: 44.818328,
     lng: -0.564465,
     challenge:
-      'Encore deux pavés dorés, cette fois au nom de Cantelaube. Trouve-les et lis les dates : te rappellent-elles d’autres pavés du quartier ?',
+      'Encore deux pavés dorés, cette fois au nom de Cantelaube. Trouve-les et lis les dates : te rappellent-elles d’autres pavés du quartier ? (La photo montre d’autres pavés de mémoire de Bordeaux, pour que tu saches à quoi ils ressemblent.)',
+    photo: commons('paves-memoire', 'Christian Michelides', 'CC BY-SA 4.0', 'Stolpersteine_in_Bordeaux_4.jpg', { x: 50, y: 45, zoom: 1 }),
     hints: ['Ils sont loin des autres pavés du quartier : regarde bien le point sur la carte.', 'Regarde le trottoir, devant les portes.'],
     story:
       "« Ici habitait… » Jean Cantelaube, né en 1910, arrêté le 22 novembre 1940, interné au camp de Mérignac-Beaudésert, assassiné au camp de Souge le 24 octobre 1941. Germaine Cantelaube, née en 1908, arrêtée le 28 août 1942, internée au fort du Hâ puis à Romainville, déportée en 1943 à Auschwitz, où elle a été assassinée. Ces pavés ont été posés en 2025. As-tu remarqué ? Robert et Georgette Bret ont été arrêtés exactement les mêmes jours que Jean et Germaine.",
@@ -1026,10 +1029,11 @@ export const SEED_PLACES: Place[] = [
     category: 'sculpture',
     quartier: 'centre',
     difficulty: 1,
-    lat: 44.8421,
-    lng: -0.5752,
+    lat: 44.842144,
+    lng: -0.574311,
     challenge:
       "À côté du Grand-Théâtre, un immense visage de jeune fille, les yeux fermés, semble rêver au milieu de la place. Trouve-la, puis fais-en le tour : à quoi ressemble-t-elle de côté ?",
+    photo: panoramax('sanna', 'Bordeaux Métropole', ETALAB, '787d8d8b-44f3-4edc-8551-b210c5a90091', { x: 60, y: 70, zoom: 1 }),
     hints: ['Place de la Comédie, côté rue Sainte-Catherine.', 'Elle mesure environ 7 mètres de haut !'],
     story:
       "Elle s'appelle Sanna, c'est une œuvre du sculpteur catalan Jaume Plensa, tout en fonte (un métal très lourd, qui rouille et devient brun-orangé). Elle est arrivée en 2013 pour une exposition en plein air, et un mécène l'a achetée pour la laisser aux Bordelais. Jaume Plensa aime les visages aux yeux fermés : il veut inviter les passants à s'arrêter, à se taire et à rêver un instant. Et toi, à quoi penses-tu qu'elle rêve ?",
