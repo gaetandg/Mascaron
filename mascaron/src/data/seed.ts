@@ -2606,4 +2606,68 @@ export const SEED_PLACES: Place[] = [
     story:
       "C'est le château Les Carmes Haut-Brion, l'un des très rares vignobles encore à l'intérieur de Bordeaux. Son nom vient des Carmes, des moines qui ont cultivé ces vignes pendant longtemps. C'est une propriété privée : on la regarde depuis la rue, sans entrer.",
   }),
+  // ---------- Saint-Bruno / Saint-Victor ----------
+  place({
+    id: 'seed-manufacture-tabacs',
+    title: "Le portail bleu de l'ancienne manufacture",
+    category: 'facade',
+    quartier: 'meriadeck',
+    difficulty: 1,
+    lat: 44.833887,
+    lng: -0.584852,
+    challenge:
+      "Un long bâtiment de pierre, un grand portail bleu en arc et deux fenêtres rondes au-dessus. Trouve-le ! À ton avis, que fabriquait-on ici autrefois ?",
+    photo: commons(
+      'manufacture-tabacs',
+      'Lantus',
+      'CC BY-SA 3.0',
+      'Espace_Rodesse_Manufacture_de_Tabac_20250709.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Entre Mériadeck et la place Amédée-Larrieu.', 'Cherche le panneau « Espace Rodesse » au-dessus du portail.'],
+    story:
+      "On y fabriquait… du tabac ! Ce bâtiment faisait partie de l'ancienne manufacture des tabacs de Bordeaux, une grande usine où travaillaient beaucoup d'ouvrières, qui roulaient cigares et cigarettes à la main. L'usine a fermé depuis longtemps et ses bâtiments ont été transformés. Les deux fenêtres rondes, de chaque côté du panneau, s'appellent des « œils-de-bœuf ».",
+  }),
+  place({
+    id: 'seed-chartreuse-femme-allongee',
+    title: 'La femme en bronze de la Chartreuse',
+    category: 'sculpture',
+    quartier: 'meriadeck',
+    difficulty: 3,
+    lat: 44.836542,
+    lng: -0.597583,
+    challenge:
+      "Dans le cimetière de la Chartreuse, une femme en bronze est allongée sur une tombe, la tête penchée et les mains jointes. Trouve-la, en marchant calmement et sans bruit !",
+    photo: commons(
+      'chartreuse-femme-allongee',
+      'Tylwyth Eldar',
+      'Domaine public',
+      'Cimeti%C3%A8re_de_la_chartreuse_-_Femme_allong%C3%A9e_04.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Entre par la grande porte de la Chartreuse, rue Saint-Bruno ou cours d’Ornano.', 'Elle est assez loin de l’entrée, du côté du boulevard.'],
+    story:
+      "Les statues de ce genre, qui semblent pleurer sur une tombe, montrent le chagrin de la famille. Celle-ci est en bronze : sur le socle, on peut lire le nom du fondeur, Denonvilliers, l'artisan qui a coulé le métal dans un moule. Le cimetière de la Chartreuse est l'un des plus anciens de Bordeaux : c'est un endroit calme où l'on se promène avec respect.",
+  }),
+  place({
+    id: 'seed-frere-alphonse',
+    title: 'Le Frère Alphonse, ami des pauvres',
+    category: 'monument',
+    quartier: 'meriadeck',
+    difficulty: 2,
+    lat: 44.835572,
+    lng: -0.598403,
+    challenge:
+      "Dans le cimetière de la Chartreuse, un religieux en bronze, en longue cape, se tient debout sur un haut socle. Trouve-le ! Que tient-il dans la main, le long de son corps ?",
+    photo: commons(
+      'frere-alphonse',
+      'Tylwyth Eldar',
+      'CC BY-SA 4.0',
+      'Cimeti%C3%A8re_de_la_chartreuse_-_Statue_du_Fr%C3%A8re_Alphonse_03.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Dans le cimetière de la Chartreuse.', 'Il est près d’une chapelle aux petits clochetons pointus.'],
+    story:
+      "Il tient son chapeau à la main. Le Frère Alphonse, né en 1791 à Castelnaudary, a passé sa vie à aider les pauvres de Bordeaux ; il a reçu la Légion d'honneur en 1866 et il est mort en 1876. Cette statue lui rend hommage. Regarde le socle : l'étoile à cinq branches rappelle sans doute sa Légion d'honneur.",
+  }),
 ]
