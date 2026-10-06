@@ -31,7 +31,7 @@ Projet perso de Gaëtan (usage familial, en pensant à une ouverture future). Ga
 
 - **Suivi de fréquentation (« tracking »)** : mesurer les visites et l'usage (lieux ouverts, trouvés…). Choisir un outil respectueux de la vie privée (sans cookies, pour éviter un bandeau RGPD) ; à discuter avec Gaëtan avant de brancher quoi que ce soit.
 - **E-mails** : nom de domaine + Brevo (SMTP) branchés dans Supabase, limite horaire relevée, modèles d'e-mails en français.
-- **Connexion Google** : Gaëtan crée l'ID client OAuth dans Google Cloud et le colle dans Supabase (le bouton apparaît tout seul).
+- **Connexion Google** : Gaëtan crée l'ID client OAuth dans Google Cloud et le colle dans Supabase (le bouton apparaît tout seul). Pour publier l'app Google : pages `public/confidentialite.html` et `public/conditions.html` (liens en bas de l'onglet Compte), logo `public/logo-120.png`. Les comptes de même e-mail (mot de passe + Google) sont reliés automatiquement par Supabase si l'e-mail est confirmé.
 - Apple (connexion) avec l'app iOS ; propositions de lieux par les joueurs.
 
 ## Code
