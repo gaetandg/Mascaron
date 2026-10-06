@@ -2670,4 +2670,60 @@ export const SEED_PLACES: Place[] = [
     story:
       "Il tient son chapeau à la main. Le Frère Alphonse, né en 1791 à Castelnaudary, a passé sa vie à aider les pauvres de Bordeaux ; il a reçu la Légion d'honneur en 1866 et il est mort en 1876. Cette statue lui rend hommage. Regarde le socle : l'étoile à cinq branches rappelle sans doute sa Légion d'honneur.",
   }),
+  // ---------- Ouest de Caudéran, Bastide est ----------
+  place({
+    id: 'seed-gare-cauderan',
+    title: 'La petite gare de Caudéran-Mérignac',
+    category: 'facade',
+    quartier: 'cauderan',
+    difficulty: 1,
+    lat: 44.842631,
+    lng: -0.627669,
+    challenge:
+      'Une petite gare au grand toit qui dépasse des murs. Trouve-la ! Combien de portes et fenêtres en arc vois-tu au rez-de-chaussée, sur la façade ?',
+    photo: commons('gare-cauderan', 'Marcel Roblin', 'CC BY-SA 4.0', 'Gare_Caud%C3%A9ran-M%C3%A9rignac.jpg', {
+      x: 50,
+      y: 50,
+      zoom: 1,
+    }),
+    hints: ['À l’ouest de Caudéran, tout près de la limite avec Mérignac.', 'Suis la voie ferrée.'],
+    story:
+      "Sur la photo, il y en a 3, toutes arrondies en haut et peintes en rouge sombre. C'est la gare de Caudéran-Mérignac : des trains régionaux s'y arrêtent encore, sur la ligne qui part vers le Médoc. Son grand toit qui dépasse beaucoup des murs protège la façade de la pluie et du soleil.",
+  }),
+  place({
+    id: 'seed-travailleurs-indochinois',
+    title: 'Le monument aux travailleurs indochinois',
+    category: 'memoire',
+    quartier: 'cauderan',
+    difficulty: 2,
+    lat: 44.859253,
+    lng: -0.620933,
+    challenge:
+      "Dans le cimetière des Pins-Francs, une colonne blanche est couverte de grands caractères d'une écriture venue d'Asie. Trouve-la, en marchant calmement !",
+    photo: commons(
+      'travailleurs-indochinois',
+      'Jefunky',
+      'CC BY-SA 4.0',
+      'Monument_aux_travailleurs_indochinois_de_la_1%C3%A8re_Guerre_mondiale,_cimeti%C3%A8re_des_Pins_Francs,_Bordeaux.jpg',
+      { x: 50, y: 50, zoom: 1 },
+    ),
+    hints: ['Cimetière des Pins-Francs, à Caudéran.', 'Cherche les longues rangées de croix blanches des soldats : la colonne est tout près.'],
+    story:
+      "Pendant la Première Guerre mondiale (1914-1918), des dizaines de milliers de travailleurs venus d'Indochine (aujourd'hui le Viêt Nam, le Laos et le Cambodge) sont venus en France pour remplacer, dans les usines, les hommes partis au front. Certains sont morts loin de chez eux : ce monument leur rend hommage. Les grands caractères sont écrits à la manière chinoise, une écriture qu'on utilisait autrefois aussi au Viêt Nam.",
+  }),
+  place({
+    id: 'seed-cypressat',
+    title: "L'église du Cypressat",
+    category: 'eglise',
+    quartier: 'bastide',
+    difficulty: 1,
+    lat: 44.85109,
+    lng: -0.54152,
+    challenge:
+      "Sur la rive droite, une église au clocher pointu porte une horloge. Trouve-la ! Au-dessus de sa porte, un cercle de pierre est décoré d'un symbole : lequel ?",
+    photo: commons('cypressat', 'JeanWilhelm', 'CC0', '%C3%89glise_Notre_Dame_du_Cypressat.jpg', { x: 50, y: 50, zoom: 1 }),
+    hints: ['À l’est de la Bastide, vers les coteaux de Cenon.', 'Le cercle est juste au-dessus de la porte rouge.'],
+    story:
+      "C'est l'église Notre-Dame-de-Lourdes du Cypressat. Son nom rappelle Lourdes, dans les Pyrénées, où une jeune fille, Bernadette, a dit avoir vu la Vierge Marie en 1858. Le symbole du cercle est une croix dont chaque bras se termine par de petites boules arrondies, entourée de deux arcs de pierre comme des ailes.",
+  }),
 ]
