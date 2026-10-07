@@ -435,19 +435,6 @@ export const SEED_PLACES: Place[] = [
       "Il y a quatre cuves, numérotées de 1 à 4… en partant de la droite ! C'est un ancien château d'eau : les cuves en hauteur gardaient de l'eau sous pression pour la distribuer. Il a été conservé au milieu du nouveau quartier. Juste à côté se cache un personnage de street art très célèbre : le Gouzou !",
   }),
   place({
-    id: 'seed-gouzou',
-    title: 'Le Gouzou',
-    category: 'street-art',
-    quartier: 'belcier',
-    difficulty: 2,
-    lat: 44.821157,
-    lng: -0.559298,
-    challenge: "Un drôle de personnage sans visage est peint sur un mur du quartier. Trouve-le : qu'est-il en train de faire ?",
-    hints: ['Tout près des citernes perchées.', 'Il est tout blanc… et il n’a pas de visage.'],
-    story:
-      "Le Gouzou est le personnage de Jace, un artiste de l'île de La Réunion. Il en a peint des centaines dans le monde entier, souvent dans des situations rigolotes. Si tu en croises un autre ailleurs, tu le reconnaîtras !",
-  }),
-  place({
     id: 'seed-fresque-fonfrede',
     title: 'La fresque de la rue Fonfrède',
     category: 'street-art',
