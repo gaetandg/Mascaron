@@ -5,13 +5,11 @@ import { supabase } from './supabase'
 // Compte joueur (facultatif). Sans compte, le carnet reste sur ce téléphone.
 interface AccountState {
   session: Session | null
-  /** Arrivé par le lien « mot de passe oublié » : il faut choisir un nouveau mot de passe */
-  recovering: boolean
   ready: boolean
 }
 
-// Retour d'un lien reçu par e-mail ou de Google : l'adresse contient « ?code=… » (tout va bien)
-// ou « ?error=…#error=… » (lien expiré, déjà utilisé…). Dans les deux cas on ouvre l'écran « Compte ».
+// Retour de Google (ou d'un autre service de connexion) : l'adresse contient « ?code=… » (tout va bien)
+// ou « ?error=…#error=… » (connexion annulée, refusée…). Dans les deux cas on ouvre l'écran « Compte ».
 function readAuthReturn(): string | null {
   const search = new URLSearchParams(location.search)
   const hash = new URLSearchParams(location.hash.replace(/^#/, ''))
@@ -20,9 +18,7 @@ function readAuthReturn(): string | null {
   if (code || description) {
     // On nettoie l'adresse (sinon le « #error=… » serait pris pour une page de l'app)
     history.replaceState(null, '', `${location.pathname}#/compte`)
-    return code === 'otp_expired'
-      ? 'Ce lien a expiré ou a déjà servi. Connecte-toi avec ton mot de passe, ou demande un nouveau lien.'
-      : (description ?? 'La connexion a échoué.')
+    return code === 'access_denied' || !description ? 'La connexion a été annulée.' : `La connexion a échoué : ${description}`
   }
   if (search.has('code')) {
     history.replaceState(null, '', `${location.pathname}${location.search}#/compte`)
@@ -33,9 +29,6 @@ function readAuthReturn(): string | null {
 
 // Après une connexion, on renvoie le joueur sur la carte
 let loginRedirect = false
-export function expectLogin(on = true) {
-  loginRedirect = on
-}
 export function consumeLoginRedirect() {
   const r = loginRedirect
   loginRedirect = false
@@ -45,7 +38,7 @@ export function consumeLoginRedirect() {
 /** Message à afficher si le lien de connexion n'a pas marché */
 export const authReturnError = readAuthReturn()
 
-let state: AccountState = { session: null, recovering: false, ready: false }
+let state: AccountState = { session: null, ready: false }
 const listeners = new Set<() => void>()
 
 function update(patch: Partial<AccountState>) {
@@ -53,8 +46,8 @@ function update(patch: Partial<AccountState>) {
   listeners.forEach((l) => l())
 }
 
-supabase.auth.onAuthStateChange((event, session) => {
-  update({ session, ready: true, ...(event === 'PASSWORD_RECOVERY' ? { recovering: true } : {}) })
+supabase.auth.onAuthStateChange((_event, session) => {
+  update({ session, ready: true })
 })
 
 export function useAccount(): AccountState {
@@ -73,8 +66,4 @@ export function getSession() {
 
 export function onSessionChange(l: () => void) {
   listeners.add(l)
-}
-
-export function recoveryDone() {
-  update({ recovering: false })
 }
