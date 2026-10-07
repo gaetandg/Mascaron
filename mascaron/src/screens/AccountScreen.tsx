@@ -4,6 +4,7 @@ import type { Provider } from '@supabase/supabase-js'
 import { AUTH_REDIRECT, enabledProviders, supabase } from '../data/supabase'
 import { authReturnError, consumeLoginRedirect, useAccount } from '../data/account'
 import { signOutAndClear, useFound, useSyncStatus } from '../data/progress'
+import { usePlaces } from '../data/places'
 import { install, isInstalled, isIos, useCanInstall } from '../data/install'
 import { Mascot } from '../components/Mascot'
 
@@ -35,8 +36,10 @@ export function AccountScreen() {
 
 function LoggedIn({ email }: { email?: string }) {
   const found = useFound()
+  const places = usePlaces()
   const sync = useSyncStatus()
-  const n = Object.keys(found).length
+  // Seulement les lieux qui existent encore dans le jeu (un lieu disparu peut avoir été retiré)
+  const n = places.filter((p) => found[p.id]).length
   return (
     <div className="account-card">
       <p>
