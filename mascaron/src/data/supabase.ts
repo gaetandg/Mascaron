@@ -7,7 +7,7 @@ const SUPABASE_KEY = 'sb_publishable_I4hIbIwAOWW9_Jcconlvig_-ZL0lVa3'
 
 export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   auth: {
-    // Le lien reçu par e-mail (ou le retour de Google) revient avec « ?code=… » dans l'adresse
+    // Le retour de Google (ou d'un autre service) revient avec « ?code=… » dans l'adresse
     flowType: 'pkce',
     detectSessionInUrl: true,
     persistSession: true,
@@ -15,13 +15,13 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   },
 })
 
-/** Adresse où revenir après un lien de connexion (e-mail) ou Google */
+/** Adresse où revenir après la connexion (Google…) */
 export const AUTH_REDIRECT = new URL(import.meta.env.BASE_URL, location.href).href
 
-/** Fournisseurs de connexion activés dans Supabase (Google…) */
+/** Services de connexion activés dans Supabase (Google, Apple…) */
 export async function enabledProviders(): Promise<Record<string, boolean>> {
   try {
-    const r = await fetch(`${SUPABASE_URL}/auth/v1/settings`, { headers: { apikey: SUPABASE_KEY } })
+    const r = await fetch(`${SUPABASE_URL}/auth/v1/settings`, { headers: { apikey: SUPABASE_KEY }, signal: AbortSignal.timeout(10000) })
     const s = (await r.json()) as { external?: Record<string, boolean> }
     return s.external ?? {}
   } catch {
