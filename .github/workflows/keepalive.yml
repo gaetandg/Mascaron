@@ -1,10 +1,12 @@
-# Supabase met en pause les projets gratuits sans activité pendant 7 jours.
-# Cette petite tâche interroge la base une fois par jour pour la garder éveillée.
+# Supabase met en pause les projets gratuits qui ont trop peu d'activité sur 7 jours
+# (« quelques requêtes par jour » suffisent d'après sa documentation).
+# Un seul appel par jour n'a pas suffi (pause le 23/11/2026) : on interroge donc la base
+# quatre fois par jour, avec plusieurs requêtes à chaque fois.
 name: Garder Supabase éveillé
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,6 +14,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Interroger la base
+        env:
+          URL: https://hzpixgfuzocoxwtqhqzh.supabase.co
+          KEY: sb_publishable_I4hIbIwAOWW9_Jcconlvig_-ZL0lVa3
         run: |
-          curl -fsS "https://hzpixgfuzocoxwtqhqzh.supabase.co/rest/v1/found?select=place_id&limit=1" \
-            -H "apikey: sb_publishable_I4hIbIwAOWW9_Jcconlvig_-ZL0lVa3" -o /dev/null -w "HTTP %{http_code}\n"
+          for i in 1 2 3; do
+            curl -fsS "$URL/rest/v1/found?select=place_id&limit=1" \
+              -H "apikey: $KEY" -o /dev/null -w "Base : HTTP %{http_code}\n"
+            curl -fsS "$URL/auth/v1/settings" \
+              -H "apikey: $KEY" -o /dev/null -w "Comptes : HTTP %{http_code}\n"
+            sleep 20
+          done
